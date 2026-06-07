@@ -7,13 +7,37 @@
     <meta name="description" content="Consultant en stratégie indépendant (ex-Oliver Wyman). J'accompagne dirigeants de PME/ETI et fonds d'investissement : diagnostic, plan stratégique, transformation, séminaires de direction. Audit stratégique offert de 30 minutes.">
     <meta name="keywords" content="consultant stratégie, conseil en stratégie, plan stratégique, transformation, PMO, fonds d'investissement, séminaire direction, Benoît Mahmoudi, Movari Conseil, Lyon">
 
-    <!-- Open Graph (aperçu LinkedIn / réseaux) — TODO: remplacer les URL relatives par des URL complètes une fois le domaine choisi -->
+    <!-- Open Graph (aperçu LinkedIn / réseaux) -->
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://movari.fr/">
     <meta property="og:title" content="Movari Conseil · Stratégie &amp; Transformation">
     <meta property="og:description" content="Un consultant senior ex-Oliver Wyman aux côtés des dirigeants et des fonds. Audit stratégique offert de 30 minutes.">
-    <meta property="og:image" content="assets/photo-benoit-mahmoudi.jpg">
+    <meta property="og:image" content="https://movari.fr/assets/photo-benoit-mahmoudi.jpg">
     <meta property="og:locale" content="fr_FR">
     <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://movari.fr/">
+
+    <!-- Données structurées pour les moteurs de recherche -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Movari Conseil",
+      "description": "Conseil en stratégie et transformation pour dirigeants de PME/ETI et fonds d'investissement. Consultant senior ex-Oliver Wyman.",
+      "url": "https://movari.fr/",
+      "telephone": "+33621059309",
+      "image": "https://movari.fr/assets/photo-benoit-mahmoudi.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "163 rue Vendôme",
+        "postalCode": "69003",
+        "addressLocality": "Lyon",
+        "addressCountry": "FR"
+      },
+      "founder": { "@type": "Person", "name": "Benoît Mahmoudi", "sameAs": "https://www.linkedin.com/in/benoitmahmoudi" },
+      "priceRange": "€€€"
+    }
+    </script>
 
     <link rel="icon" type="image/png" href="assets/logo-movari-conseil.png">
 
@@ -594,7 +618,8 @@
             <h2 class="font-display text-4xl md:text-[2.9rem] font-semibold tracking-tight leading-tight mt-4">Ce que disent ceux<br>qui ont travaillé avec moi</h2>
         </div>
 
-        <div class="reveal-stagger reveal grid md:grid-cols-3 gap-6">
+        <!-- Grille en 2 colonnes tant que la 3e carte (Truchassout) est masquée ; repasser à md:grid-cols-3 en la réactivant -->
+        <div class="reveal-stagger reveal grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <figure class="card-hover relative bg-white border border-slate-200/80 rounded-3xl p-8 flex flex-col">
                 <div class="quote-mark" aria-hidden="true">“</div>
                 <blockquote class="text-[15px] text-slate-600 italic leading-relaxed flex-1">Benoît est quelqu'un de confiance et toujours de bon conseil. Visionnaire et pragmatique, il réalise une excellente veille de l'actualité pour en déduire des orientations stratégiques, notamment pour l'entreprise dans laquelle il travaille. Je recommande fortement Benoît pour ses compétences, ainsi que son savoir-être que j'apprécie énormément.</blockquote>
@@ -626,8 +651,9 @@
                 </figcaption>
             </figure>
 
-            <!-- Recommandation demandée à Matthieu Truchassout (mission Safetykleen ~2 ans) : remplacer dès réception -->
-            <figure class="relative bg-white border-2 border-dashed border-slate-200 rounded-3xl p-8 flex flex-col">
+            <!-- Recommandation demandée à Matthieu Truchassout (mission Safetykleen ~2 ans).
+                 Carte masquée (class hidden) jusqu'à réception : retirer "hidden" et repasser la grille en md:grid-cols-3 pour la réactiver -->
+            <figure class="hidden relative bg-white border-2 border-dashed border-slate-200 rounded-3xl p-8 flex flex-col">
                 <span class="absolute -top-3 left-7 bg-slate-100 text-slate-500 text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-full">Bientôt</span>
                 <div class="quote-mark" aria-hidden="true">“</div>
                 <blockquote class="text-[15px] text-slate-400 italic leading-relaxed flex-1">[Recommandation en cours de recueil : mission de transformation de près de deux ans chez Safetykleen.]</blockquote>
@@ -902,9 +928,11 @@
         const CAL_LINK = "movariconseil/audit-strategique-30min";
 
         // Branche tous les boutons marqués data-cal sur le popup Cal.com (avec fallback lien direct)
+        // + comptage anonyme des clics « Réserver » via GoatCounter
         document.querySelectorAll('[data-cal]').forEach(el => {
             el.setAttribute('data-cal-link', CAL_LINK);
             el.setAttribute('data-cal-config', '{"layout":"month_view"}');
+            el.setAttribute('data-goatcounter-click', 'clic-reserver-audit');
         });
 
         // Menu mobile
@@ -944,5 +972,8 @@
             }
         });
     </script>
+
+    <!-- GoatCounter : mesure d'audience anonyme, sans cookie (compte movari.goatcounter.com) -->
+    <script data-goatcounter="https://movari.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
