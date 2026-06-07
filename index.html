@@ -858,10 +858,8 @@
 
     <script>
         /* ═══ Lien de réservation Cal.com ═══
-           Aujourd'hui : l'appel de découverte existant.
-           Dès que l'événement « Audit stratégique offert · 30 min » est créé dans Cal.com,
-           remplacer la ligne ci-dessous par : const CAL_LINK = "movariconseil/audit-strategique-30min"; */
-        const CAL_LINK = "movariconseil/appel-de-decouverte-gratuit";
+           Tous les boutons du site ouvrent cet événement en popup. */
+        const CAL_LINK = "movariconseil/audit-strategique-30min";
 
         // Branche tous les boutons marqués data-cal sur le popup Cal.com (avec fallback lien direct)
         document.querySelectorAll('[data-cal]').forEach(el => {
