@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Études de cas · missions de transformation &amp; performance | Movari Conseil</title>
+    <meta name="description" content="Exemples anonymisés de missions menées par Movari Conseil : PMO post-acquisition pour un fonds, transformation commerciale, création de filiale, plan stratégique. Contexte, enjeu, intervention, résultats.">
+    <link rel="canonical" href="https://movari.fr/etudes-de-cas.html">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://movari.fr/etudes-de-cas.html">
+    <meta property="og:title" content="Études de cas · Movari Conseil">
+    <meta property="og:description" content="Missions anonymisées : PMO post-acquisition, transformation commerciale, création de filiale, plan stratégique.">
+    <meta property="og:image" content="https://movari.fr/assets/photo-benoit-mahmoudi.jpg">
+    <meta property="og:locale" content="fr_FR">
+
+    <link rel="icon" type="image/png" href="assets/logo-movari-conseil.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: {
+                colors: { movari: { DEFAULT: '#0066F0', dark: '#0052CC', deeper: '#003D99', navy: '#0A1F44', ink: '#0E1B33' } },
+                fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], serif: ['"Playfair Display"', 'Georgia', 'serif'] }
+            } }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
+    <style>
+        :root { --blue: #0066F0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', system-ui, sans-serif; text-rendering: optimizeLegibility; }
+        .font-display { font-family: 'Playfair Display', Georgia, serif; }
+
+        .kicker { display: inline-flex; align-items: center; gap: .6rem; font-size: .6875rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); }
+        .kicker .bars { display: inline-flex; align-items: flex-end; gap: 2px; height: 14px; }
+        .kicker .bars span { width: 3px; background: var(--blue); border-radius: 99px; }
+        .kicker .bars span:nth-child(1) { height: 35%; } .kicker .bars span:nth-child(2) { height: 60%; } .kicker .bars span:nth-child(3) { height: 100%; }
+
+        .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1); }
+        .reveal.revealed { opacity: 1; transform: none; }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .reveal { opacity: 1 !important; transform: none !important; transition: none !important; } }
+
+        .btn-primary { background: var(--blue); box-shadow: 0 10px 24px -8px rgba(0,102,240,.45); transition: background .2s, transform .15s, box-shadow .2s; }
+        .btn-primary:hover { background: #0052CC; transform: translateY(-2px); }
+        .btn-primary:active { transform: scale(.985); }
+        .hairline { height: 1px; background: linear-gradient(90deg, transparent, rgba(14,27,51,.14), transparent); }
+        ::selection { background: rgba(0,102,240,.18); }
+        :focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 4px; }
+
+        /* Marqueur éditorial discret (à compléter par Benoît) */
+        .todo { display: inline-flex; align-items: center; gap: .3rem; font-size: .72rem; font-weight: 600; color: #92660a; background: #fff7e6; border: 1px dashed #f0c060; border-radius: 999px; padding: .1rem .55rem; }
+    </style>
+</head>
+<body class="bg-[#FCFCFD] text-movari-ink antialiased">
+
+    <!-- NAV -->
+    <nav class="bg-white/90 backdrop-blur-md border-b border-slate-200/70 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-5 md:px-8 flex items-center justify-between h-[76px]">
+            <a href="index.html" aria-label="Movari Conseil, accueil"><img src="assets/logo-movari-hd.png" alt="Movari Conseil" class="h-12 md:h-14 w-auto"></a>
+            <div class="flex items-center gap-x-4">
+                <a href="index.html" class="hidden sm:inline text-sm font-medium text-slate-600 hover:text-movari transition">← Retour au site</a>
+                <a href="https://cal.com/movariconseil" target="_blank" rel="noopener" data-cal class="btn-primary inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white rounded-xl">Audit offert · 30 min</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- INTRO -->
+    <header class="border-b border-slate-100 bg-gradient-to-b from-white to-slate-50">
+        <div class="max-w-4xl mx-auto px-5 md:px-8 pt-16 pb-12 md:pt-20 md:pb-16">
+            <span class="kicker"><span class="bars" aria-hidden="true"><span></span><span></span><span></span></span> Études de cas</span>
+            <h1 class="font-display text-[1.9rem] sm:text-4xl md:text-6xl font-semibold tracking-tight leading-[1.1] mt-4 mb-5">Des missions, des résultats.</h1>
+            <p class="text-lg text-slate-600 leading-relaxed max-w-2xl">Quelques exemples de missions menées au fil de mon parcours. Par respect de la confidentialité de mes clients, ces cas sont <strong class="font-medium text-slate-800">anonymisés</strong> : seuls le contexte, la démarche et les résultats sont décrits.</p>
+        </div>
+    </header>
+
+    <!-- CAS -->
+    <main class="max-w-5xl mx-auto px-5 md:px-8 py-14 md:py-20 space-y-8">
+
+        <!-- CAS 1 -->
+        <article class="reveal bg-white border border-slate-200/80 rounded-3xl overflow-hidden">
+            <div class="grid md:grid-cols-12">
+                <div class="md:col-span-4 bg-movari-navy text-white p-7 md:p-9 flex flex-col">
+                    <div class="font-display text-5xl font-semibold text-white/25 mb-4">01</div>
+                    <span class="inline-block self-start text-[10.5px] font-semibold tracking-[0.14em] uppercase bg-white/10 text-sky-200 px-3 py-1 rounded-full mb-4">Pour un fonds d'investissement</span>
+                    <h2 class="font-display text-2xl md:text-[1.7rem] font-semibold tracking-tight leading-snug">PMO post-acquisition &amp; capture de synergies</h2>
+                    <div class="mt-auto pt-6 text-sm text-slate-300">Durée : 12 mois</div>
+                </div>
+                <div class="md:col-span-8 p-7 md:p-9 space-y-5">
+                    <div><div class="text-[10.5px] font-semibold tracking-[0.14em] uppercase text-movari mb-1.5">Contexte</div><p class="text-[15px] text-slate-600 leading-relaxed">Un leader français de l'agroalimentaire, récemment racheté par un grand fonds de private equity.</p></div>
+                    <div><div class="text-[10.5px] font-semibold tracking-[0.14em] uppercase text-movari mb-1.5">Enjeu</div><p class="text-[15px] text-slate-600 leading-relaxed">Sécuriser la création de valeur post-acquisition : structurer le pilotage, capturer rapidement les premiers gains et donner au fonds une visibilité claire sur l'avancement.</p></div>
+                    <div><div class="text-[10.5px] font-semibold tracking-[0.14em] uppercase text-movari mb-1.5">Intervention</div>
+                        <ul class="text-[15px] text-slate-600 leading-relaxed space-y-1.5">
+                            <li class="flex gap-2.5"><span class="mt-2 block w-1.5 h-1.5 bg-movari rounded-full flex-shrink-0"></span> Déploiement d'un PMO post-acquisition opérationnel dès les premières semaines</li>
+                            <li class="flex gap-2.5"><span class="mt-2 block w-1.5 h-1.5 bg-movari rounded-full flex-shrink-0"></span> Cartographie et priorisation des chantiers de synergies</li>
+                            <li class="flex gap-2.5"><span class="mt-2 block w-1.5 h-1.5 bg-movari rounded-full flex-shrink-0"></span> Mise en place du reporting investisseur et animation des équipes vers les gains rapides</li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-50 border border-slate-100 rounded-2xl p-5">
+                        <div class="text-[10.5px] font-semibold tracking-[0.14em] uppercase text-emerald-600 mb-1.5">Résultats</div>
+                        <p class="text-[15px] text-slate-700 leading-relaxed">PMO opérationnel dès les premières semaines · synergies significatives identifiées et engagées dès la première année · reporting investisseur fiabilisé. <span class="todo">⚑ à préciser : chiffre de synergies (montant ou %)</span></p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- CAS 2 -->
+        <article class="reveal bg-white border border-slate-200/80 rounded-3xl overflow-hidden">
+            <div class="grid md:grid-cols-12">
+                <div class="md:col-span-4 bg-movari-navy text-white p-7 md:p-9 flex flex-col">
+                    <div class="font-display text-5xl font-semibold text-white/25 mb-4">02</div>
+                    <span class="inline-block self-start text-[10.5px] font-semibold tracking-[0.14em] uppercase bg-white/10 text-sky-200 px-3 py-1 rounded-full mb-4">Pour un dirigeant</span>
+                    <h2 class="font-display text-2xl md:text-[1.7rem] font-semibold tracking-tight leading-snug">Transformation &amp; performance commerciale d'un réseau national</h2>
+                    <div class="mt-auto pt-6 text-sm text-slate-300">Durée : 3,5 ans</div>
+                </div>
+                <div class="md:col-span-8 p-7 md:p-9 space-y-5">
+                    <div><div class="text-[10.5px] font-semibold tracking-[0.14em] uppercase text-movari mb-1.5">Contexte</div><p class="text-[15px] text-slate-600 leading-relaxed">Un réseau national de conseil en gestion de patrimoine, filiale d'un grand groupe d'assurance.</p></div>
+                    <div><div class="text-[10.5px] font-semibold tracking-[0.14em] uppercase text-movari mb-1.5">Enjeu</div><p class="text-[15px] text-slate-600 leading-relaxed">Redresser la performance commerciale d'un réseau d'agences réparti sur toute la France et professionnaliser ses équipes.</p></div>
+                    <div><div class="text-[10.5px] font-semibold tracking-[0.14em] uppercase text-movari mb-1.5">Intervention</div>
+                        <ul class="text-[15px] text-slate-600 leading-relaxed space-y-1.5">
+                            <li class="flex gap-2.5"><span class="mt-2 block w-1.5 h-1.5 bg-movari rounded-full flex-shrink-0"></span> Membre du Comité de Direction, pilotage du P&amp;L commercial</li>
+                            <li class="flex gap-2.5"><span class="mt-2 block w-1.5 h-1.5 bg-movari rounded-full flex-shrink-0"></span> Réorganisation du réseau et transformation de 12 assistantes en Responsables d'Agence orientées service client</li>
+                            <li class="flex gap-2.5"><span class="mt-2 block w-1.5 h-1.5 bg-movari rounded-full flex-shrink-0"></span> Management et montée en puissance de 30 commerciaux juniors</li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-50 border border-slate-100 rounded-2xl p-5">
+                        <div class="text-[10.5px] font-semibold tracking-[0.14em] uppercase text-emerald-600 mb-1.5">Résultats</div>
+                        <p class="text-[15px] text-slate-700 leading-relaxed"><strong class="font-semibold text-movari">+25 % de chiffre d'affaires</strong> · <strong class="font-semibold text-movari">+100 k€ d'économies</strong> sur le périmètre commercial · service client nettement renforcé · équipe de ~45 personnes structurée.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- CAS 3 -->
+        <article class="reveal bg-white border border-slate-200/80 rounded-3xl overflow-hidden">
+            <div class="grid md:grid-cols-12">
+                <div class="md:col-span-4 bg-movari-navy text-white p-7 md:p-9 flex flex-col">
+                    <div class="font-display text-5xl font-semibold text-white/25 mb-4">03</div>
+                    <span class="inline-block self-start text-[10.5px] font-semibold tracking-[0.14em] uppercase bg-white/10 text-sky-200 px-3 py-1 rounded-full mb-4">Grand projet stratégique</span>
+                    <h2 class="font-display text-2xl md:text-[1.7rem] font-semibold tracking-tight leading-snug">Création d'une filiale deep-tech</h2>
+                    <div class="mt-auto pt-6 text-sm text-slate-300">Durée : 12 mois</div>
+                </div>
+                <div class="md:col-span-8 p-7 md:p-9 space-y-5">
+                    <div><div class="text-[10.5px] font-semibold tracking-[0.14em] uppercase text-movari mb-1.5">Contexte</div><p class="text-[15px] text-slate-600 leading-relaxed">Un grand énergéticien européen lançant une activité de rupture (deep-tech), dans un environnement technique et réglementaire exigeant.</p></div>
+                    <div><div class="text-[10.5px] font-semibold tracking-[0.14em] uppercase text-movari mb-1.5">Enjeu</div><p class="text-[15px] text-slate-600 leading-relaxed">Créer de toutes pièces une filiale dédiée : gouvernance, organisation et pilotage de projet.</p></div>
+                    <div><div class="text-[10.5px] font-semibold tracking-[0.14em] uppercase text-movari mb-1.5">Intervention</div>
+                        <ul class="text-[15px] text-slate-600 leading-relaxed space-y-1.5">
+                            <li class="flex gap-2.5"><span class="mt-2 block w-1.5 h-1.5 bg-movari rounded-full flex-shrink-0"></span> Project Manager au CEO Office</li>
+                            <li class="flex gap-2.5"><span class="mt-2 block w-1.5 h-1.5 bg-movari rounded-full flex-shrink-0"></span> Mise en place du PMO et de la gouvernance projet</li>
+                            <li class="flex gap-2.5"><span class="mt-2 block w-1.5 h-1.5 bg-movari rounded-full flex-shrink-0"></span> Coordination des équipes et reporting à la direction générale</li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-50 border border-slate-100 rounded-2xl p-5">
+                        <div class="text-[10.5px] font-semibold tracking-[0.14em] uppercase text-emerald-600 mb-1.5">Résultats</div>
+                        <p class="text-[15px] text-slate-700 leading-relaxed">Filiale structurée et opérationnelle · gouvernance et PMO en place · pilotage projet maîtrisé. <span class="todo">⚑ à préciser : 1-2 jalons (délai de création, effectifs, partenariats, financement…)</span></p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- CAS 4 -->
+        <article class="reveal bg-white border border-slate-200/80 rounded-3xl overflow-hidden">
+            <div class="grid md:grid-cols-12">
+                <div class="md:col-span-4 bg-movari-navy text-white p-7 md:p-9 flex flex-col">
+                    <div class="font-display text-5xl font-semibold text-white/25 mb-4">04</div>
+                    <span class="inline-block self-start text-[10.5px] font-semibold tracking-[0.14em] uppercase bg-white/10 text-sky-200 px-3 py-1 rounded-full mb-4">Pour un dirigeant</span>
+                    <h2 class="font-display text-2xl md:text-[1.7rem] font-semibold tracking-tight leading-snug">Plan stratégique 5 ans &amp; gains rapides</h2>
+                    <div class="mt-auto pt-6 text-sm text-slate-300">Durée : 2 ans</div>
+                </div>
+                <div class="md:col-span-8 p-7 md:p-9 space-y-5">
+                    <div><div class="text-[10.5px] font-semibold tracking-[0.14em] uppercase text-movari mb-1.5">Contexte</div><p class="text-[15px] text-slate-600 leading-relaxed">Un laboratoire pharmaceutique français.</p></div>
+                    <div><div class="text-[10.5px] font-semibold tracking-[0.14em] uppercase text-movari mb-1.5">Enjeu</div><p class="text-[15px] text-slate-600 leading-relaxed">Définir un cap stratégique à 5 ans et identifier des relais de croissance et de performance.</p></div>
+                    <div><div class="text-[10.5px] font-semibold tracking-[0.14em] uppercase text-movari mb-1.5">Intervention</div>
+                        <ul class="text-[15px] text-slate-600 leading-relaxed space-y-1.5">
+                            <li class="flex gap-2.5"><span class="mt-2 block w-1.5 h-1.5 bg-movari rounded-full flex-shrink-0"></span> Attaché de Direction du Directeur Général</li>
+                            <li class="flex gap-2.5"><span class="mt-2 block w-1.5 h-1.5 bg-movari rounded-full flex-shrink-0"></span> Élaboration du plan stratégique 5 ans et du plan moyen terme</li>
+                            <li class="flex gap-2.5"><span class="mt-2 block w-1.5 h-1.5 bg-movari rounded-full flex-shrink-0"></span> Identification de gains (business development, nouveaux produits) et création d'un service consommateur</li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-50 border border-slate-100 rounded-2xl p-5">
+                        <div class="text-[10.5px] font-semibold tracking-[0.14em] uppercase text-emerald-600 mb-1.5">Résultats</div>
+                        <p class="text-[15px] text-slate-700 leading-relaxed"><strong class="font-semibold text-movari">+500 k€ de gains identifiés</strong> · <strong class="font-semibold text-movari">+150 % de ventes</strong> en mission terrain (service consommateur) · plan stratégique 5 ans livré.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- CTA -->
+    <div class="relative overflow-hidden bg-movari-navy">
+        <div class="absolute inset-0 opacity-[0.06]" aria-hidden="true" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 26px 26px;"></div>
+        <div class="relative max-w-4xl mx-auto px-5 md:px-8 py-16 text-center text-white">
+            <h2 class="reveal font-display text-3xl md:text-4xl font-semibold tracking-tight leading-tight mb-5">Un enjeu similaire dans votre entreprise ?</h2>
+            <p class="reveal text-slate-300 max-w-md mx-auto mb-8">Parlons-en 30 minutes. C'est offert et sans engagement.</p>
+            <a href="https://cal.com/movariconseil" target="_blank" rel="noopener" data-cal class="reveal inline-flex items-center justify-center px-10 py-4 bg-white text-movari-deeper font-bold text-lg rounded-2xl shadow-2xl hover:bg-slate-100 active:scale-[0.985] transition">Réserver mon audit offert de 30 min →</a>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#071735] text-slate-400 text-sm">
+        <div class="max-w-6xl mx-auto px-5 md:px-8 py-10 flex flex-col md:flex-row gap-y-6 md:items-center md:justify-between">
+            <div class="flex items-center gap-x-3">
+                <img src="assets/logo-movari-hd.png" alt="Movari Conseil" class="h-9 brightness-0 invert opacity-90">
+            </div>
+            <div class="flex flex-wrap items-center gap-x-6 gap-y-2">
+                <a href="index.html" class="hover:text-white transition">Accueil</a>
+                <a href="tel:+33621059309" class="hover:text-white transition">06 21 05 93 09</a>
+                <a href="mailto:contact@movari.fr" class="hover:text-white transition">contact@movari.fr</a>
+                <a href="mentions-legales.html" class="hover:text-white transition">Mentions légales</a>
+            </div>
+        </div>
+        <div class="border-t border-white/10">
+            <div class="max-w-6xl mx-auto px-5 md:px-8 py-5 text-xs text-slate-500">© 2026 Movari Conseil. Tous droits réservés.</div>
+        </div>
+    </footer>
+
+    <!-- Cal.com embed -->
+    <script type="text/javascript">
+        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); })(window, "https://app.cal.com/embed/embed.js", "init");
+        Cal("init", { origin: "https://cal.com" });
+        Cal("ui", { styles: { branding: { brandColor: "#0066F0" } }, hideEventTypeDetails: false, layout: "month_view" });
+    </script>
+    <script>
+        const CAL_LINK = "movariconseil/audit-strategique-30min";
+        document.querySelectorAll('[data-cal]').forEach(el => {
+            el.setAttribute('data-cal-link', CAL_LINK);
+            el.setAttribute('data-cal-config', '{"layout":"month_view"}');
+        });
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('revealed'); observer.unobserve(entry.target); } });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+    <!-- GoatCounter -->
+    <script data-goatcounter="https://movari.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
