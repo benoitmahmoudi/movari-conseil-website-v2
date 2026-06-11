@@ -8,6 +8,11 @@
     <meta name="robots" content="noindex, follow">
     <link rel="icon" type="image/png" href="assets/logo-movari-conseil.png">
 
+    <!-- Versions linguistiques -->
+    <link rel="alternate" hreflang="fr" href="https://movari.fr/mentions-legales.html">
+    <link rel="alternate" hreflang="en" href="https://movari.fr/en/mentions-legales.html">
+    <link rel="alternate" hreflang="x-default" href="https://movari.fr/mentions-legales.html">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -32,7 +37,11 @@
             <a href="index.html" aria-label="Movari Conseil, accueil">
                 <img src="assets/logo-movari-hd.png" alt="Movari Conseil" class="h-12 w-auto">
             </a>
-            <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-movari transition">← Retour au site</a>
+            <div class="flex items-center gap-x-4">
+                <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-movari transition">← Retour au site</a>
+                <a href="/en/mentions-legales.html" hreflang="en" aria-label="English version"
+                   class="inline-flex items-center justify-center px-3 py-2 text-[12.5px] font-semibold tracking-wide text-slate-500 border border-slate-200 rounded-lg hover:text-movari hover:border-movari/40 transition">EN</a>
+            </div>
         </div>
     </nav>
 
