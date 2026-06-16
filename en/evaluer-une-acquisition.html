@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluate an acquisition: a senior eye before you sign | Movari Conseil</title>
+    <meta name="description" content="Got a target in mind? Before you sign, I challenge the thesis, assess the commercial, operational and business-plan angles, and give you a go or no-go in one week. Commercial due diligence by a senior ex-Oliver Wyman consultant.">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="evaluate an acquisition, commercial due diligence, pre-deal review, buy-side, target assessment, go no-go acquisition, Benoît Mahmoudi, Movari Conseil">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://movari.fr/en/evaluer-une-acquisition.html">
+    <meta property="og:title" content="Evaluate an acquisition · a senior eye before you sign · Movari Conseil">
+    <meta property="og:description" content="Before you sign, the senior eye that validates or breaks the thesis: market, customers, operations, business plan. Go or no-go in one week. A senior ex-Oliver Wyman consultant.">
+    <meta property="og:image" content="https://movari.fr/assets/photo-benoit-mahmoudi.jpg">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://movari.fr/en/evaluer-une-acquisition.html">
+
+    <!-- Versions linguistiques -->
+    <link rel="alternate" hreflang="fr" href="https://movari.fr/evaluer-une-acquisition.html">
+    <link rel="alternate" hreflang="en" href="https://movari.fr/en/evaluer-une-acquisition.html">
+    <link rel="alternate" hreflang="x-default" href="https://movari.fr/evaluer-une-acquisition.html">
+
+    <!-- Données structurées pour les moteurs de recherche -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Commercial and operational due diligence of an acquisition target",
+      "provider": { "@type": "ProfessionalService", "name": "Movari Conseil", "url": "https://movari.fr/en/" },
+      "areaServed": ["France", "International"],
+      "url": "https://movari.fr/en/evaluer-une-acquisition.html",
+      "description": "Pre-deal commercial and operational due diligence: review of a target's market, customers, operations and business plan, with a go or no-go verdict in one week. Senior ex-Oliver Wyman consultant for SME and mid-cap CEOs and investment funds."
+    }
+    </script>
+
+    <link rel="icon" type="image/png" href="../assets/logo-movari-conseil.png">
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        movari: {
+                            DEFAULT: '#0066F0',
+                            dark: '#0052CC',
+                            deeper: '#003D99',
+                            navy: '#0A1F44',
+                            ink: '#0E1B33'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'Georgia', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --blue: #0066F0;
+            --navy: #0A1F44;
+        }
+
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', system-ui, sans-serif; text-rendering: optimizeLegibility; }
+
+        .font-display { font-family: 'Playfair Display', Georgia, serif; }
+
+        .kicker {
+            display: inline-flex; align-items: center; gap: .6rem;
+            font-size: .6875rem; font-weight: 600; letter-spacing: .14em;
+            text-transform: uppercase; color: var(--blue);
+        }
+        .kicker .bars { display: inline-flex; align-items: flex-end; gap: 2px; height: 14px; }
+        .kicker .bars span { width: 3px; background: var(--blue); border-radius: 99px; }
+        .kicker .bars span:nth-child(1) { height: 35%; }
+        .kicker .bars span:nth-child(2) { height: 60%; }
+        .kicker .bars span:nth-child(3) { height: 100%; }
+
+        .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1); }
+        .reveal.revealed { opacity: 1; transform: none; }
+        .reveal-stagger > * { opacity: 0; transform: translateY(18px); transition: opacity .65s cubic-bezier(.22,.61,.36,1), transform .65s cubic-bezier(.22,.61,.36,1); }
+        .reveal-stagger.revealed > * { opacity: 1; transform: none; }
+        .reveal-stagger.revealed > *:nth-child(1) { transition-delay: .05s; }
+        .reveal-stagger.revealed > *:nth-child(2) { transition-delay: .15s; }
+        .reveal-stagger.revealed > *:nth-child(3) { transition-delay: .25s; }
+        .reveal-stagger.revealed > *:nth-child(4) { transition-delay: .35s; }
+
+        @keyframes heroUp { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+        .hero-in { opacity: 0; animation: heroUp .8s cubic-bezier(.22,.61,.36,1) forwards; }
+        .hero-in.d1 { animation-delay: .08s; } .hero-in.d2 { animation-delay: .22s; }
+        .hero-in.d3 { animation-delay: .36s; } .hero-in.d4 { animation-delay: .5s; }
+        .hero-in.d5 { animation-delay: .68s; }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .reveal, .reveal-stagger > * { opacity: 1 !important; transform: none !important; transition: none !important; }
+            .hero-in { animation: none; opacity: 1; }
+        }
+
+        .hero-bars {
+            position: absolute; right: -2rem; bottom: 0; display: flex; align-items: flex-end; gap: clamp(10px, 2vw, 22px);
+            pointer-events: none;
+        }
+        .hero-bars i { display: block; width: clamp(26px, 4.5vw, 64px); border-radius: 14px 14px 0 0;
+            background: linear-gradient(180deg, rgba(0,102,240,.10), rgba(0,102,240,.02)); }
+
+        .card-hover { transition: transform .25s cubic-bezier(.22,.61,.36,1), box-shadow .25s, border-color .25s; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 24px 38px -16px rgba(10,31,68,.14); border-color: rgba(0,102,240,.35); }
+
+        .btn-primary {
+            background: var(--blue);
+            box-shadow: 0 10px 24px -8px rgba(0,102,240,.45);
+            transition: background .2s, transform .15s, box-shadow .2s;
+        }
+        .btn-primary:hover { background: #0052CC; transform: translateY(-2px); box-shadow: 0 16px 30px -10px rgba(0,102,240,.5); }
+        .btn-primary:active { transform: scale(.985); }
+
+        .client-logo { filter: grayscale(1); opacity: .55; transition: filter .3s, opacity .3s; }
+        .client-logo:hover { filter: none; opacity: 1; }
+
+        .nav-link { position: relative; transition: color .15s; }
+        .nav-link::after { content: ''; position: absolute; left: 0; bottom: -4px; height: 2px; width: 0; background: var(--blue); transition: width .25s cubic-bezier(.22,.61,.36,1); }
+        .nav-link:hover { color: #0E1B33; }
+        .nav-link:hover::after { width: 100%; }
+
+        .stat-num { font-variant-numeric: tabular-nums; }
+        .anchor { scroll-margin-top: 92px; }
+        .hairline { height: 1px; background: linear-gradient(90deg, transparent, rgba(14,27,51,.14), transparent); }
+        ::selection { background: rgba(0,102,240,.18); }
+        :focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 4px; }
+
+        .quote-mark { font-family: 'Playfair Display', serif; font-size: 4.5rem; line-height: 1; color: rgba(0,102,240,.16); }
+    </style>
+</head>
+<body class="bg-[#FCFCFD] text-movari-ink antialiased">
+
+    <!-- ════════ NAVIGATION ════════ -->
+    <nav class="bg-white/90 backdrop-blur-md border-b border-slate-200/70 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-5 md:px-8">
+            <div class="flex items-center justify-between h-[76px]">
+                <a href="index.html" class="flex items-center gap-x-3" aria-label="Movari Conseil, back to home">
+                    <img src="../assets/logo-movari-hd.png" alt="Movari Conseil" class="h-12 md:h-14 w-auto">
+                </a>
+
+                <div class="hidden lg:flex items-center gap-x-9 text-[13.5px] font-medium text-slate-500">
+                    <div class="relative group">
+                        <a href="index.html#pour-qui" class="nav-link inline-flex items-center gap-x-1.5" aria-haspopup="true">
+                            Who it's for
+                            <svg class="w-3.5 h-3.5 text-slate-400 transition-transform duration-200 group-hover:rotate-180 group-hover:text-movari" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </a>
+                        <div class="absolute left-0 top-full pt-3.5 w-[320px] opacity-0 invisible translate-y-1 transition-all duration-200 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-y-0">
+                            <div class="bg-white border border-slate-200/80 rounded-2xl shadow-xl shadow-slate-300/40 p-2">
+                                <a href="fonds.html" class="flex items-start gap-3 rounded-xl px-3 py-2.5 hover:bg-slate-50 transition">
+                                    <span class="mt-0.5 w-9 h-9 rounded-lg bg-movari/10 flex items-center justify-center flex-shrink-0">
+                                        <svg class="w-5 h-5 text-movari" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z"/>
+                                        </svg>
+                                    </span>
+                                    <span class="min-w-0">
+                                        <span class="block text-[13.5px] font-semibold text-movari-ink">Investment funds</span>
+                                        <span class="block text-[12px] text-slate-400 leading-snug">Post-acquisition value creation</span>
+                                    </span>
+                                </a>
+                                <a href="entreprises.html" class="flex items-start gap-3 rounded-xl px-3 py-2.5 hover:bg-slate-50 transition">
+                                    <span class="mt-0.5 w-9 h-9 rounded-lg bg-movari/10 flex items-center justify-center flex-shrink-0">
+                                        <svg class="w-5 h-5 text-movari" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z"/>
+                                        </svg>
+                                    </span>
+                                    <span class="min-w-0">
+                                        <span class="block text-[13.5px] font-semibold text-movari-ink">SME &amp; mid-cap CEOs</span>
+                                        <span class="block text-[12px] text-slate-400 leading-snug">Diagnosis, plan, execution</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="index.html#approche" class="nav-link">Approach</a>
+                    <div class="relative group">
+                        <a href="index.html#prestations" class="nav-link inline-flex items-center gap-x-1.5" aria-haspopup="true">
+                            Services
+                            <svg class="w-3.5 h-3.5 text-slate-400 transition-transform duration-200 group-hover:rotate-180 group-hover:text-movari" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </a>
+                        <div class="absolute left-0 top-full pt-3.5 w-[300px] opacity-0 invisible translate-y-1 transition-all duration-200 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-y-0">
+                            <div class="bg-white border border-slate-200/80 rounded-2xl shadow-xl shadow-slate-300/40 p-2">
+                                <a href="index.html#prestations" class="block rounded-xl px-3 py-2 text-[13.5px] font-medium text-movari-ink hover:bg-slate-50 transition">Strategic diagnosis</a>
+                                <a href="index.html#prestations" class="block rounded-xl px-3 py-2 text-[13.5px] font-medium text-movari-ink hover:bg-slate-50 transition">Strategic plan</a>
+                                <a href="index.html#prestations" class="block rounded-xl px-3 py-2 text-[13.5px] font-medium text-movari-ink hover:bg-slate-50 transition">Transformation &amp; PMO</a>
+                                <a href="index.html#prestations" class="block rounded-xl px-3 py-2 text-[13.5px] font-medium text-movari-ink hover:bg-slate-50 transition">Executive seminars</a>
+                                <div class="my-1.5 h-px bg-slate-100" aria-hidden="true"></div>
+                                <a href="evaluer-une-acquisition.html" class="flex items-start gap-3 rounded-xl px-3 py-2.5 bg-movari/10 transition" aria-current="page">
+                                    <span class="mt-0.5 w-9 h-9 rounded-lg bg-movari/10 flex items-center justify-center flex-shrink-0">
+                                        <svg class="w-5 h-5 text-movari" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                                        </svg>
+                                    </span>
+                                    <span class="min-w-0">
+                                        <span class="block text-[13.5px] font-semibold text-movari">Evaluate an acquisition</span>
+                                        <span class="block text-[12px] text-slate-400 leading-snug">Pre-deal review · go or no-go</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="index.html#experience" class="nav-link">Experience</a>
+                    <a href="index.html#investissement" class="nav-link">Investment</a>
+                    <a href="index.html#apropos" class="nav-link">About</a>
+                </div>
+
+                <div class="flex items-center gap-x-3">
+                    <a href="/evaluer-une-acquisition.html" hreflang="fr" aria-label="Version française de cette page"
+                       class="inline-flex items-center justify-center px-3 py-2 text-[12.5px] font-semibold tracking-wide text-slate-500 border border-slate-200 rounded-lg hover:text-movari hover:border-movari/40 transition">FR</a>
+                    <a href="https://cal.com/movariconseil" target="_blank" rel="noopener" data-cal
+                       class="btn-primary hidden sm:inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white rounded-xl">
+                        Talk about your target
+                    </a>
+                    <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-600 hover:text-slate-900" aria-label="Open menu" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu mobile -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-100 bg-white px-6 py-5">
+            <div class="flex flex-col gap-y-1 text-[15px] font-medium text-slate-600">
+                <a href="index.html#pour-qui" class="py-2.5">Who it's for</a>
+                <div class="ml-1 pl-3.5 border-l border-slate-200 flex flex-col mb-1">
+                    <a href="fonds.html" class="py-2 text-[14px] text-slate-500">Investment funds</a>
+                    <a href="entreprises.html" class="py-2 text-[14px] text-slate-500">SME &amp; mid-cap CEOs</a>
+                </div>
+                <a href="index.html#approche" class="py-2.5">Approach</a>
+                <a href="index.html#prestations" class="py-2.5">Services</a>
+                <div class="ml-1 pl-3.5 border-l border-slate-200 flex flex-col mb-1">
+                    <a href="evaluer-une-acquisition.html" class="py-2 text-[14px] text-movari font-semibold">Evaluate an acquisition</a>
+                </div>
+                <a href="index.html#experience" class="py-2.5">Experience</a>
+                <a href="index.html#investissement" class="py-2.5">Investment</a>
+                <a href="index.html#apropos" class="py-2.5">About</a>
+                <a href="/evaluer-une-acquisition.html" hreflang="fr" class="py-2.5">Version française · FR</a>
+                <a href="https://cal.com/movariconseil" target="_blank" rel="noopener" data-cal
+                   class="btn-primary mt-3 inline-flex items-center justify-center px-5 py-3.5 text-sm font-semibold text-white rounded-xl">
+                    Talk about your target · 30 min
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ════════ FIL D'ARIANE ════════ -->
+    <div class="max-w-6xl mx-auto px-5 md:px-8 pt-5 text-[13px] text-slate-400">
+        <a href="index.html" class="hover:text-movari transition">Home</a>
+        <span class="mx-2" aria-hidden="true">›</span>
+        <span class="text-slate-600">Evaluate an acquisition</span>
+    </div>
+
+    <!-- ════════ HERO ════════ -->
+    <header class="relative overflow-hidden border-b border-slate-100 bg-gradient-to-b from-white to-slate-50">
+        <div class="absolute inset-0 pointer-events-none" aria-hidden="true"
+             style="background: radial-gradient(58% 50% at 82% 0%, rgba(0,102,240,.10), transparent 70%), radial-gradient(46% 42% at 0% 100%, rgba(0,102,240,.06), transparent 70%);"></div>
+        <div class="absolute inset-0 pointer-events-none opacity-60" aria-hidden="true"
+             style="background-image: radial-gradient(circle at 1px 1px, rgba(14,27,51,.06) 1px, transparent 0); background-size: 22px 22px; -webkit-mask-image: linear-gradient(to bottom, #000, transparent 75%); mask-image: linear-gradient(to bottom, #000, transparent 75%);"></div>
+        <div class="hero-bars" aria-hidden="true">
+            <i style="height:120px"></i><i style="height:190px"></i><i style="height:260px"></i><i style="height:340px"></i><i style="height:430px"></i>
+        </div>
+
+        <div class="relative max-w-6xl mx-auto px-5 md:px-8 pt-12 pb-16 md:pt-16 md:pb-24">
+            <div class="grid lg:grid-cols-12 gap-x-10 gap-y-14 items-center">
+
+                <!-- Text column -->
+                <div class="lg:col-span-7 order-2 lg:order-1">
+                    <div class="hero-in d1 inline-flex items-center gap-x-2.5 bg-white border border-slate-200 shadow-sm rounded-full px-4 py-1.5 mb-7">
+                        <span class="text-[11px] font-semibold tracking-[0.12em] text-movari uppercase">Before you sign</span>
+                    </div>
+
+                    <h1 class="font-display font-semibold tracking-tight leading-[1.06] text-[2.3rem] sm:text-[2.9rem] md:text-[3.6rem] max-w-3xl mb-6">
+                        <span class="hero-in d2 block">Before you sign, a clear-eyed look at your target.</span>
+                        <span class="hero-in d3 block italic text-movari">Go or no-go, in one week.</span>
+                    </h1>
+
+                    <p class="hero-in d4 max-w-2xl text-lg md:text-xl text-slate-600 font-light leading-relaxed mb-8">
+                        “I have a target in mind, but I want to be sure before committing millions.”
+                        I go on the ground, I meet the key people, I hunt the hidden risks and I check which synergies are genuinely capturable.
+                        A review led by a senior, where no data room takes you, in one week.
+                    </p>
+
+                    <div class="hero-in d5 flex flex-col sm:flex-row items-start gap-4 mb-7">
+                        <a href="https://cal.com/movariconseil" target="_blank" rel="noopener" data-cal
+                           class="btn-primary w-full sm:w-auto inline-flex items-center justify-center gap-x-2 px-9 py-4 text-base font-semibold text-white rounded-2xl">
+                            Talk about your target · 30 min
+                        </a>
+                        <a href="#methode"
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-x-2 px-8 py-4 text-base font-medium text-slate-700 bg-white border border-slate-200 hover:border-slate-300 hover:bg-slate-50 rounded-2xl transition">
+                            See the method <span aria-hidden="true">↓</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-in d5 flex flex-wrap items-center gap-x-6 gap-y-2.5 text-[13px] text-slate-500">
+                        <span class="font-semibold text-slate-700">Confidential</span>
+                        <span class="w-px h-3.5 bg-slate-300" aria-hidden="true"></span>
+                        <span>Reply within 24 hours</span>
+                        <span class="hidden sm:block w-px h-3.5 bg-slate-300" aria-hidden="true"></span>
+                        <span>ex-Oliver Wyman · PE experience (Panzani × CVC, APAX)</span>
+                    </div>
+                </div>
+
+                <!-- Visual column: verdict gauge + medallion -->
+                <div class="lg:col-span-5 order-1 lg:order-2 hero-in d3">
+                    <div class="relative w-full max-w-md mx-auto lg:max-w-none pb-10 lg:pb-12">
+                        <!-- Offset blue frame (signature) -->
+                        <div class="absolute -top-4 -right-4 w-full h-full rounded-[2rem] bg-movari/10" aria-hidden="true"></div>
+
+                        <!-- Chart card -->
+                        <div class="relative bg-white rounded-[2rem] border border-slate-200/80 shadow-2xl shadow-slate-300/40 ring-1 ring-slate-900/5 p-6 md:p-7">
+                            <div class="flex items-center justify-between mb-1">
+                                <span class="kicker"><span class="bars" aria-hidden="true"><span></span><span></span><span></span></span> Verdict</span>
+                                <span class="text-[10.5px] font-semibold tracking-[0.06em] uppercase text-slate-400">Before signing</span>
+                            </div>
+                            <div class="font-display text-[1.55rem] md:text-[1.7rem] font-semibold tracking-tight leading-snug mb-5">
+                                A clear-cut <span class="text-movari italic">decision</span>
+                            </div>
+
+                            <svg viewBox="0 0 300 178" class="w-full h-auto" role="img"
+                                 aria-label="Decision gauge: after the review, the needle settles on the go or no-go side.">
+                                <path d="M30 150 A120 120 0 0 1 270 150" fill="none" stroke="#E2E8F0" stroke-width="18" stroke-linecap="round"/>
+                                <path d="M30 150 A120 120 0 0 1 150 30" fill="none" stroke="#CBD5E1" stroke-width="18" stroke-linecap="round"/>
+                                <path d="M150 30 A120 120 0 0 1 270 150" fill="none" stroke="#0066F0" stroke-width="18" stroke-linecap="round"/>
+                                <line x1="150" y1="150" x2="222" y2="88" stroke="#0A1F44" stroke-width="4.5" stroke-linecap="round"/>
+                                <circle cx="150" cy="150" r="8.5" fill="#0A1F44"/>
+                                <circle cx="150" cy="150" r="3" fill="#fff"/>
+                                <g font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700">
+                                    <text x="34" y="172" fill="#94A3B8">No-go</text>
+                                    <text x="244" y="172" fill="#0066F0">Go</text>
+                                </g>
+                            </svg>
+
+                            <!-- Milestones -->
+                            <div class="mt-3 flex items-center justify-between text-[10.5px] font-medium">
+                                <span class="text-slate-500">Framing</span>
+                                <span class="text-slate-400">Review</span>
+                                <span class="text-movari font-semibold">Verdict</span>
+                            </div>
+                            <p class="mt-4 pt-4 border-t border-slate-100 text-[12.5px] text-slate-500 leading-relaxed">
+                                A senior who makes the call, instead of leaving you alone with your doubts.
+                            </p>
+                        </div>
+
+                        <!-- Portrait medallion + ex-Oliver Wyman badge -->
+                        <div class="absolute -bottom-2 left-3 sm:left-4 flex items-center gap-2.5 bg-white/95 backdrop-blur shadow-xl shadow-slate-300/40 rounded-2xl border border-slate-100 pl-2 pr-3.5 py-2">
+                            <img src="../assets/photo-benoit-hero.jpg" alt="Benoît Mahmoudi, founder of Movari Conseil"
+                                 class="w-11 h-11 rounded-xl object-cover" style="object-position: center 15%;">
+                            <div class="leading-tight">
+                                <div class="text-[12.5px] font-semibold text-slate-800">Benoît Mahmoudi</div>
+                                <div class="flex items-center gap-x-1 text-[7.5px] font-medium tracking-wide text-slate-400 uppercase">
+                                    Ex- <img src="../assets/logos/oliverwyman.svg" alt="Oliver Wyman" class="w-[56px] h-auto">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- ════════ THE REAL QUESTION ════════ -->
+    <section class="bg-white border-b border-slate-100 py-16 md:py-20">
+        <div class="max-w-5xl mx-auto px-5 md:px-8">
+            <div class="reveal max-w-2xl mb-12">
+                <span class="kicker"><span class="bars" aria-hidden="true"><span></span><span></span><span></span></span> The real question</span>
+                <h2 class="font-display text-4xl md:text-[2.7rem] font-semibold tracking-tight leading-tight mt-4">
+                    An acquisition is won or lost <em class="italic text-movari">before</em> the signature.
+                </h2>
+                <p class="text-[15px] text-slate-600 leading-relaxed mt-5">The difference is decided before you sign, in what no data room shows.</p>
+            </div>
+
+            <figure class="reveal mb-12 bg-gradient-to-br from-movari/[0.06] to-transparent border border-movari/15 rounded-3xl p-7 md:p-9">
+                <div class="flex flex-col md:flex-row md:items-center gap-8 md:gap-10">
+                    <!-- Pictogram: out of 3 acquisitions, only 1 creates value -->
+                    <div class="flex-shrink-0">
+                        <div class="flex items-end gap-3 sm:gap-4" role="img" aria-label="Out of three acquisitions, only one truly creates value; the other two fall short.">
+                            <div class="relative w-[4.25rem] h-[4.25rem] sm:w-[4.75rem] sm:h-[4.75rem] rounded-2xl bg-movari shadow-lg shadow-movari/30 flex items-center justify-center">
+                                <svg class="w-9 h-9 sm:w-10 sm:h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z"/></svg>
+                                <span class="absolute -top-2.5 -right-2.5 w-7 h-7 rounded-full bg-emerald-500 ring-4 ring-white flex items-center justify-center" aria-hidden="true">
+                                    <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3.2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                                </span>
+                            </div>
+                            <div class="w-[4.25rem] h-[4.25rem] sm:w-[4.75rem] sm:h-[4.75rem] rounded-2xl bg-slate-100 border border-slate-200/80 flex items-center justify-center">
+                                <svg class="w-8 h-8 sm:w-9 sm:h-9 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z"/></svg>
+                            </div>
+                            <div class="w-[4.25rem] h-[4.25rem] sm:w-[4.75rem] sm:h-[4.75rem] rounded-2xl bg-slate-100 border border-slate-200/80 flex items-center justify-center">
+                                <svg class="w-8 h-8 sm:w-9 sm:h-9 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z"/></svg>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[11.5px] font-medium">
+                            <span class="inline-flex items-center gap-1.5 text-movari"><span class="w-2.5 h-2.5 rounded-sm bg-movari" aria-hidden="true"></span>1 creates value</span>
+                            <span class="inline-flex items-center gap-1.5 text-slate-400"><span class="w-2.5 h-2.5 rounded-sm bg-slate-200" aria-hidden="true"></span>2 fall short</span>
+                        </div>
+                    </div>
+                    <div class="md:border-l md:border-movari/15 md:pl-10">
+                        <blockquote class="font-display text-2xl md:text-[1.7rem] font-semibold tracking-tight leading-snug text-movari-ink">Barely one acquisition in three truly creates value.</blockquote>
+                        <figcaption class="text-[13px] text-slate-500 mt-3">Sources: KPMG, McKinsey and Mercer studies, synthesized in my ESCP thesis “Do M&amp;A create value?”.</figcaption>
+                    </div>
+                </div>
+            </figure>
+
+            <div class="reveal-stagger reveal grid md:grid-cols-3 gap-6">
+                <div class="bg-slate-50/80 border border-slate-100 rounded-3xl p-7">
+                    <div class="w-12 h-12 bg-movari/10 rounded-xl flex items-center justify-center mb-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-movari" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg tracking-tight mb-2.5">The crush clouds judgment</h3>
+                    <p class="text-[15px] text-slate-600 leading-relaxed">You want to believe it, you play down the weak signals, and you end up paying for a story rather than a reality.</p>
+                </div>
+                <div class="bg-slate-50/80 border border-slate-100 rounded-3xl p-7">
+                    <div class="w-12 h-12 bg-movari/10 rounded-xl flex items-center justify-center mb-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-movari" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243m4.242 4.242L9.88 9.88"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg tracking-tight mb-2.5">The data room doesn't tell you everything</h3>
+                    <p class="text-[15px] text-slate-600 leading-relaxed">The numbers are audited, but the key people, the hidden dependencies and the undocumented know-how appear on no spreadsheet. Yet that's where value is decided.</p>
+                </div>
+                <div class="bg-slate-50/80 border border-slate-100 rounded-3xl p-7">
+                    <div class="w-12 h-12 bg-movari/10 rounded-xl flex items-center justify-center mb-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-movari" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg tracking-tight mb-2.5">The price rests on a promise</h3>
+                    <p class="text-[15px] text-slate-600 leading-relaxed">You're paying for a growth thesis. If it doesn't hold, neither does the price. Better to know before you sign than after.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════ WHAT ARE YOU REALLY AFTER ════════ -->
+    <section class="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-20">
+        <div class="reveal max-w-2xl mb-12">
+            <span class="kicker"><span class="bars" aria-hidden="true"><span></span><span></span><span></span></span> First, your objective</span>
+            <h2 class="font-display text-4xl md:text-[2.7rem] font-semibold tracking-tight leading-tight mt-4">What are you <em class="italic text-movari">really</em> after?</h2>
+            <p class="text-[15px] text-slate-600 leading-relaxed mt-5">We assess the target against what you truly want. Sometimes buying the whole company isn't the right answer: a team or a market is enough.</p>
+        </div>
+
+        <div class="reveal-stagger reveal grid md:grid-cols-3 gap-6">
+            <div class="bg-slate-50/80 border border-slate-100 rounded-3xl p-7">
+                <div class="w-12 h-12 bg-movari/10 rounded-xl flex items-center justify-center mb-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-movari" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z"/>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-lg tracking-tight mb-2.5">The whole company</h3>
+                <p class="text-[15px] text-slate-600 leading-relaxed">Growth, consolidation, vertical integration: you want all of it. The question is whether it will hold over time.</p>
+            </div>
+            <div class="bg-slate-50/80 border border-slate-100 rounded-3xl p-7">
+                <div class="w-12 h-12 bg-movari/10 rounded-xl flex items-center justify-center mb-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-movari" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"/>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-lg tracking-tight mb-2.5">Skills &amp; key people</h3>
+                <p class="text-[15px] text-slate-600 leading-relaxed">A team, a know-how, a technology. We make sure what you're really buying is the right people, and that they'll stay.</p>
+            </div>
+            <div class="bg-slate-50/80 border border-slate-100 rounded-3xl p-7">
+                <div class="w-12 h-12 bg-movari/10 rounded-xl flex items-center justify-center mb-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-movari" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-lg tracking-tight mb-2.5">A market &amp; customers</h3>
+                <p class="text-[15px] text-slate-600 leading-relaxed">An access, an installed base, a region. Sometimes the target is worth it mainly for its portfolio, and the rest matters little.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════ WHAT I ASSESS ════════ -->
+    <section id="methode" class="anchor max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-20">
+        <div class="reveal max-w-2xl mb-12">
+            <span class="kicker"><span class="bars" aria-hidden="true"><span></span><span></span><span></span></span> What I assess</span>
+            <h2 class="font-display text-4xl md:text-[2.7rem] font-semibold tracking-tight leading-tight mt-4">Six angles, one clear verdict</h2>
+        </div>
+
+        <!-- Radar: the 360° read of the target -->
+        <div class="reveal flex justify-center mb-12">
+            <div class="w-full max-w-[36rem] bg-white border border-slate-200/70 rounded-[2rem] shadow-xl shadow-slate-300/30 px-5 py-8 sm:px-10 sm:py-10">
+                <svg viewBox="0 0 520 380" class="w-full h-auto" role="img" aria-label="Radar diagram of the evaluation: six angles analysed, Market, Clients, Operations, Hidden risks, Key people and Synergies.">
+                    <!-- Concentric rings -->
+                    <polygon points="260,70 363.9,130 363.9,250 260,310 156.1,250 156.1,130" fill="none" stroke="#E2E8F0" stroke-width="1.5"/>
+                    <polygon points="260,110 329.3,150 329.3,230 260,270 190.7,230 190.7,150" fill="none" stroke="#E2E8F0" stroke-width="1.5"/>
+                    <polygon points="260,150 294.6,170 294.6,210 260,230 225.4,210 225.4,170" fill="none" stroke="#E2E8F0" stroke-width="1.5"/>
+                    <!-- Axes -->
+                    <g stroke="#E2E8F0" stroke-width="1.5">
+                        <line x1="260" y1="190" x2="260" y2="70"/>
+                        <line x1="260" y1="190" x2="363.9" y2="130"/>
+                        <line x1="260" y1="190" x2="363.9" y2="250"/>
+                        <line x1="260" y1="190" x2="260" y2="310"/>
+                        <line x1="260" y1="190" x2="156.1" y2="250"/>
+                        <line x1="260" y1="190" x2="156.1" y2="130"/>
+                    </g>
+                    <!-- Covered surface (360° read) -->
+                    <polygon points="260,94 343.1,142 343.1,238 260,286 176.9,238 176.9,142" fill="rgba(0,102,240,0.10)" stroke="#0066F0" stroke-width="2.5" stroke-linejoin="round"/>
+                    <!-- Vertices -->
+                    <g fill="#0066F0">
+                        <circle cx="260" cy="94" r="4"/>
+                        <circle cx="343.1" cy="142" r="4"/>
+                        <circle cx="343.1" cy="238" r="4"/>
+                        <circle cx="260" cy="286" r="4"/>
+                        <circle cx="176.9" cy="238" r="4"/>
+                        <circle cx="176.9" cy="142" r="4"/>
+                    </g>
+                    <!-- Centre -->
+                    <circle cx="260" cy="190" r="30" fill="#fff" stroke="rgba(0,102,240,0.22)" stroke-width="1.5"/>
+                    <text x="260" y="196" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="17" font-weight="600" fill="#0066F0">360°</text>
+                    <!-- Labels -->
+                    <g font-family="Inter, system-ui, sans-serif" font-size="14.5" font-weight="600" fill="#475569">
+                        <text x="260" y="52" text-anchor="middle"><tspan fill="#0066F0" font-weight="700">01</tspan> · Market</text>
+                        <text x="378" y="135" text-anchor="start"><tspan fill="#0066F0" font-weight="700">02</tspan> · Clients</text>
+                        <text x="378" y="255" text-anchor="start"><tspan fill="#0066F0" font-weight="700">03</tspan> · Operations</text>
+                        <text x="260" y="338" text-anchor="middle"><tspan fill="#0066F0" font-weight="700">04</tspan> · Hidden risks</text>
+                        <text x="142" y="255" text-anchor="end"><tspan fill="#0066F0" font-weight="700">05</tspan> · Key people</text>
+                        <text x="142" y="135" text-anchor="end"><tspan fill="#0066F0" font-weight="700">06</tspan> · Synergies</text>
+                    </g>
+                </svg>
+                <p class="text-center text-[13.5px] text-slate-500 leading-relaxed mt-4 max-w-md mx-auto">A 360° read of the target: no dimension left aside before the verdict.</p>
+            </div>
+        </div>
+
+        <div class="reveal-stagger reveal grid md:grid-cols-2 gap-6">
+            <div class="card-hover relative bg-white border border-slate-200/80 rounded-3xl p-8 flex flex-col">
+                <div class="font-display text-5xl font-semibold text-movari/10 absolute top-6 right-7 select-none" aria-hidden="true">01</div>
+                <div class="w-14 h-14 bg-movari/10 rounded-2xl flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-movari" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/>
+                    </svg>
+                </div>
+                <div class="text-[10.5px] font-semibold tracking-[0.14em] uppercase text-movari mb-2">Market &amp; thesis</div>
+                <h3 class="font-display text-2xl font-semibold tracking-tight mb-3">Does the promise hold up?</h3>
+                <p class="text-[15px] text-slate-600 leading-relaxed flex-1">The real market size, its growth, competitive intensity. We check whether the thesis that justifies the price rests on facts, not on a narrative.</p>
+            </div>
+            <div class="card-hover relative bg-white border border-slate-200/80 rounded-3xl p-8 flex flex-col">
+                <div class="font-display text-5xl font-semibold text-movari/10 absolute top-6 right-7 select-none" aria-hidden="true">02</div>
+                <div class="w-14 h-14 bg-movari/10 rounded-2xl flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-movari" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/>
+                    </svg>
+                </div>
+                <div class="text-[10.5px] font-semibold tracking-[0.14em] uppercase text-movari mb-2">Customers &amp; revenue</div>
+                <h3 class="font-display text-2xl font-semibold tracking-tight mb-3">Is revenue solid and durable?</h3>
+                <p class="text-[15px] text-slate-600 leading-relaxed flex-1">Concentration, dependencies, recurrence, satisfaction, pipeline. We separate fragile revenue from revenue that will last after the deal.</p>
+            </div>
+            <div class="card-hover relative bg-white border border-slate-200/80 rounded-3xl p-8 flex flex-col">
+                <div class="font-display text-5xl font-semibold text-movari/10 absolute top-6 right-7 select-none" aria-hidden="true">03</div>
+                <div class="w-14 h-14 bg-movari/10 rounded-2xl flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-movari" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/>
+                    </svg>
+                </div>
+                <div class="text-[10.5px] font-semibold tracking-[0.14em] uppercase text-movari mb-2">Operations &amp; numbers</div>
+                <h3 class="font-display text-2xl font-semibold tracking-tight mb-3">Can the target deliver, and do the numbers hold?</h3>
+                <p class="text-[15px] text-slate-600 leading-relaxed flex-1">The ability to hold the plan, scalability, the real organization, and a critical look at the business plan and its assumptions. What will actually happen once the cheque is signed.</p>
+            </div>
+            <div class="card-hover relative bg-white border border-slate-200/80 rounded-3xl p-8 flex flex-col">
+                <div class="font-display text-5xl font-semibold text-movari/10 absolute top-6 right-7 select-none" aria-hidden="true">04</div>
+                <div class="w-14 h-14 bg-movari/10 rounded-2xl flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-movari" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/>
+                    </svg>
+                </div>
+                <div class="text-[10.5px] font-semibold tracking-[0.14em] uppercase text-movari mb-2">Hidden risks &amp; dependencies</div>
+                <h3 class="font-display text-2xl font-semibold tracking-tight mb-3">What time bomb has no one spotted?</h3>
+                <p class="text-[15px] text-slate-600 leading-relaxed flex-1">The homemade software only one person masters, undocumented know-how, a client or supplier everything depends on. The single points of failure no financial audit reveals, and the red flags to put to the seller.</p>
+            </div>
+            <div class="card-hover relative bg-white border border-slate-200/80 rounded-3xl p-8 flex flex-col">
+                <div class="font-display text-5xl font-semibold text-movari/10 absolute top-6 right-7 select-none" aria-hidden="true">05</div>
+                <div class="w-14 h-14 bg-movari/10 rounded-2xl flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-movari" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"/>
+                    </svg>
+                </div>
+                <div class="text-[10.5px] font-semibold tracking-[0.14em] uppercase text-movari mb-2">Key people</div>
+                <h3 class="font-display text-2xl font-semibold tracking-tight mb-3">Who really runs the business?</h3>
+                <p class="text-[15px] text-slate-600 leading-relaxed flex-1">The people the value depends on, and who aren't on the balance sheet: will they stay, and on what terms? Integration is won or lost with them, and that's where most acquisitions derail.</p>
+            </div>
+            <div class="card-hover relative bg-white border border-slate-200/80 rounded-3xl p-8 flex flex-col">
+                <div class="font-display text-5xl font-semibold text-movari/10 absolute top-6 right-7 select-none" aria-hidden="true">06</div>
+                <div class="w-14 h-14 bg-movari/10 rounded-2xl flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-movari" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                </div>
+                <div class="text-[10.5px] font-semibold tracking-[0.14em] uppercase text-movari mb-2">Real, capturable synergies</div>
+                <h3 class="font-display text-2xl font-semibold tracking-tight mb-3">The real, not the theoretical</h3>
+                <p class="text-[15px] text-slate-600 leading-relaxed flex-1">Which synergies are genuinely capturable, by whom, in how long and at what integration cost. We rule out the slide-deck synergies that never happen, and I know what I'm talking about: I'm the one who captures them afterward if you buy.</p>
+            </div>
+        </div>
+
+        <div class="reveal mt-7 inline-flex items-start gap-x-3 bg-slate-50 border border-slate-200/70 rounded-2xl px-5 py-4">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-movari/10 text-movari flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </span>
+            <span class="text-[14px] text-slate-600 leading-relaxed">I cover the commercial, operational, human and business-plan-consistency angles. <span class="font-semibold text-slate-800">The accounting, financial, legal and tax audit remains the domain of your accountants and lawyers</span>, with whom I work hand in hand.</span>
+        </div>
+    </section>
+
+    <!-- ════════ DATA ROOM vs THE FIELD (the contrast) ════════ -->
+    <section class="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-20">
+        <div class="reveal text-center max-w-2xl mx-auto mb-11">
+            <span class="kicker justify-center"><span class="bars" aria-hidden="true"><span></span><span></span><span></span></span> Where value hides</span>
+            <h2 class="font-display text-4xl md:text-[2.7rem] font-semibold tracking-tight leading-tight mt-4">The data room shows the surface. <em class="italic text-movari">The value lies beneath.</em></h2>
+        </div>
+
+        <div class="reveal grid md:grid-cols-[1fr_3rem_1fr] items-stretch gap-4 md:gap-1">
+            <!-- Left panel: the data room -->
+            <div class="bg-slate-50 border border-slate-200 rounded-3xl p-7 md:p-9">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="w-11 h-11 rounded-xl bg-slate-200/70 flex items-center justify-center flex-shrink-0">
+                        <svg class="w-5 h-5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/></svg>
+                    </span>
+                    <div>
+                        <div class="text-[10.5px] font-semibold tracking-[0.14em] uppercase text-slate-400">What it shows</div>
+                        <div class="font-display text-xl font-semibold text-slate-700">The data room</div>
+                    </div>
+                </div>
+                <ul class="flex flex-wrap gap-2">
+                    <li class="text-[12.5px] font-medium text-slate-600 bg-white border border-slate-200 rounded-lg px-3 py-1.5">Audited figures</li>
+                    <li class="text-[12.5px] font-medium text-slate-600 bg-white border border-slate-200 rounded-lg px-3 py-1.5">Presentation slides</li>
+                    <li class="text-[12.5px] font-medium text-slate-600 bg-white border border-slate-200 rounded-lg px-3 py-1.5">Contracts</li>
+                    <li class="text-[12.5px] font-medium text-slate-600 bg-white border border-slate-200 rounded-lg px-3 py-1.5">Reporting</li>
+                    <li class="text-[12.5px] font-medium text-slate-600 bg-white border border-slate-200 rounded-lg px-3 py-1.5">Balance sheets</li>
+                </ul>
+                <p class="text-[13.5px] text-slate-500 mt-6 leading-relaxed">The past, packaged by the seller. Necessary, but it won't tell you whether tomorrow holds.</p>
+            </div>
+
+            <!-- Divider vs -->
+            <div class="flex md:flex-col items-center justify-center">
+                <div class="hidden md:block w-px flex-1 bg-gradient-to-b from-transparent to-slate-200" aria-hidden="true"></div>
+                <span class="z-10 w-12 h-12 rounded-full bg-white border border-slate-200 shadow-md flex items-center justify-center font-display text-sm font-semibold text-movari" aria-hidden="true">vs</span>
+                <div class="hidden md:block w-px flex-1 bg-gradient-to-t from-transparent to-slate-200" aria-hidden="true"></div>
+            </div>
+
+            <!-- Right panel: the field -->
+            <div class="relative overflow-hidden bg-gradient-to-br from-movari to-movari-deeper text-white rounded-3xl p-7 md:p-9 shadow-xl shadow-movari/20">
+                <div class="absolute inset-0 opacity-[0.12]" aria-hidden="true" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 24px 24px;"></div>
+                <div class="relative">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="w-11 h-11 rounded-xl bg-white/15 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg>
+                        </span>
+                        <div>
+                            <div class="text-[10.5px] font-semibold tracking-[0.14em] uppercase text-white/70">What it reveals</div>
+                            <div class="font-display text-xl font-semibold text-white">The field</div>
+                        </div>
+                    </div>
+                    <ul class="flex flex-wrap gap-2">
+                        <li class="text-[12.5px] font-semibold text-white bg-white/25 border border-white/40 rounded-lg px-3 py-1.5">Key people</li>
+                        <li class="text-[12.5px] font-medium text-white bg-white/10 border border-white/20 rounded-lg px-3 py-1.5">Hidden dependencies</li>
+                        <li class="text-[12.5px] font-medium text-white bg-white/10 border border-white/20 rounded-lg px-3 py-1.5">Undocumented know-how</li>
+                        <li class="text-[12.5px] font-medium text-white bg-white/10 border border-white/20 rounded-lg px-3 py-1.5">Unspoken truths</li>
+                        <li class="text-[12.5px] font-medium text-white bg-white/10 border border-white/20 rounded-lg px-3 py-1.5">Real atmosphere</li>
+                    </ul>
+                    <p class="text-[13.5px] text-white/80 mt-6 leading-relaxed">The present and the future, as they really are. This is where value creation is decided.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════ ON THE GROUND (method) ════════ -->
+    <section class="max-w-6xl mx-auto px-5 md:px-8 pb-4 md:pb-8">
+        <div class="reveal relative overflow-hidden bg-movari-navy text-white rounded-[2rem]">
+            <div class="absolute inset-0 opacity-[0.07]" aria-hidden="true"
+                 style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 26px 26px;"></div>
+            <div class="relative px-7 py-12 md:p-14">
+                <div class="max-w-2xl mb-10">
+                    <span class="inline-block text-[10.5px] font-semibold tracking-[0.16em] uppercase bg-white/10 text-sky-200 px-3.5 py-1.5 rounded-full mb-6">My method</span>
+                    <h2 class="font-display text-3xl md:text-[2.5rem] font-semibold tracking-tight leading-tight mb-5">On the ground, not just in a <em class="italic text-sky-300">data room</em></h2>
+                    <p class="text-[16px] text-slate-300 leading-relaxed">If so many acquisitions disappoint, it's because it all plays out where the data room doesn't go: in the people. So I go there. I meet the key people, I listen to operations, I see what really runs and what hangs on a single person.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-5">
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+                        <div class="w-11 h-11 bg-white/10 rounded-xl flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-sky-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-[17px] tracking-tight mb-2">I go on site</h3>
+                        <p class="text-[14.5px] text-slate-300 leading-relaxed">A visit is worth a thousand spreadsheets: the real state of the tools, the organization and the mood.</p>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+                        <div class="w-11 h-11 bg-white/10 rounded-xl flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-sky-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-[17px] tracking-tight mb-2">I interview people</h3>
+                        <p class="text-[14.5px] text-slate-300 leading-relaxed">Key people, teams, sometimes customers. It's by talking to people that you learn what no document says.</p>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+                        <div class="w-11 h-11 bg-white/10 rounded-xl flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-sky-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-[17px] tracking-tight mb-2">I spot the dependencies</h3>
+                        <p class="text-[14.5px] text-slate-300 leading-relaxed">Undocumented know-how, single points of failure, unspoken truths. The real risks come from the field, not the data room.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════ WHAT YOU RECEIVE ════════ -->
+    <section class="bg-white border-y border-slate-100 py-16 md:py-20">
+        <div class="max-w-6xl mx-auto px-5 md:px-8">
+            <div class="reveal grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div>
+                    <span class="kicker"><span class="bars" aria-hidden="true"><span></span><span></span><span></span></span> What you receive</span>
+                    <h2 class="font-display text-4xl md:text-[2.7rem] font-semibold tracking-tight leading-tight mt-4 mb-5">A decision note, not a report that gathers dust</h2>
+                    <p class="text-[15px] text-slate-600 leading-relaxed mb-6">After one week, you have a short summary note and an oral debrief. Not two hundred pages: the essentials to decide, and what you need to take it forward.</p>
+                    <ul class="space-y-3 text-[15px] text-slate-700">
+                        <li class="flex gap-3"><span class="mt-1 inline-flex items-center justify-center w-5 h-5 rounded-full bg-movari/10 text-movari flex-shrink-0"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span> The verdict: go or no-go, and why.</li>
+                        <li class="flex gap-3"><span class="mt-1 inline-flex items-center justify-center w-5 h-5 rounded-full bg-movari/10 text-movari flex-shrink-0"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span> The key people, the hidden dependencies and the red flags to watch.</li>
+                        <li class="flex gap-3"><span class="mt-1 inline-flex items-center justify-center w-5 h-5 rounded-full bg-movari/10 text-movari flex-shrink-0"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span> The synergies that are genuinely capturable, quantified.</li>
+                        <li class="flex gap-3"><span class="mt-1 inline-flex items-center justify-center w-5 h-5 rounded-full bg-movari/10 text-movari flex-shrink-0"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span> The questions to ask the seller before signing.</li>
+                        <li class="flex gap-3"><span class="mt-1 inline-flex items-center justify-center w-5 h-5 rounded-full bg-movari/10 text-movari flex-shrink-0"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span> A first draft plan for the first 100 days.</li>
+                    </ul>
+                </div>
+
+                <!-- Note mockup -->
+                <div class="relative">
+                    <div class="absolute -top-3 -right-3 w-full h-full rounded-[1.75rem] bg-movari/10" aria-hidden="true"></div>
+                    <div class="relative bg-white border border-slate-200/80 rounded-[1.75rem] shadow-2xl shadow-slate-300/40 ring-1 ring-slate-900/5 p-7">
+                        <div class="flex items-center justify-between mb-5">
+                            <div class="text-[11px] font-semibold tracking-[0.14em] uppercase text-slate-400">Decision note</div>
+                            <span class="inline-flex items-center gap-x-1.5 text-[11px] font-bold tracking-wide uppercase bg-emerald-100 text-emerald-700 px-2.5 py-1 rounded-full">
+                                <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Go
+                            </span>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="text-[12px] font-semibold text-slate-700 mb-1.5">Acquisition thesis</div>
+                                <div class="h-2 rounded-full bg-slate-100 mb-1.5"></div>
+                                <div class="h-2 w-4/5 rounded-full bg-slate-100"></div>
+                            </div>
+                            <div>
+                                <div class="text-[12px] font-semibold text-slate-700 mb-1.5">Red flags</div>
+                                <div class="h-2 rounded-full bg-slate-100 mb-1.5"></div>
+                                <div class="h-2 w-2/3 rounded-full bg-slate-100"></div>
+                            </div>
+                            <div>
+                                <div class="text-[12px] font-semibold text-slate-700 mb-1.5">Questions for the seller</div>
+                                <div class="h-2 rounded-full bg-slate-100 mb-1.5"></div>
+                                <div class="h-2 w-3/4 rounded-full bg-slate-100"></div>
+                            </div>
+                            <div class="pt-4 border-t border-slate-100 flex items-center gap-x-2 text-[12px] text-slate-500">
+                                <svg class="w-4 h-4 text-movari" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                Delivered and debriefed in one week
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════ HOW IT WORKS (timeline) ════════ -->
+    <section class="max-w-4xl mx-auto px-5 md:px-8 py-16 md:py-20">
+        <div class="reveal text-center max-w-2xl mx-auto mb-14">
+            <span class="kicker justify-center"><span class="bars" aria-hidden="true"><span></span><span></span><span></span></span> How it works</span>
+            <h2 class="font-display text-4xl md:text-[2.7rem] font-semibold tracking-tight leading-tight mt-4">One week, three steps</h2>
+        </div>
+
+        <div class="reveal-stagger reveal relative grid md:grid-cols-3 gap-8 md:gap-6">
+            <div class="hidden md:block absolute top-7 left-[16.6%] right-[16.6%] h-px bg-gradient-to-r from-movari/60 via-movari/30 to-movari/60" aria-hidden="true"></div>
+
+            <div class="relative text-center">
+                <div class="relative z-10 w-14 h-14 mx-auto bg-movari text-white rounded-full flex items-center justify-center font-display text-xl font-semibold shadow-lg shadow-blue-500/25 mb-5">1</div>
+                <div class="font-semibold mb-2">Framing · Day 0</div>
+                <p class="text-sm text-slate-500 leading-relaxed max-w-[230px] mx-auto">A conversation to understand your thesis, your doubts and the documents available.</p>
+            </div>
+            <div class="relative text-center">
+                <div class="relative z-10 w-14 h-14 mx-auto bg-white border-2 border-movari text-movari rounded-full flex items-center justify-center font-display text-xl font-semibold mb-5">2</div>
+                <div class="font-semibold mb-2">On-site audit &amp; interviews · Days 1 to 5</div>
+                <p class="text-sm text-slate-500 leading-relaxed max-w-[230px] mx-auto">I go on site, I meet the key people and teams, I observe operations and dig into market, customers and numbers.</p>
+            </div>
+            <div class="relative text-center">
+                <div class="relative z-10 w-14 h-14 mx-auto bg-white border-2 border-movari text-movari rounded-full flex items-center justify-center font-display text-xl font-semibold mb-5">3</div>
+                <div class="font-semibold mb-2">Verdict · Day 7</div>
+                <p class="text-sm text-slate-500 leading-relaxed max-w-[230px] mx-auto">Go or no-go restitution in person, summary note, and the right questions for what's next.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════ BRIDGE BEFORE → AFTER ════════ -->
+    <section class="max-w-6xl mx-auto px-5 md:px-8 pb-4 md:pb-8">
+        <div class="reveal relative overflow-hidden bg-movari-navy text-white rounded-[2rem]">
+            <div class="absolute inset-0 opacity-[0.07]" aria-hidden="true"
+                 style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 26px 26px;"></div>
+            <div class="relative px-7 py-12 md:p-14 grid lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-8">
+                    <span class="inline-block text-[10.5px] font-semibold tracking-[0.16em] uppercase bg-white/10 text-sky-200 px-3.5 py-1.5 rounded-full mb-5">Before, and after</span>
+                    <h3 class="font-display text-3xl md:text-[2.4rem] font-semibold tracking-tight leading-tight mb-4">Buying? I won't drop you at the signature.</h3>
+                    <p class="text-[16px] text-slate-300 leading-relaxed max-w-2xl">The evaluation is only the start. If the deal goes through, I steer value creation from day 1: PMO, quick wins, synergies and reporting. The same person before and after, no loss at handover.</p>
+                </div>
+                <div class="lg:col-span-4 lg:text-right">
+                    <a href="fonds.html" class="inline-flex items-center gap-x-2 text-sm font-semibold text-white hover:text-sky-300 transition">
+                        Discover the post-acquisition support <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════ PROOF (why me) ════════ -->
+    <section class="bg-white border-y border-slate-100 py-16 md:py-20">
+        <div class="max-w-5xl mx-auto px-5 md:px-8">
+            <div class="reveal text-center max-w-2xl mx-auto mb-12">
+                <span class="kicker justify-center"><span class="bars" aria-hidden="true"><span></span><span></span><span></span></span> Why me</span>
+                <h2 class="font-display text-4xl md:text-[2.7rem] font-semibold tracking-tight leading-tight mt-4">I know where value is created, and where it's destroyed</h2>
+                <p class="text-[15px] text-slate-600 leading-relaxed mt-5">Fifteen years steering strategic plans, commercial reorganizations, on-site audits and post-acquisition integrations. I know the traps, because I've been on both sides of the cheque.</p>
+            </div>
+
+            <div class="reveal-stagger reveal grid sm:grid-cols-3 gap-5 mb-12">
+                <div class="bg-slate-50 border border-slate-100 rounded-3xl p-8 text-center">
+                    <div class="w-11 h-11 mx-auto mb-4 bg-movari/10 rounded-xl flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-movari" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                        </svg>
+                    </div>
+                    <div class="font-display stat-num text-5xl md:text-6xl font-semibold text-movari mb-3">+25%</div>
+                    <div class="font-semibold mb-2.5">in revenue</div>
+                    <p class="text-sm text-slate-500 leading-relaxed">Reorganizing a sales network (Generali): I know how to read a target's real commercial performance.</p>
+                </div>
+                <div class="bg-movari-navy text-white border border-movari-navy rounded-3xl p-8 text-center shadow-xl shadow-slate-300/50">
+                    <div class="w-11 h-11 mx-auto mb-4 bg-white/10 rounded-xl flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-sky-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                    </div>
+                    <div class="font-display stat-num text-5xl md:text-6xl font-semibold text-sky-300 mb-3">+500 k€</div>
+                    <div class="font-semibold mb-2.5">in identified gains</div>
+                    <p class="text-sm text-slate-300 leading-relaxed">Five-year strategic plan (Urgo): I assess growth potential, not a promise on a slide.</p>
+                </div>
+                <div class="bg-slate-50 border border-slate-100 rounded-3xl p-8 text-center">
+                    <div class="w-11 h-11 mx-auto mb-4 bg-movari/10 rounded-xl flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-movari" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <div class="font-display stat-num text-5xl md:text-6xl font-semibold text-movari mb-3">LBO</div>
+                    <div class="font-semibold mb-2.5">seen from the inside</div>
+                    <p class="text-sm text-slate-500 leading-relaxed">Post-acquisition PMO (Panzani × CVC): I've lived the "after", so I know what to check before.</p>
+                </div>
+            </div>
+
+            <p class="reveal text-center text-sm text-slate-500 leading-relaxed max-w-2xl mx-auto mb-10">
+                I didn't label these missions "due diligence". But reorganizing a sales network, building a five-year plan or integrating an acquired company is exactly where you learn to spot what creates, or destroys, a target's value.
+            </p>
+
+            <div class="reveal flex items-start gap-x-3 bg-slate-50 border border-slate-200/70 rounded-2xl px-5 py-4 max-w-3xl mx-auto mb-10">
+                <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-movari/10 text-movari flex-shrink-0 mt-0.5">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
+                </span>
+                <span class="text-[14px] text-slate-600 leading-relaxed"><span class="font-semibold text-slate-800">On-the-ground approach:</span> at Safetykleen, a multi-site field diagnosis (on-site audit and interviews) before an 8-workstream roadmap. That's exactly how I assess a target.</span>
+            </div>
+
+            <div class="reveal text-center text-[11px] font-semibold tracking-[0.14em] uppercase text-slate-400 mb-5">Private equity &amp; portfolio contexts</div>
+            <div class="reveal flex flex-wrap items-center justify-center gap-x-9 gap-y-4">
+                <img src="../assets/logos/panzani.png" alt="Panzani" class="client-logo h-7 w-auto">
+                <img src="../assets/logos/generali.png" alt="Generali" class="client-logo h-[18px] w-auto">
+                <span class="client-logo text-sm font-bold text-[#0055A5] tracking-[0.12em]">URGO</span>
+                <img src="../assets/logos/apax.svg" alt="APAX Partners" class="client-logo h-5 w-auto">
+                <img src="../assets/logos/edf.png" alt="EDF" class="client-logo h-6 w-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════ MANIFESTO (editorial band) ════════ -->
+    <section class="max-w-6xl mx-auto px-5 md:px-8 py-6 md:py-10">
+        <div class="reveal relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-movari to-movari-deeper text-white px-7 py-14 md:px-16 md:py-20">
+            <div class="absolute inset-0 opacity-[0.12]" aria-hidden="true"
+                 style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 26px 26px;"></div>
+            <div class="absolute right-6 bottom-6 hidden sm:flex items-end gap-2.5 opacity-25" aria-hidden="true">
+                <span class="block w-3.5 rounded-t bg-white" style="height:34px"></span>
+                <span class="block w-3.5 rounded-t bg-white" style="height:58px"></span>
+                <span class="block w-3.5 rounded-t bg-white" style="height:86px"></span>
+                <span class="block w-3.5 rounded-t bg-white" style="height:120px"></span>
+            </div>
+            <div class="relative max-w-3xl">
+                <div class="quote-mark !text-white/40 mb-1" aria-hidden="true">“</div>
+                <p class="font-display text-3xl md:text-[2.7rem] font-semibold leading-[1.18] tracking-tight">
+                    A target's truth isn't in the data room. <span class="italic">It's on the ground, in its people.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════ CONVERSION · FREE CALL ════════ -->
+    <section id="echange" class="anchor max-w-5xl mx-auto px-5 md:px-8 py-16 md:py-20">
+        <div class="reveal bg-white border border-slate-200 shadow-2xl shadow-slate-200/70 rounded-[2rem] p-8 md:p-14">
+            <div class="grid lg:grid-cols-12 gap-x-12 gap-y-10 items-start">
+
+                <div class="lg:col-span-7">
+                    <span class="inline-block text-[10.5px] font-bold tracking-[0.16em] uppercase bg-emerald-100 text-emerald-700 px-3.5 py-1.5 rounded-full mb-5">Free · Confidential</span>
+
+                    <h2 class="font-display text-4xl md:text-[2.8rem] font-semibold tracking-tight leading-[1.1] mb-6">
+                        Let's talk about your target <em class="italic text-movari">in 30 minutes</em>
+                    </h2>
+
+                    <div class="text-[15px] text-slate-600 leading-relaxed space-y-4">
+                        <p>A first direct conversation to frame the topic:</p>
+                        <ul class="space-y-2.5">
+                            <li class="flex gap-3"><span class="mt-2 block w-1.5 h-1.5 bg-movari rounded-full flex-shrink-0" aria-hidden="true"></span> What you're looking to acquire, and why</li>
+                            <li class="flex gap-3"><span class="mt-2 block w-1.5 h-1.5 bg-movari rounded-full flex-shrink-0" aria-hidden="true"></span> The points that worry you or you want to secure</li>
+                            <li class="flex gap-3"><span class="mt-2 block w-1.5 h-1.5 bg-movari rounded-full flex-shrink-0" aria-hidden="true"></span> Whether a pre-deal review makes sense, and on what timeline</li>
+                        </ul>
+                        <p class="text-sm pt-1 text-slate-500">A frank, confidential conversation. If your project doesn't call for my involvement, I'll tell you straight.</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5">
+                    <div class="bg-slate-50 border border-slate-100 rounded-2xl p-7">
+                        <div class="font-semibold text-lg mb-1">Pick a time slot</div>
+                        <p class="text-sm text-slate-500 mb-6">Phone or video call (Meet / Teams)</p>
+
+                        <a href="https://cal.com/movariconseil" target="_blank" rel="noopener" data-cal
+                           class="btn-primary block w-full text-center text-white font-semibold py-4 rounded-xl text-[15px]">
+                            Book online →
+                        </a>
+                        <div class="mt-3 text-[11px] text-center text-slate-400">
+                            Booking via <a href="https://cal.com/movariconseil" target="_blank" rel="noopener" class="underline">cal.com/movariconseil</a> · reply within 24 hours
+                        </div>
+
+                        <div class="hairline my-6" aria-hidden="true"></div>
+
+                        <div class="text-center space-y-3">
+                            <div>
+                                <div class="text-xs text-slate-400 mb-0.5">Or call directly</div>
+                                <a href="tel:+33621059309" class="font-semibold text-xl tracking-tight hover:text-movari transition">+33 6 21 05 93 09</a>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400 mb-0.5">Or write to me</div>
+                                <a href="mailto:contact@movari.fr" class="font-medium text-[15px] text-slate-700 hover:text-movari transition break-all">contact@movari.fr</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════ FOOTER ════════ -->
+    <footer class="bg-[#071735] text-slate-400 text-sm">
+        <div class="max-w-6xl mx-auto px-5 md:px-8 pt-14 pb-10">
+            <div class="flex flex-col md:flex-row gap-y-10 md:items-start md:justify-between">
+                <div>
+                    <img src="../assets/logo-movari-hd.png" alt="Movari Conseil" class="h-10 brightness-0 invert opacity-90 mb-5">
+                    <div class="max-w-xs leading-relaxed">
+                        French SASU · share capital €1,000<br>
+                        SIRET 892 384 751 000 12<br>
+                        RCS Lyon B 892 384 751 · VAT FR49 892 384 751
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-x-14 gap-y-8">
+                    <div>
+                        <div class="font-semibold text-white mb-3.5 text-[11px] tracking-[0.16em] uppercase">Contact</div>
+                        <a href="tel:+33621059309" class="block hover:text-white mb-1.5 transition">+33 6 21 05 93 09</a>
+                        <a href="mailto:contact@movari.fr" class="block hover:text-white mb-1.5 transition">contact@movari.fr</a>
+                        <a href="https://www.linkedin.com/in/benoitmahmoudi" target="_blank" rel="noopener" class="block hover:text-white transition">LinkedIn ↗</a>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-white mb-3.5 text-[11px] tracking-[0.16em] uppercase">Address</div>
+                        <div class="leading-relaxed">163 rue Vendôme<br>69003 Lyon, France</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 mt-12 pt-6 text-xs text-slate-500 flex flex-col md:flex-row gap-y-2 md:items-center md:justify-between">
+                <div>© 2026 Movari Conseil. All rights reserved.</div>
+                <div class="flex items-center gap-x-5">
+                    <a href="index.html" class="hover:text-white transition">Home</a>
+                    <a href="mentions-legales.html" class="hover:text-white transition">Legal notice</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CTA collant mobile -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur border-t border-slate-200 p-3 z-50 shadow-[0_-8px_30px_rgba(10,31,68,.12)]">
+        <a href="https://cal.com/movariconseil" target="_blank" rel="noopener" data-cal
+           class="btn-primary block w-full text-center text-white font-bold py-3.5 text-sm rounded-2xl">
+            Talk about your target · 30 min
+        </a>
+    </div>
+    <div class="md:hidden h-[68px]" aria-hidden="true"><!-- compense le CTA collant --></div>
+
+    <!-- ════════ Cal.com · embed officiel (popup) ════════ -->
+    <script type="text/javascript">
+        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); })(window, "https://app.cal.com/embed/embed.js", "init");
+        Cal("init", { origin: "https://cal.com" });
+        Cal("ui", { styles: { branding: { brandColor: "#0066F0" } }, hideEventTypeDetails: false, layout: "month_view" });
+    </script>
+
+    <script>
+        /* ═══ Cal.com booking link ═══ */
+        const CAL_LINK = "movariconseil/audit-strategique-30min";
+
+        document.querySelectorAll('[data-cal]').forEach(el => {
+            el.setAttribute('data-cal-link', CAL_LINK);
+            el.setAttribute('data-cal-config', '{"layout":"month_view"}');
+            el.setAttribute('data-goatcounter-click', 'clic-reserver-audit');
+        });
+
+        // Mobile menu
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const iconOpen = '<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>';
+        const iconClose = '<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>';
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                const hidden = menu.classList.toggle('hidden');
+                btn.innerHTML = hidden ? iconOpen : iconClose;
+                btn.setAttribute('aria-expanded', String(!hidden));
+            });
+            menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                btn.innerHTML = iconOpen;
+                btn.setAttribute('aria-expanded', 'false');
+            }));
+        }
+
+        // Reveal on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Close mobile menu with Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && menu && !menu.classList.contains('hidden')) {
+                menu.classList.add('hidden');
+                if (btn) { btn.innerHTML = iconOpen; btn.setAttribute('aria-expanded', 'false'); }
+            }
+        });
+    </script>
+
+    <!-- GoatCounter : anonymous, cookie-free audience measurement -->
+    <script data-goatcounter="https://movari.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
