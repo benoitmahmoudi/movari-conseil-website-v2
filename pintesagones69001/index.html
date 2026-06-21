@@ -9,280 +9,294 @@
   <link rel="canonical" href="https://movari.fr/pintesagones69001/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Pintes À Gones · Bar à bières & vins nature · Lyon 1er">
-  <meta property="og:description" content="Le repaire des gones sur les pentes. Bières artisanales, vins nature, planches. 13 rue Terme, Lyon 1er.">
+  <meta property="og:description" content="Le bar à bières artisanales et vins nature des pentes. Bières bien tirées, vins de vignerons, planches à partager. 13 rue Terme, Lyon 1er.">
   <meta property="og:locale" content="fr_FR">
 
   <link rel="icon" href="assets/favicon.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Serif:ital@0;1&family=Spline+Sans:wght@400..600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Manrope:wght@400..700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#17110d; --bg2:#1f1711; --panel:#221a13;
-      --cream:#f4e9d6; --muted:#b6a489;
-      --amber:#e6ad45; --amber-deep:#c4862a;
-      --wine:#b03346; --wine-deep:#7d2233;
-      --line:rgba(244,233,214,.13);
+      --paper:#f7f1e4; --paper2:#efe5d2; --card:#fffaf0;
+      --ink:#2a201a; --ink-soft:#6d5f4f;
+      --amber:#b9761a; --amber-deep:#8f5a12;
+      --wine:#9b3330; --wine-deep:#7a2624;
+      --line:rgba(42,32,26,.13);
     }
     *{box-sizing:border-box;}
     html{scroll-behavior:smooth;}
-    body{font-family:'Spline Sans',system-ui,sans-serif;background:var(--bg);color:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
-    h1,h2,h3,.disp{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-.02em;line-height:.95;}
-    .serif{font-family:'Instrument Serif',Georgia,serif;font-weight:400;letter-spacing:.01em;}
-    ::selection{background:var(--amber);color:#17110d;}
-
-    /* grain + glows */
-    .grain::before{content:'';position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
-      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
-    .glow{position:absolute;border-radius:9999px;filter:blur(90px);opacity:.5;pointer-events:none;z-index:0;}
+    body{font-family:'Manrope',system-ui,sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+    h1,h2,h3,.disp{font-family:'Fraunces',Georgia,serif;font-weight:600;letter-spacing:-.015em;line-height:1.02;}
+    .it{font-style:italic;font-weight:500;}
+    ::selection{background:var(--amber);color:#fffaf0;}
 
     .wrap{position:relative;z-index:2;}
-    .eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--amber);}
+    .eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--amber-deep);}
 
-    .btn{display:inline-flex;align-items:center;gap:.6rem;border-radius:999px;font-weight:600;padding:.95rem 1.6rem;font-size:.98rem;line-height:1;transition:transform .25s,background .25s,color .25s,border-color .25s;cursor:pointer;}
-    .btn-amber{background:var(--amber);color:#1a130c;}
-    .btn-amber:hover{transform:translateY(-3px);background:#f2bd58;}
-    .btn-out{border:1px solid var(--line);color:var(--cream);}
-    .btn-out:hover{border-color:var(--amber);color:var(--amber);transform:translateY(-3px);}
+    .btn{display:inline-flex;align-items:center;gap:.55rem;border-radius:999px;font-weight:700;padding:.92rem 1.55rem;font-size:.97rem;line-height:1;transition:transform .25s,background .25s,color .25s,border-color .25s,box-shadow .25s;cursor:pointer;}
+    .btn-amber{background:var(--amber);color:#fffaf0;box-shadow:0 8px 22px -10px rgba(143,90,18,.7);}
+    .btn-amber:hover{transform:translateY(-3px);background:var(--amber-deep);}
+    .btn-out{border:1.5px solid var(--line);color:var(--ink);}
+    .btn-out:hover{border-color:var(--amber);color:var(--amber-deep);transform:translateY(-3px);}
+    .btn-wine{background:var(--wine);color:#fff7f1;box-shadow:0 8px 22px -10px rgba(122,38,36,.7);}
+    .btn-wine:hover{transform:translateY(-3px);background:var(--wine-deep);}
 
-    .link-u{position:relative;}
-    .link-u::after{content:'';position:absolute;left:0;bottom:-3px;height:1px;width:100%;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .3s;}
+    .link-u{position:relative;font-weight:600;color:var(--ink);}
+    .link-u::after{content:'';position:absolute;left:0;bottom:-3px;height:1.5px;width:100%;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .3s;}
     .link-u:hover::after{transform:scaleX(1);}
 
-    /* marquee */
-    .marquee{display:flex;gap:0;white-space:nowrap;animation:slide 32s linear infinite;}
-    .marquee span{padding:0 1.4rem;}
-    @keyframes slide{to{transform:translateX(-50%);}}
+    .photo{position:relative;overflow:hidden;background:var(--paper2);}
+    .photo img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1);}
+    .photo:hover img{transform:scale(1.045);}
+    .ring{box-shadow:0 1px 0 rgba(255,255,255,.5) inset, 0 18px 40px -24px rgba(42,32,26,.5);}
 
-    /* warm duotone images */
-    .img-warm{position:relative;overflow:hidden;}
-    .img-warm img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(.25) sepia(.32) brightness(.82) contrast(1.06);transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .6s;}
-    .img-warm::after{content:'';position:absolute;inset:0;background:linear-gradient(150deg,rgba(176,51,70,.28),rgba(230,173,69,.22));mix-blend-mode:overlay;}
-    .img-warm:hover img{transform:scale(1.05);filter:grayscale(.1) sepia(.15) brightness(.92) contrast(1.05);}
+    .chip{display:inline-flex;align-items:center;gap:.5rem;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:.5rem .9rem;font-size:.86rem;font-weight:600;}
+
+    .card{background:var(--card);border:1px solid var(--line);border-radius:1.25rem;overflow:hidden;transition:transform .3s,box-shadow .3s;}
+    .card:hover{transform:translateY(-4px);box-shadow:0 24px 48px -30px rgba(42,32,26,.55);}
 
     .rule{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);}
 
-    /* numbered carte rows */
-    .carde{border-top:1px solid var(--line);}
-    .carde:last-child{border-bottom:1px solid var(--line);}
-    .carde .idx{font-family:'Instrument Serif',serif;font-size:1.4rem;color:var(--amber);}
-    .carde h3{transition:color .3s,transform .3s;}
-    .carde:hover h3{color:var(--amber);transform:translateX(8px);}
-
-    .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);}
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);}
     .reveal.on{opacity:1;transform:none;}
-    .load{opacity:0;transform:translateY(20px);animation:rise .9s cubic-bezier(.22,.61,.36,1) forwards;}
+    .load{opacity:0;transform:translateY(18px);animation:rise .9s cubic-bezier(.22,.61,.36,1) forwards;}
     @keyframes rise{to{opacity:1;transform:none;}}
-    @media (prefers-reduced-motion:reduce){.reveal,.load{opacity:1!important;transform:none!important;animation:none!important;}.marquee{animation:none;}}
+    @media (prefers-reduced-motion:reduce){.reveal,.load{opacity:1!important;transform:none!important;animation:none!important;}}
   </style>
 </head>
-<body class="grain">
+<body>
 
   <!-- aperçu démo -->
-  <div class="wrap text-center text-[11px] tracking-wide py-1.5 px-4" style="background:#0f0b08;color:#8c7d68;">
+  <div class="wrap text-center text-[11px] tracking-wide py-1.5 px-4" style="background:#2a201a;color:#cdbfa6;">
     Aperçu préparé pour Pintes À Gones · démonstration, textes et photos à personnaliser
   </div>
 
-  <!-- marquee -->
-  <div class="wrap border-y border-[var(--line)] py-2.5 text-[12.5px] font-semibold uppercase tracking-[0.22em] text-[var(--muted)] overflow-hidden" style="background:var(--bg2);">
-    <div class="marquee">
-      <span>Bières artisanales <span class="text-[var(--amber)]">✦</span></span><span>Vins nature <span class="text-[var(--amber)]">✦</span></span><span>Planches du marché <span class="text-[var(--amber)]">✦</span></span><span>Pentes de la Croix-Rousse <span class="text-[var(--amber)]">✦</span></span><span>Entre gones <span class="text-[var(--amber)]">✦</span></span>
-      <span>Bières artisanales <span class="text-[var(--amber)]">✦</span></span><span>Vins nature <span class="text-[var(--amber)]">✦</span></span><span>Planches du marché <span class="text-[var(--amber)]">✦</span></span><span>Pentes de la Croix-Rousse <span class="text-[var(--amber)]">✦</span></span><span>Entre gones <span class="text-[var(--amber)]">✦</span></span>
-    </div>
-  </div>
-
   <!-- header -->
-  <header class="wrap sticky top-0 z-40 backdrop-blur" style="background:rgba(23,17,13,.72);border-bottom:1px solid var(--line);">
-    <div class="max-w-6xl mx-auto px-5 h-[62px] flex items-center justify-between">
-      <a href="#top" class="disp text-lg" style="letter-spacing:-.01em;">Pintes <span class="serif italic text-[var(--amber)]" style="font-weight:400;">à</span> Gones</a>
-      <nav class="hidden md:flex items-center gap-8 text-sm text-[var(--muted)]">
+  <header class="wrap sticky top-0 z-40 backdrop-blur" style="background:rgba(247,241,228,.82);border-bottom:1px solid var(--line);">
+    <div class="max-w-6xl mx-auto px-5 h-[64px] flex items-center justify-between">
+      <a href="#top" class="disp text-xl" style="letter-spacing:-.01em;">Pintes <span class="it" style="color:var(--wine);">à</span> Gones</a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-[var(--ink-soft)]">
         <a href="#carte" class="link-u">La carte</a>
         <a href="#cave" class="link-u">La cave</a>
-        <a href="#lieu" class="link-u">Le lieu</a>
         <a href="#venir" class="link-u">Venir</a>
       </nav>
-      <a href="https://www.instagram.com/pintesagones69001/" target="_blank" rel="noopener" class="btn btn-amber !py-2.5 !px-4 text-sm">Nous suivre</a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=13+rue+Terme+69001+Lyon" target="_blank" rel="noopener" class="btn btn-amber !py-2.5 !px-4 text-sm">Itinéraire</a>
     </div>
   </header>
 
   <!-- HERO -->
   <section id="top" class="wrap relative">
-    <div class="glow" style="width:34rem;height:34rem;background:var(--amber);top:-10rem;right:-8rem;opacity:.28;"></div>
-    <div class="glow" style="width:26rem;height:26rem;background:var(--wine);bottom:-6rem;left:-6rem;opacity:.35;"></div>
-    <div class="max-w-6xl mx-auto px-5 pt-12 pb-10 md:pt-16">
-      <p class="eyebrow load mb-6" style="animation-delay:.05s">Bar à bières & vins nature · Lyon 1er</p>
-      <h1 class="load text-[18vw] sm:text-[15vw] md:text-[10.5rem] leading-[.82]" style="animation-delay:.12s">
-        Pintes
-        <span class="block">
-          <span class="serif italic font-normal text-[var(--amber)]" style="font-weight:400;">à</span> gones
-        </span>
+    <div class="max-w-6xl mx-auto px-5 pt-12 pb-6 md:pt-16">
+      <p class="eyebrow load mb-5" style="animation-delay:.05s">Bar à bières &amp; vins nature · Lyon 1er</p>
+      <h1 class="load text-[11.5vw] sm:text-7xl md:text-8xl" style="animation-delay:.1s;line-height:.95;">
+        Pintes <span class="it" style="color:var(--wine);font-weight:500;">à</span> Gones
       </h1>
-      <div class="grid md:grid-cols-[1.1fr_.9fr] gap-8 md:gap-12 items-end mt-8 md:mt-10">
-        <p class="load text-lg md:text-xl text-[var(--muted)] leading-relaxed max-w-xl" style="animation-delay:.2s">
-          Le repaire des gones sur les pentes. Des bières qu'on choisit avec soin, des vins nature de vignerons, des planches à partager, et l'ambiance qui va avec.
-        </p>
-        <div class="load flex flex-wrap gap-3 md:justify-end" style="animation-delay:.28s">
-          <a href="#carte" class="btn btn-amber">Découvrir la carte</a>
-          <a href="#venir" class="btn btn-out">Venir nous voir</a>
-        </div>
+      <p class="load text-lg md:text-2xl text-[var(--ink-soft)] leading-relaxed max-w-2xl mt-6" style="animation-delay:.18s">
+        Le bar de quartier des pentes de la Croix-Rousse : des <strong class="text-[var(--ink)] font-semibold">bières artisanales</strong> bien tirées, des <strong class="text-[var(--ink)] font-semibold">vins nature</strong> de vignerons, et des planches à partager entre gones.
+      </p>
+      <div class="load flex flex-wrap items-center gap-3 mt-8" style="animation-delay:.26s">
+        <a href="#carte" class="btn btn-amber">Découvrir la carte</a>
+        <a href="#venir" class="btn btn-out">Comment venir
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
       </div>
     </div>
-    <!-- bande image hero -->
-    <div class="load max-w-6xl mx-auto px-5 mt-8" style="animation-delay:.34s">
-      <div class="img-warm rounded-2xl h-[44vh] md:h-[56vh] border border-[var(--line)]">
-        <img src="assets/hero.jpg" alt="L'ambiance du bar Pintes À Gones, Lyon 1er">
+
+    <!-- photo hero -->
+    <div class="load max-w-6xl mx-auto px-5 mt-8" style="animation-delay:.32s">
+      <div class="photo ring rounded-3xl h-[46vh] md:h-[58vh]">
+        <img src="assets/hero.jpg" alt="L'ambiance chaleureuse du bar Pintes À Gones, Lyon 1er">
       </div>
     </div>
   </section>
 
-  <!-- bandeau infos -->
-  <section class="wrap max-w-6xl mx-auto px-5 py-12 md:py-16">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-6 reveal">
-      <div>
-        <p class="eyebrow mb-2">L'adresse</p>
-        <p class="disp text-xl">13 rue Terme</p>
-        <p class="text-[var(--muted)] text-sm mt-1">Lyon 1er, les pentes</p>
+  <!-- barre infos pratiques -->
+  <section class="wrap max-w-6xl mx-auto px-5 py-10 md:py-14">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 reveal">
+      <div class="card p-5">
+        <p class="eyebrow mb-2">Adresse</p>
+        <p class="disp text-xl leading-tight">13 rue Terme</p>
+        <p class="text-[var(--ink-soft)] text-sm mt-1">Lyon 1er · les pentes</p>
       </div>
-      <div>
-        <p class="eyebrow mb-2">Les horaires</p>
-        <p class="disp text-xl">En soirée</p>
-        <p class="text-[var(--muted)] text-sm mt-1">du mardi au samedi (à confirmer)</p>
+      <div class="card p-5">
+        <p class="eyebrow mb-2">Horaires</p>
+        <p class="disp text-xl leading-tight">En soirée</p>
+        <p class="text-[var(--ink-soft)] text-sm mt-1">du mardi au samedi <span class="opacity-70">(à confirmer)</span></p>
       </div>
-      <div>
+      <div class="card p-5">
         <p class="eyebrow mb-2">Sur Google</p>
-        <p class="disp text-xl">Bien notés</p>
-        <p class="text-[var(--muted)] text-sm mt-1">par les habitués du quartier</p>
+        <p class="disp text-xl leading-tight">Bien notés</p>
+        <p class="text-[var(--ink-soft)] text-sm mt-1">par les habitués du quartier</p>
       </div>
-      <div>
-        <p class="eyebrow mb-2">Le réseau</p>
-        <a href="https://www.instagram.com/pintesagones69001/" target="_blank" rel="noopener" class="disp text-xl link-u">@pintesagones</a>
-        <p class="text-[var(--muted)] text-sm mt-1">la vie du bar au quotidien</p>
-      </div>
+      <a href="https://www.instagram.com/pintesagones69001/" target="_blank" rel="noopener" class="card p-5 group">
+        <p class="eyebrow mb-2">Instagram</p>
+        <p class="disp text-xl leading-tight group-hover:text-[var(--amber-deep)] transition">@pintesagones</p>
+        <p class="text-[var(--ink-soft)] text-sm mt-1">la vie du bar au quotidien</p>
+      </a>
     </div>
   </section>
 
   <!-- LA CARTE -->
-  <section id="carte" class="wrap relative" style="background:var(--bg2);">
-    <div class="max-w-6xl mx-auto px-5 py-20 md:py-28">
-      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-14 reveal">
+  <section id="carte" class="wrap" style="background:var(--paper2);">
+    <div class="max-w-6xl mx-auto px-5 py-16 md:py-24">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10 md:mb-14 reveal">
         <div>
-          <p class="eyebrow mb-4">Au comptoir</p>
-          <h2 class="text-4xl md:text-6xl">Ce qu'on<br>vous sert</h2>
+          <p class="eyebrow mb-3">Au comptoir</p>
+          <h2 class="text-4xl md:text-6xl">Ce qu'on vous sert</h2>
         </div>
-        <p class="text-[var(--muted)] max-w-sm md:text-right">Une carte vivante, qui change au gré des brasseurs et des vignerons. On vous guide, selon votre soif et votre humeur.</p>
+        <p class="text-[var(--ink-soft)] max-w-sm md:text-right">Une carte vivante, qui change au gré des brasseurs et des vignerons. On vous guide, selon votre soif et votre humeur.</p>
       </div>
 
-      <div class="reveal">
-        <div class="carde py-7 md:py-9 grid grid-cols-[auto_1fr] md:grid-cols-[auto_1fr_auto] gap-x-5 md:gap-x-10 items-baseline">
-          <span class="idx">01</span>
-          <div><h3 class="disp text-2xl md:text-4xl mb-2">Bières artisanales</h3><p class="text-[var(--muted)] md:max-w-xl">À la pression et à la bouteille, une sélection qui tourne : brasseurs locaux, pépites artisanales, toujours bien tirées.</p></div>
-          <span class="hidden md:block serif italic text-[var(--muted)] text-xl">pression & bouteilles</span>
-        </div>
-        <div class="carde py-7 md:py-9 grid grid-cols-[auto_1fr] md:grid-cols-[auto_1fr_auto] gap-x-5 md:gap-x-10 items-baseline">
-          <span class="idx">02</span>
-          <div><h3 class="disp text-2xl md:text-4xl mb-2">Vins nature</h3><p class="text-[var(--muted)] md:max-w-xl">Une cave de vignerons, vivante et sincère, dont les cuvées du Château Saint-Louis. On adore raconter ce qu'il y a dans le verre.</p></div>
-          <span class="hidden md:block serif italic text-[var(--muted)] text-xl">au verre & en bouteille</span>
-        </div>
-        <div class="carde py-7 md:py-9 grid grid-cols-[auto_1fr] md:grid-cols-[auto_1fr_auto] gap-x-5 md:gap-x-10 items-baseline">
-          <span class="idx">03</span>
-          <div><h3 class="disp text-2xl md:text-4xl mb-2">Planches à partager</h3><p class="text-[var(--muted)] md:max-w-xl">Charcuterie, fromages affinés et bons produits, à picorer à plusieurs autour d'un verre.</p></div>
-          <span class="hidden md:block serif italic text-[var(--muted)] text-xl">à grignoter</span>
-        </div>
-        <div class="carde py-7 md:py-9 grid grid-cols-[auto_1fr] md:grid-cols-[auto_1fr_auto] gap-x-5 md:gap-x-10 items-baseline">
-          <span class="idx">04</span>
-          <div><h3 class="disp text-2xl md:text-4xl mb-2">L'apéro entre gones</h3><p class="text-[var(--muted)] md:max-w-xl">Un comptoir où l'on se sent vite chez soi, pour l'afterwork, les copains ou refaire le monde jusqu'à la fermeture.</p></div>
-          <span class="hidden md:block serif italic text-[var(--muted)] text-xl">l'ambiance maison</span>
+      <div class="grid sm:grid-cols-2 gap-5 md:gap-6">
+        <!-- bières -->
+        <article class="card reveal">
+          <div class="photo h-52 md:h-60"><img src="assets/serv-bieres.jpg" alt="Bières artisanales à la pression"></div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="eyebrow">01</span><span class="chip">pression &amp; bouteilles</span>
+            </div>
+            <h3 class="text-2xl md:text-3xl mb-2">Bières artisanales</h3>
+            <p class="text-[var(--ink-soft)]">À la pression et à la bouteille, une sélection qui tourne : brasseurs locaux et pépites artisanales, toujours bien tirées.</p>
+          </div>
+        </article>
+        <!-- vins -->
+        <article class="card reveal">
+          <div class="photo h-52 md:h-60"><img src="assets/serv-vins.jpg" alt="Vins nature de vignerons, au verre"></div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="eyebrow">02</span><span class="chip">au verre &amp; en bouteille</span>
+            </div>
+            <h3 class="text-2xl md:text-3xl mb-2">Vins nature</h3>
+            <p class="text-[var(--ink-soft)]">Une cave de vignerons, vivante et sincère, dont les cuvées du <a href="https://chateausaintlouis.fr/" target="_blank" rel="noopener" class="link-u" style="color:var(--wine);">Château Saint-Louis</a>. On adore raconter ce qu'il y a dans le verre.</p>
+          </div>
+        </article>
+        <!-- planches -->
+        <article class="card reveal">
+          <div class="photo h-52 md:h-60"><img src="assets/serv-planches.jpg" alt="Planche de charcuterie et fromages à partager"></div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="eyebrow">03</span><span class="chip">à grignoter</span>
+            </div>
+            <h3 class="text-2xl md:text-3xl mb-2">Planches à partager</h3>
+            <p class="text-[var(--ink-soft)]">Charcuterie, fromages affinés et bons produits, à picorer à plusieurs autour d'un verre.</p>
+          </div>
+        </article>
+        <!-- apéro -->
+        <article class="card reveal">
+          <div class="photo h-52 md:h-60"><img src="assets/amb-1.jpg" alt="L'apéro entre amis au comptoir"></div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="eyebrow">04</span><span class="chip">l'ambiance maison</span>
+            </div>
+            <h3 class="text-2xl md:text-3xl mb-2">L'apéro entre gones</h3>
+            <p class="text-[var(--ink-soft)]">Un comptoir où l'on se sent vite chez soi : l'afterwork, les copains, ou refaire le monde jusqu'à la fermeture.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- LA CAVE (Château Saint-Louis) -->
+  <section id="cave" class="wrap">
+    <div class="max-w-6xl mx-auto px-5 py-16 md:py-24 grid md:grid-cols-[1fr_1fr] gap-10 md:gap-14 items-center">
+      <div class="photo ring rounded-3xl h-72 md:h-[28rem] reveal order-2 md:order-1"><img src="assets/serv-vins.jpg" alt="La cave de vins nature du bar"></div>
+      <div class="reveal order-1 md:order-2">
+        <p class="eyebrow mb-4" style="color:var(--wine-deep);">La cave</p>
+        <h2 class="text-4xl md:text-5xl mb-5">Des vins <span class="it" style="color:var(--wine);">qui ont une histoire</span></h2>
+        <p class="text-[var(--ink-soft)] text-lg leading-relaxed mb-4 max-w-lg">Sur nos étagères, des vins nature de vignerons qu'on aime. Parmi eux, les cuvées du <strong class="text-[var(--ink)] font-semibold">Château Saint-Louis</strong>, un domaine familial du Sud-Ouest : des vins vivants et francs, à découvrir au verre comme à la bouteille.</p>
+        <p class="text-[var(--ink-soft)] mb-7 max-w-lg">Dites-nous ce que vous aimez, on trouve le bon.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="https://chateausaintlouis.fr/" target="_blank" rel="noopener" class="btn btn-wine">Découvrir le domaine
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </a>
+          <a href="#venir" class="btn btn-out">Passer goûter</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- galerie -->
-  <section id="lieu" class="wrap max-w-6xl mx-auto px-5 py-20 md:py-28">
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-      <div class="img-warm rounded-2xl h-64 md:h-80 reveal col-span-2 md:col-span-2"><img src="assets/amb-1.jpg" alt="Trinquer entre amis"></div>
-      <div class="img-warm rounded-2xl h-64 md:h-80 reveal"><img src="assets/serv-bieres.jpg" alt="Bières à la pression"></div>
-      <div class="img-warm rounded-2xl h-64 md:h-80 reveal"><img src="assets/serv-vins.jpg" alt="Vins nature au verre"></div>
-      <div class="img-warm rounded-2xl h-64 md:h-80 reveal"><img src="assets/serv-planches.jpg" alt="Planche à partager"></div>
-      <div class="img-warm rounded-2xl h-64 md:h-80 reveal"><img src="assets/amb-6.jpg" alt="L'ambiance du soir"></div>
-    </div>
-  </section>
-
-  <!-- LA CAVE (spotlight vin nature, Château Saint-Louis) -->
-  <section id="cave" class="wrap relative overflow-hidden" style="background:linear-gradient(160deg,#2a1016,#1a0e0b);">
-    <div class="glow" style="width:30rem;height:30rem;background:var(--wine);top:-8rem;right:-6rem;opacity:.45;"></div>
-    <div class="max-w-6xl mx-auto px-5 py-20 md:py-28 grid md:grid-cols-[1fr_1fr] gap-12 items-center">
-      <div class="img-warm rounded-2xl h-80 md:h-[30rem] reveal border border-[var(--line)] order-2 md:order-1"><img src="assets/amb-4.jpg" alt="La cave de vins nature"></div>
-      <div class="reveal order-1 md:order-2">
-        <p class="eyebrow mb-5" style="color:var(--wine);">La cave</p>
-        <h2 class="text-4xl md:text-6xl mb-6">Des vins<br><span class="serif italic font-normal text-[var(--amber)]" style="font-weight:400;">qui ont une histoire</span></h2>
-        <p class="text-[var(--muted)] text-lg leading-relaxed mb-6 max-w-lg">Sur nos étagères, des vins nature de vignerons qu'on aime, dont les cuvées du <strong class="text-[var(--cream)] font-semibold">Château Saint-Louis</strong>. Des vins vivants, francs, à découvrir au verre comme à la bouteille. Dites nous ce que vous aimez, on trouve le bon.</p>
-        <a href="#venir" class="btn btn-out">Passer goûter</a>
+  <section class="wrap" style="background:var(--paper2);">
+    <div class="max-w-6xl mx-auto px-5 py-16 md:py-24">
+      <p class="eyebrow mb-8 reveal">L'ambiance</p>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+        <div class="photo ring rounded-2xl h-56 md:h-72 reveal col-span-2 md:col-span-2"><img src="assets/amb-5.jpg" alt="Trinquer entre amis au bar"></div>
+        <div class="photo ring rounded-2xl h-56 md:h-72 reveal"><img src="assets/serv-bieres.jpg" alt="Bières à la pression"></div>
+        <div class="photo ring rounded-2xl h-56 md:h-72 reveal"><img src="assets/serv-planches.jpg" alt="Planche à partager"></div>
+        <div class="photo ring rounded-2xl h-56 md:h-72 reveal"><img src="assets/amb-6.jpg" alt="L'ambiance du soir"></div>
+        <div class="photo ring rounded-2xl h-56 md:h-72 reveal"><img src="assets/amb-2.jpg" alt="Le comptoir et les habitués"></div>
       </div>
     </div>
   </section>
 
   <!-- AVIS -->
-  <section class="wrap max-w-4xl mx-auto px-5 py-20 md:py-28 text-center reveal">
+  <section class="wrap max-w-4xl mx-auto px-5 py-16 md:py-24 text-center reveal">
     <p class="eyebrow mb-6">On en dit du bien</p>
-    <blockquote class="serif text-2xl md:text-[2.4rem] leading-snug text-[var(--cream)]">
-      &ldquo; Super endroit, les bières sont de qualité, les propriétaires cherchent la qualité et la satisfaction client avant tout. Le rapport qualité prix est dans les meilleurs de Lyon. &rdquo;
+    <blockquote class="disp text-2xl md:text-4xl leading-snug">
+      &ldquo; Super endroit, les bières sont de qualité, les propriétaires cherchent la qualité et la satisfaction client avant tout. Le rapport qualité-prix est dans les meilleurs de Lyon. &rdquo;
     </blockquote>
-    <p class="mt-6 text-[var(--muted)] text-sm">Un client, sur Google</p>
+    <p class="mt-6 text-[var(--ink-soft)] text-sm">Un client, sur Google</p>
   </section>
 
   <!-- VENIR -->
-  <section id="venir" class="wrap relative" style="background:var(--bg2);">
-    <div class="max-w-6xl mx-auto px-5 py-20 md:py-28 grid md:grid-cols-[1fr_1fr] gap-12 items-start">
+  <section id="venir" class="wrap" style="background:var(--paper2);">
+    <div class="max-w-6xl mx-auto px-5 py-16 md:py-24 grid md:grid-cols-[1fr_1fr] gap-10 md:gap-14 items-start">
       <div class="reveal">
         <p class="eyebrow mb-4">Venir nous voir</p>
-        <h2 class="text-4xl md:text-6xl mb-8">On vous<br>garde une place</h2>
+        <h2 class="text-4xl md:text-5xl mb-8">On vous garde une place</h2>
         <div class="space-y-6 text-lg">
           <div>
             <p class="eyebrow mb-1">Adresse</p>
             <p>13 rue Terme, 69001 Lyon</p>
-            <p class="text-[var(--muted)] text-sm">Pentes de la Croix-Rousse, métro Hôtel de Ville</p>
+            <p class="text-[var(--ink-soft)] text-sm">Pentes de la Croix-Rousse · métro Hôtel de Ville</p>
           </div>
           <div>
             <p class="eyebrow mb-1">Horaires</p>
             <p>Du mardi au samedi, en soirée</p>
-            <p class="text-[var(--muted)] text-sm">horaires précis à confirmer</p>
+            <p class="text-[var(--ink-soft)] text-sm">horaires précis à confirmer</p>
           </div>
           <div>
-            <p class="eyebrow mb-1">Réservation & privatisation</p>
-            <a href="https://www.instagram.com/pintesagones69001/" target="_blank" rel="noopener" class="link-u">Écrivez nous sur Instagram @pintesagones69001</a>
+            <p class="eyebrow mb-1">Réservation &amp; privatisation</p>
+            <a href="https://www.instagram.com/pintesagones69001/" target="_blank" rel="noopener" class="link-u">Écrivez-nous sur Instagram @pintesagones69001</a>
           </div>
         </div>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=13+rue+Terme+69001+Lyon" target="_blank" rel="noopener" class="btn btn-amber mt-8">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          Itinéraire
+        </a>
       </div>
       <div class="reveal">
-        <div class="img-warm rounded-2xl overflow-hidden border border-[var(--line)]">
-          <iframe src="https://www.google.com/maps?q=13%20rue%20Terme%2069001%20Lyon&output=embed" class="w-full h-[26rem] border-0" style="filter:grayscale(.3) sepia(.2) brightness(.9);" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Plan d'accès Pintes À Gones"></iframe>
+        <div class="photo ring rounded-3xl overflow-hidden">
+          <iframe src="https://www.google.com/maps?q=13%20rue%20Terme%2069001%20Lyon&output=embed" class="w-full h-[24rem] md:h-[28rem] border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Plan d'accès Pintes À Gones"></iframe>
         </div>
       </div>
     </div>
   </section>
 
   <!-- footer -->
-  <footer class="wrap relative overflow-hidden" style="background:var(--bg);border-top:1px solid var(--line);">
-    <div class="max-w-6xl mx-auto px-5 pt-16 pb-10">
-      <div class="disp text-[16vw] md:text-[10rem] leading-[.8] text-center" style="color:#2a2017;">Pintes à Gones</div>
-      <div class="rule my-10"></div>
-      <div class="flex flex-col md:flex-row gap-4 md:items-center md:justify-between text-sm text-[var(--muted)]">
-        <p>13 rue Terme, 69001 Lyon · Bar à bières & vins nature</p>
+  <footer class="wrap" style="background:var(--paper);border-top:1px solid var(--line);">
+    <div class="max-w-6xl mx-auto px-5 pt-14 pb-28 md:pb-12">
+      <div class="disp text-[15vw] md:text-[9rem] leading-[.85] text-center" style="color:rgba(42,32,26,.1);">Pintes à Gones</div>
+      <div class="rule my-9"></div>
+      <div class="flex flex-col md:flex-row gap-4 md:items-center md:justify-between text-sm text-[var(--ink-soft)]">
+        <p>13 rue Terme, 69001 Lyon · Bar à bières &amp; vins nature</p>
         <div class="flex gap-6">
           <a href="https://www.instagram.com/pintesagones69001/" target="_blank" rel="noopener" class="link-u">Instagram</a>
+          <a href="https://chateausaintlouis.fr/" target="_blank" rel="noopener" class="link-u">Château Saint-Louis</a>
           <a href="mentions-legales.html" class="link-u">Mentions légales</a>
         </div>
       </div>
-      <p class="text-center text-xs mt-10" style="color:#6c5f4d;">© <span id="year"></span> Pintes À Gones. Site réalisé par Movari Easy.</p>
+      <p class="text-center text-xs mt-9" style="color:var(--ink-soft);opacity:.7;">© <span id="year"></span> Pintes À Gones · Site réalisé par Movari Easy.</p>
     </div>
   </footer>
 
-  <!-- bouton flottant mobile -->
-  <a href="https://www.instagram.com/pintesagones69001/" target="_blank" rel="noopener" class="md:hidden wrap fixed bottom-0 inset-x-0 z-50 text-center font-semibold py-4" style="background:var(--amber);color:#1a130c;">
-    Nous écrire sur Instagram
-  </a>
+  <!-- barre flottante mobile -->
+  <div class="md:hidden wrap fixed bottom-0 inset-x-0 z-50 grid grid-cols-2 text-center font-bold text-sm" style="box-shadow:0 -8px 24px -16px rgba(42,32,26,.6);">
+    <a href="https://www.google.com/maps/dir/?api=1&destination=13+rue+Terme+69001+Lyon" target="_blank" rel="noopener" class="py-4" style="background:var(--amber);color:#fffaf0;">Itinéraire</a>
+    <a href="https://www.instagram.com/pintesagones69001/" target="_blank" rel="noopener" class="py-4" style="background:var(--ink);color:var(--paper);">Instagram</a>
+  </div>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
