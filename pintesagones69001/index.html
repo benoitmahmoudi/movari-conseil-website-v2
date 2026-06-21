@@ -3,442 +3,291 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pint'A Gones | Bar à bières, cocktails & vins à Lyon 7</title>
-  <meta name="description" content="Pint'A Gones, le bar festif du 7ème à Lyon. Bières pression, cocktails maison, vins de vignerons, matchs sur écran géant, beer pong et privatisation. 82 rue Jaboulay, Lyon 7. Réservez au 06 36 16 06 93.">
+  <title>Pintes À Gones · Bar à bières & vins nature · Lyon 1er</title>
+  <meta name="description" content="Pintes À Gones, le bar à bières artisanales et vins nature des pentes de la Croix-Rousse. 13 rue Terme, Lyon 1er. Bières bien tirées, vins de vignerons, planches à partager.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="canonical" href="https://movari.fr/pintesagones69001/">
-
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://movari.fr/pintesagones69001/">
-  <meta property="og:title" content="Pint'A Gones · Bar à bières, cocktails & vins à Lyon 7">
-  <meta property="og:description" content="Le bar festif du 7ème. Bières, cocktails, vins de vignerons, matchs et privatisation. Réservez au 06 36 16 06 93.">
+  <meta property="og:title" content="Pintes À Gones · Bar à bières & vins nature · Lyon 1er">
+  <meta property="og:description" content="Le repaire des gones sur les pentes. Bières artisanales, vins nature, planches. 13 rue Terme, Lyon 1er.">
   <meta property="og:locale" content="fr_FR">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BarOrPub",
-    "name": "Pint'A Gones",
-    "description": "Bar à bières, cocktails et vins à Lyon 7. Ambiance festive, matchs sur écran géant, jeux et privatisation.",
-    "url": "https://movari.fr/pintesagones69001/",
-    "telephone": "+33636160693",
-    "email": "pintagones.lyon@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "82 rue Jaboulay",
-      "postalCode": "69007",
-      "addressLocality": "Lyon",
-      "addressCountry": "FR"
-    },
-    "areaServed": "Lyon 7, Jean Macé et alentours",
-    "openingHours": "Tu-Fr 17:00-01:00",
-    "servesCuisine": "Bar, bières, cocktails, vins, planches",
-    "priceRange": "€€"
-  }
-  </script>
 
   <link rel="icon" href="assets/favicon.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Serif:ital@0;1&family=Spline+Sans:wght@400..600&display=swap" rel="stylesheet">
   <style>
     :root{
-      --primary:#b45309; --primary-dark:#92400e; --primary-deep:#2a1810; --primary-soft:#f7e9d7;
-      --paper:#f7f3ec; --paper-2:#efe7d9; --card:#fffdf9;
-      --ink:#221c16; --muted:#6c6053;
-      --accent:#c08a2e; --accent-2:#9d6a1d; --accent-soft:#f1e4cd;
-      --line:rgba(34,28,22,.12);
+      --bg:#17110d; --bg2:#1f1711; --panel:#221a13;
+      --cream:#f4e9d6; --muted:#b6a489;
+      --amber:#e6ad45; --amber-deep:#c4862a;
+      --wine:#b03346; --wine-deep:#7d2233;
+      --line:rgba(244,233,214,.13);
     }
     *{box-sizing:border-box;}
     html{scroll-behavior:smooth;}
-    body{font-family:'Hanken Grotesk',system-ui,sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;}
-    h1,h2,h3,.disp{font-family:'Fraunces',Georgia,serif;font-weight:600;letter-spacing:-.012em;}
-    ::selection{background:var(--accent-soft);}
+    body{font-family:'Spline Sans',system-ui,sans-serif;background:var(--bg);color:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+    h1,h2,h3,.disp{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-.02em;line-height:.95;}
+    .serif{font-family:'Instrument Serif',Georgia,serif;font-weight:400;letter-spacing:.01em;}
+    ::selection{background:var(--amber);color:#17110d;}
 
-    .grain{position:relative;}
-    .grain::after{content:'';position:absolute;inset:0;pointer-events:none;mix-blend-mode:multiply;opacity:.06;
-      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+    /* grain + glows */
+    .grain::before{content:'';position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+    .glow{position:absolute;border-radius:9999px;filter:blur(90px);opacity:.5;pointer-events:none;z-index:0;}
 
-    .eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-2);}
-    .eyebrow::before{content:'';display:inline-block;width:1.6rem;height:1px;background:var(--accent);vertical-align:middle;margin-right:.55rem;}
-    .eyebrow.center{display:block;text-align:center;}
-    .eyebrow.center::after{content:'';display:inline-block;width:1.6rem;height:1px;background:var(--accent);vertical-align:middle;margin-left:.55rem;}
+    .wrap{position:relative;z-index:2;}
+    .eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--amber);}
 
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;border-radius:999px;font-weight:700;padding:.95rem 1.55rem;font-size:1rem;line-height:1;transition:transform .2s,box-shadow .2s,background .2s,border-color .2s,color .2s;cursor:pointer;}
-    .btn-primary{background:var(--primary);color:#fff;box-shadow:0 12px 26px -12px rgba(42,24,16,.6);}
-    .btn-primary:hover{background:var(--primary-dark);transform:translateY(-2px);box-shadow:0 18px 32px -14px rgba(42,24,16,.7);}
-    .btn-ghost{border:1.5px solid var(--line);color:var(--ink);background:transparent;}
-    .btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px);}
-    .btn-light{background:#fff;color:var(--primary-deep);}
-    .btn-light:hover{transform:translateY(-2px);box-shadow:0 14px 28px -14px rgba(0,0,0,.4);}
+    .btn{display:inline-flex;align-items:center;gap:.6rem;border-radius:999px;font-weight:600;padding:.95rem 1.6rem;font-size:.98rem;line-height:1;transition:transform .25s,background .25s,color .25s,border-color .25s;cursor:pointer;}
+    .btn-amber{background:var(--amber);color:#1a130c;}
+    .btn-amber:hover{transform:translateY(-3px);background:#f2bd58;}
+    .btn-out{border:1px solid var(--line);color:var(--cream);}
+    .btn-out:hover{border-color:var(--amber);color:var(--amber);transform:translateY(-3px);}
 
-    .card{background:var(--card);border:1px solid var(--line);border-radius:20px;transition:transform .28s,box-shadow .28s,border-color .28s;}
-    .card-hover:hover{transform:translateY(-5px);box-shadow:0 26px 44px -26px rgba(34,28,22,.4);border-color:rgba(192,138,46,.45);}
+    .link-u{position:relative;}
+    .link-u::after{content:'';position:absolute;left:0;bottom:-3px;height:1px;width:100%;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .3s;}
+    .link-u:hover::after{transform:scaleX(1);}
 
-    .nav-link{position:relative;padding:.2rem 0;}
-    .nav-link::after{content:'';position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .25s;}
-    .nav-link:hover::after{transform:scaleX(1);}
+    /* marquee */
+    .marquee{display:flex;gap:0;white-space:nowrap;animation:slide 32s linear infinite;}
+    .marquee span{padding:0 1.4rem;}
+    @keyframes slide{to{transform:translateX(-50%);}}
 
-    .hero-photo{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 34px 64px -32px rgba(42,24,16,.55);}
-    .hero-photo img{display:block;width:100%;height:100%;object-fit:cover;filter:sepia(.16) contrast(1.05) brightness(1.02);}
-    .hero-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(150deg,rgba(42,24,16,.12),rgba(192,138,46,.22));mix-blend-mode:multiply;}
+    /* warm duotone images */
+    .img-warm{position:relative;overflow:hidden;}
+    .img-warm img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(.25) sepia(.32) brightness(.82) contrast(1.06);transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .6s;}
+    .img-warm::after{content:'';position:absolute;inset:0;background:linear-gradient(150deg,rgba(176,51,70,.28),rgba(230,173,69,.22));mix-blend-mode:overlay;}
+    .img-warm:hover img{transform:scale(1.05);filter:grayscale(.1) sepia(.15) brightness(.92) contrast(1.05);}
 
-    .stat-num{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.4rem,6vw,3.5rem);line-height:.9;color:var(--primary-deep);}
+    .rule{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);}
 
-    .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.22,.61,.36,1),transform .8s cubic-bezier(.22,.61,.36,1);}
+    /* numbered carte rows */
+    .carde{border-top:1px solid var(--line);}
+    .carde:last-child{border-bottom:1px solid var(--line);}
+    .carde .idx{font-family:'Instrument Serif',serif;font-size:1.4rem;color:var(--amber);}
+    .carde h3{transition:color .3s,transform .3s;}
+    .carde:hover h3{color:var(--amber);transform:translateX(8px);}
+
+    .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);}
     .reveal.on{opacity:1;transform:none;}
-    .reveal-stagger>*{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease;}
-    .reveal-stagger.on>*{opacity:1;transform:none;}
-    .reveal-stagger.on>*:nth-child(2){transition-delay:.07s;}
-    .reveal-stagger.on>*:nth-child(3){transition-delay:.14s;}
-    .reveal-stagger.on>*:nth-child(4){transition-delay:.21s;}
-    .reveal-stagger.on>*:nth-child(5){transition-delay:.28s;}
-    .reveal-stagger.on>*:nth-child(6){transition-delay:.35s;}
-    @media (prefers-reduced-motion:reduce){.reveal,.reveal-stagger>*{transition:none;opacity:1;transform:none;}}
+    .load{opacity:0;transform:translateY(20px);animation:rise .9s cubic-bezier(.22,.61,.36,1) forwards;}
+    @keyframes rise{to{opacity:1;transform:none;}}
+    @media (prefers-reduced-motion:reduce){.reveal,.load{opacity:1!important;transform:none!important;animation:none!important;}.marquee{animation:none;}}
   </style>
 </head>
-<body>
+<body class="grain">
 
-  <!-- ================= BANDEAU APERÇU (démo de prospection) ================= -->
-  <div class="bg-[var(--primary-deep)] text-white/90 text-center text-[12.5px] py-2 px-4 font-medium">
-    Aperçu de site préparé pour Pint'A Gones. Démonstration : textes et photos à personnaliser avec vous.
+  <!-- aperçu démo -->
+  <div class="wrap text-center text-[11px] tracking-wide py-1.5 px-4" style="background:#0f0b08;color:#8c7d68;">
+    Aperçu préparé pour Pintes À Gones · démonstration, textes et photos à personnaliser
   </div>
 
-  <!-- ================= EN-TÊTE ================= -->
-  <header class="sticky top-0 z-40 bg-[var(--paper)]/85 backdrop-blur border-b border-[var(--line)]">
-    <div class="max-w-6xl mx-auto px-5 h-[68px] flex items-center justify-between">
-      <a href="#top" class="leading-none">
-        <span class="block disp font-bold text-lg text-[var(--ink)]">Pint'A Gones</span>
-        <span class="block text-[10px] font-bold text-[var(--accent-2)] uppercase tracking-[0.22em] mt-0.5">Bar · bières, cocktails & vins · Lyon 7</span>
-      </a>
-      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-[var(--muted)]">
-        <a href="#carte" class="nav-link">La carte</a>
-        <a href="#ambiance" class="nav-link">L'ambiance</a>
-        <a href="#privatiser" class="nav-link">Privatiser</a>
-        <a href="#avis" class="nav-link">Avis</a>
-        <a href="#venir" class="nav-link">Venir</a>
+  <!-- marquee -->
+  <div class="wrap border-y border-[var(--line)] py-2.5 text-[12.5px] font-semibold uppercase tracking-[0.22em] text-[var(--muted)] overflow-hidden" style="background:var(--bg2);">
+    <div class="marquee">
+      <span>Bières artisanales <span class="text-[var(--amber)]">✦</span></span><span>Vins nature <span class="text-[var(--amber)]">✦</span></span><span>Planches du marché <span class="text-[var(--amber)]">✦</span></span><span>Pentes de la Croix-Rousse <span class="text-[var(--amber)]">✦</span></span><span>Entre gones <span class="text-[var(--amber)]">✦</span></span>
+      <span>Bières artisanales <span class="text-[var(--amber)]">✦</span></span><span>Vins nature <span class="text-[var(--amber)]">✦</span></span><span>Planches du marché <span class="text-[var(--amber)]">✦</span></span><span>Pentes de la Croix-Rousse <span class="text-[var(--amber)]">✦</span></span><span>Entre gones <span class="text-[var(--amber)]">✦</span></span>
+    </div>
+  </div>
+
+  <!-- header -->
+  <header class="wrap sticky top-0 z-40 backdrop-blur" style="background:rgba(23,17,13,.72);border-bottom:1px solid var(--line);">
+    <div class="max-w-6xl mx-auto px-5 h-[62px] flex items-center justify-between">
+      <a href="#top" class="disp text-lg" style="letter-spacing:-.01em;">Pintes <span class="serif italic text-[var(--amber)]" style="font-weight:400;">à</span> Gones</a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-[var(--muted)]">
+        <a href="#carte" class="link-u">La carte</a>
+        <a href="#cave" class="link-u">La cave</a>
+        <a href="#lieu" class="link-u">Le lieu</a>
+        <a href="#venir" class="link-u">Venir</a>
       </nav>
-      <div class="flex items-center gap-3">
-        <a href="tel:+33636160693" class="hidden sm:inline-flex items-center gap-2 text-sm font-bold text-[var(--primary-deep)]">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          06 36 16 06 93
-        </a>
-        <a href="#venir" class="btn btn-primary !py-2.5 !px-4 text-sm">Réserver</a>
-      </div>
+      <a href="https://www.instagram.com/pintesagones69001/" target="_blank" rel="noopener" class="btn btn-amber !py-2.5 !px-4 text-sm">Nous suivre</a>
     </div>
   </header>
 
-  <!-- ================= HERO ================= -->
-  <section id="top" class="grain relative overflow-hidden">
-    <div class="absolute -top-24 -right-24 w-[28rem] h-[28rem] rounded-full bg-[var(--accent-soft)] blur-3xl opacity-50 pointer-events-none"></div>
-    <div class="max-w-6xl mx-auto px-5 pt-14 pb-16 md:pt-20 md:pb-24 grid grid-cols-1 md:grid-cols-[1.05fr_.95fr] gap-12 md:gap-10 items-center relative">
-      <div class="reveal on">
-        <p class="eyebrow mb-5"><span>Le bar festif du 7ème · Lyon</span></p>
-        <h1 class="text-[2.05rem] sm:text-5xl md:text-[3.4rem] leading-[1.08] mb-5">
-          Bières, cocktails et vins,
-          <span class="block italic font-normal text-[var(--accent-2)] mt-2">entre amis, à deux pas de Jean Macé.</span>
-        </h1>
-        <p class="text-lg text-[var(--muted)] leading-relaxed mb-8 max-w-xl">Pint'A Gones, c'est l'ambiance conviviale d'un bar de quartier : bières pression, cocktails maison, vins de vignerons, les matchs sur écran géant et de quoi faire la fête en groupe.</p>
-        <div class="flex flex-wrap gap-3 mb-8">
-          <a href="tel:+33636160693" class="btn btn-primary text-base">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Réserver au 06 36 16 06 93
-          </a>
-          <a href="#carte" class="btn btn-ghost text-base">Voir la carte</a>
+  <!-- HERO -->
+  <section id="top" class="wrap relative">
+    <div class="glow" style="width:34rem;height:34rem;background:var(--amber);top:-10rem;right:-8rem;opacity:.28;"></div>
+    <div class="glow" style="width:26rem;height:26rem;background:var(--wine);bottom:-6rem;left:-6rem;opacity:.35;"></div>
+    <div class="max-w-6xl mx-auto px-5 pt-12 pb-10 md:pt-16">
+      <p class="eyebrow load mb-6" style="animation-delay:.05s">Bar à bières & vins nature · Lyon 1er</p>
+      <h1 class="load text-[18vw] sm:text-[15vw] md:text-[10.5rem] leading-[.82]" style="animation-delay:.12s">
+        Pintes
+        <span class="block">
+          <span class="serif italic font-normal text-[var(--amber)]" style="font-weight:400;">à</span> gones
+        </span>
+      </h1>
+      <div class="grid md:grid-cols-[1.1fr_.9fr] gap-8 md:gap-12 items-end mt-8 md:mt-10">
+        <p class="load text-lg md:text-xl text-[var(--muted)] leading-relaxed max-w-xl" style="animation-delay:.2s">
+          Le repaire des gones sur les pentes. Des bières qu'on choisit avec soin, des vins nature de vignerons, des planches à partager, et l'ambiance qui va avec.
+        </p>
+        <div class="load flex flex-wrap gap-3 md:justify-end" style="animation-delay:.28s">
+          <a href="#carte" class="btn btn-amber">Découvrir la carte</a>
+          <a href="#venir" class="btn btn-out">Venir nous voir</a>
         </div>
-        <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold text-[var(--muted)]">
-          <li class="inline-flex items-center gap-1.5"><span class="text-[var(--accent)]">●</span> 4,6/5 sur Google</li>
-          <li class="inline-flex items-center gap-1.5"><span class="text-[var(--accent)]">●</span> Du mardi au vendredi, 17h à 1h</li>
-          <li class="inline-flex items-center gap-1.5"><span class="text-[var(--accent)]">●</span> Privatisation possible</li>
-          <li class="inline-flex items-center gap-1.5"><span class="text-[var(--accent)]">●</span> Tous les matchs</li>
-        </ul>
       </div>
-      <div class="reveal on relative">
-        <div class="hero-photo h-80 md:h-[30rem]">
-          <img src="assets/hero.jpg" alt="Le bar Pint'A Gones à Lyon 7">
-        </div>
-        <div class="absolute -bottom-6 -left-4 sm:left-auto sm:-right-6 bg-[var(--card)] border border-[var(--line)] rounded-2xl shadow-xl px-5 py-4 flex items-center gap-4">
-          <div class="text-center">
-            <div class="disp text-3xl font-bold text-[var(--primary-deep)] leading-none">4,6<span class="text-[var(--accent)]">★</span></div>
-            <div class="text-[11px] font-semibold uppercase tracking-wider text-[var(--muted)] mt-1">sur Google</div>
-          </div>
-          <div class="w-px h-10 bg-[var(--line)]"></div>
-          <div class="text-sm font-bold text-[var(--ink)] leading-snug">Ambiance<br>garantie</div>
-        </div>
+    </div>
+    <!-- bande image hero -->
+    <div class="load max-w-6xl mx-auto px-5 mt-8" style="animation-delay:.34s">
+      <div class="img-warm rounded-2xl h-[44vh] md:h-[56vh] border border-[var(--line)]">
+        <img src="assets/hero.jpg" alt="L'ambiance du bar Pintes À Gones, Lyon 1er">
       </div>
     </div>
   </section>
 
-  <!-- ================= CHIFFRES CLÉS ================= -->
-  <section class="max-w-6xl mx-auto px-5 py-14 md:py-16">
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10 reveal-stagger">
-      <div class="text-center sm:text-left">
-        <div class="stat-num">4,6<span class="text-[var(--accent)]">/5</span></div>
-        <div class="mt-2 text-sm font-semibold text-[var(--muted)]">la note de vos clients sur Google</div>
+  <!-- bandeau infos -->
+  <section class="wrap max-w-6xl mx-auto px-5 py-12 md:py-16">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-6 reveal">
+      <div>
+        <p class="eyebrow mb-2">L'adresse</p>
+        <p class="disp text-xl">13 rue Terme</p>
+        <p class="text-[var(--muted)] text-sm mt-1">Lyon 1er, les pentes</p>
       </div>
-      <div class="text-center sm:text-left">
-        <div class="stat-num">45</div>
-        <div class="mt-2 text-sm font-semibold text-[var(--muted)]">places pour faire la fête</div>
+      <div>
+        <p class="eyebrow mb-2">Les horaires</p>
+        <p class="disp text-xl">En soirée</p>
+        <p class="text-[var(--muted)] text-sm mt-1">du mardi au samedi (à confirmer)</p>
       </div>
-      <div class="text-center sm:text-left">
-        <div class="stat-num">1h</div>
-        <div class="mt-2 text-sm font-semibold text-[var(--muted)]">du matin, du mardi au vendredi</div>
+      <div>
+        <p class="eyebrow mb-2">Sur Google</p>
+        <p class="disp text-xl">Bien notés</p>
+        <p class="text-[var(--muted)] text-sm mt-1">par les habitués du quartier</p>
       </div>
-      <div class="text-center sm:text-left">
-        <div class="stat-num">100%</div>
-        <div class="mt-2 text-sm font-semibold text-[var(--muted)]">bières, cocktails & vins choisis</div>
+      <div>
+        <p class="eyebrow mb-2">Le réseau</p>
+        <a href="https://www.instagram.com/pintesagones69001/" target="_blank" rel="noopener" class="disp text-xl link-u">@pintesagones</a>
+        <p class="text-[var(--muted)] text-sm mt-1">la vie du bar au quotidien</p>
       </div>
     </div>
   </section>
 
-  <!-- ================= LA CARTE ================= -->
-  <section id="carte" class="bg-[var(--paper-2)] grain">
+  <!-- LA CARTE -->
+  <section id="carte" class="wrap relative" style="background:var(--bg2);">
     <div class="max-w-6xl mx-auto px-5 py-20 md:py-28">
-      <div class="max-w-2xl mb-14 reveal">
-        <p class="eyebrow mb-4">La carte</p>
-        <h2 class="text-3xl md:text-4xl mb-3">Ce qu'on vous sert</h2>
-        <p class="text-[var(--muted)] text-lg">De la pression bien tirée aux vins de petits domaines, tout est choisi pour passer un bon moment.</p>
-      </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal-stagger">
-        <article class="card card-hover overflow-hidden">
-          <div class="overflow-hidden h-48"><img src="assets/serv-bieres.jpg" alt="Bières pression" class="w-full h-full object-cover hover:scale-105 transition duration-500"></div>
-          <div class="p-6"><h3 class="text-xl mb-2">Bières pression & du moment</h3><p class="text-sm text-[var(--muted)] leading-relaxed">Une sélection de pressions et de bières du moment, bien tirées et bien fraîches.</p></div>
-        </article>
-        <article class="card card-hover overflow-hidden">
-          <div class="overflow-hidden h-48"><img src="assets/serv-cocktails.jpg" alt="Cocktails maison" class="w-full h-full object-cover hover:scale-105 transition duration-500"></div>
-          <div class="p-6"><h3 class="text-xl mb-2">Cocktails maison</h3><p class="text-sm text-[var(--muted)] leading-relaxed">Des classiques et des créations préparés au shaker, pour bien lancer la soirée.</p></div>
-        </article>
-        <article class="card card-hover overflow-hidden">
-          <div class="overflow-hidden h-48"><img src="assets/serv-vins.jpg" alt="Vins de vignerons" class="w-full h-full object-cover hover:scale-105 transition duration-500"></div>
-          <div class="p-6"><h3 class="text-xl mb-2">Vins de vignerons</h3><p class="text-sm text-[var(--muted)] leading-relaxed">Une cave qui change, avec des vins de petits domaines, dont de jolies pépites du Sud Ouest.</p></div>
-        </article>
-        <article class="card card-hover overflow-hidden">
-          <div class="overflow-hidden h-48"><img src="assets/serv-planches.jpg" alt="Planches à partager" class="w-full h-full object-cover hover:scale-105 transition duration-500"></div>
-          <div class="p-6"><h3 class="text-xl mb-2">Planches à partager</h3><p class="text-sm text-[var(--muted)] leading-relaxed">Charcuterie, fromages et bons produits à grignoter à plusieurs, autour d'un verre.</p></div>
-        </article>
-        <article class="card card-hover overflow-hidden">
-          <div class="overflow-hidden h-48"><img src="assets/serv-matchs.jpg" alt="Matchs sur écran géant" class="w-full h-full object-cover hover:scale-105 transition duration-500"></div>
-          <div class="p-6"><h3 class="text-xl mb-2">Tous les matchs sur écran géant</h3><p class="text-sm text-[var(--muted)] leading-relaxed">Foot, rugby et grands rendez-vous sportifs à vivre ensemble, l'ambiance en plus.</p></div>
-        </article>
-        <article class="card card-hover overflow-hidden">
-          <div class="overflow-hidden h-48"><img src="assets/serv-jeux.jpg" alt="Beer pong, fléchettes et jeux" class="w-full h-full object-cover hover:scale-105 transition duration-500"></div>
-          <div class="p-6"><h3 class="text-xl mb-2">Beer pong, fléchettes & jeux</h3><p class="text-sm text-[var(--muted)] leading-relaxed">De quoi s'amuser toute la soirée, entre amis ou pour un anniversaire.</p></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= 3 BONNES RAISONS ================= -->
-  <section id="ambiance" class="max-w-6xl mx-auto px-5 py-20 md:py-28">
-    <div class="text-center max-w-2xl mx-auto mb-14 reveal">
-      <p class="eyebrow center mb-4">L'ambiance</p>
-      <h2 class="text-3xl md:text-4xl">Trois bonnes raisons de pousser la porte</h2>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 reveal-stagger">
-      <div class="relative">
-        <span class="disp text-5xl font-bold text-[var(--accent-soft)] absolute -top-4 right-2 select-none">01</span>
-        <div class="relative">
-          <div class="w-12 h-12 rounded-2xl bg-[var(--primary-soft)] text-[var(--primary)] flex items-center justify-center mb-4">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 11V3H7v8M5 21h14a2 2 0 0 0 2-2v-5H3v5a2 2 0 0 0 2 2z"/></svg>
-          </div>
-          <h3 class="text-xl mb-2">Une ambiance qui réchauffe</h3>
-          <p class="text-[var(--muted)] leading-relaxed">Un bar de quartier convivial où on se sent vite chez soi, du premier verre au dernier.</p>
-        </div>
-      </div>
-      <div class="relative">
-        <span class="disp text-5xl font-bold text-[var(--accent-soft)] absolute -top-4 right-2 select-none">02</span>
-        <div class="relative">
-          <div class="w-12 h-12 rounded-2xl bg-[var(--primary-soft)] text-[var(--primary)] flex items-center justify-center mb-4">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8M12 11v11M5 3h14l-1 7a6 6 0 0 1-12 0z"/></svg>
-          </div>
-          <h3 class="text-xl mb-2">Du bon, dans le verre</h3>
-          <p class="text-[var(--muted)] leading-relaxed">Bières bien tirées, cocktails maison et vins choisis chez des vignerons. La qualité avant tout.</p>
-        </div>
-      </div>
-      <div class="relative">
-        <span class="disp text-5xl font-bold text-[var(--accent-soft)] absolute -top-4 right-2 select-none">03</span>
-        <div class="relative">
-          <div class="w-12 h-12 rounded-2xl bg-[var(--primary-soft)] text-[var(--primary)] flex items-center justify-center mb-4">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h3 class="text-xl mb-2">Parfait pour les groupes</h3>
-          <p class="text-[var(--muted)] leading-relaxed">Anniversaires, afterworks, EVG et EVJF : on privatise le bar pour vos grandes occasions.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= GALERIE D'AMBIANCE ================= -->
-  <section class="max-w-6xl mx-auto px-5 pb-8 md:pb-12">
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 reveal-stagger">
-      <div class="overflow-hidden rounded-2xl h-56"><img src="assets/amb-1.jpg" alt="Trinquer entre amis au bar" class="w-full h-full object-cover hover:scale-105 transition duration-500"></div>
-      <div class="overflow-hidden rounded-2xl h-56"><img src="assets/amb-2.jpg" alt="Sélection de bières" class="w-full h-full object-cover hover:scale-105 transition duration-500"></div>
-      <div class="overflow-hidden rounded-2xl h-56"><img src="assets/amb-3.jpg" alt="Cocktails au bar le soir" class="w-full h-full object-cover hover:scale-105 transition duration-500"></div>
-      <div class="overflow-hidden rounded-2xl h-56"><img src="assets/amb-4.jpg" alt="On trinque pour fêter" class="w-full h-full object-cover hover:scale-105 transition duration-500"></div>
-      <div class="overflow-hidden rounded-2xl h-56"><img src="assets/amb-5.jpg" alt="Groupe d'amis au bar" class="w-full h-full object-cover hover:scale-105 transition duration-500"></div>
-      <div class="overflow-hidden rounded-2xl h-56"><img src="assets/amb-6.jpg" alt="Ambiance du bar en soirée" class="w-full h-full object-cover hover:scale-105 transition duration-500"></div>
-    </div>
-  </section>
-
-  <!-- ================= PRIVATISER (bande sombre) ================= -->
-  <section id="privatiser" class="bg-[var(--primary-deep)] text-white grain relative overflow-hidden">
-    <div class="absolute -bottom-32 -left-20 w-[26rem] h-[26rem] rounded-full bg-[var(--accent)] blur-3xl opacity-20 pointer-events-none"></div>
-    <div class="max-w-4xl mx-auto px-5 py-20 md:py-28 text-center relative">
-      <p class="eyebrow center mb-6" style="color:var(--accent-soft)">Privatisation</p>
-      <span class="disp text-6xl text-[var(--accent)] leading-none block mb-2">&ldquo;</span>
-      <blockquote class="disp text-2xl md:text-[2rem] leading-snug font-medium max-w-3xl mx-auto">
-        Anniversaire, afterwork, enterrement de vie de garçon ou de jeune fille : on privatise le bar rien que pour vous et votre groupe, dans l'ambiance qui fait notre réputation.
-      </blockquote>
-      <p class="mt-8 font-bold text-lg">L'équipe de Pint'A Gones</p>
-      <p class="text-white/70 text-sm">Bar à bières, cocktails & vins, Lyon 7</p>
-      <a href="#venir" class="btn btn-light text-base mt-8">Demander une privatisation</a>
-    </div>
-  </section>
-
-  <!-- ================= AVIS (note Google réelle) ================= -->
-  <section id="avis" class="max-w-4xl mx-auto px-5 py-20 md:py-28 text-center">
-    <p class="eyebrow center mb-4">Vos avis clients</p>
-    <h2 class="text-3xl md:text-4xl reveal">Ce que vos clients en disent</h2>
-    <div class="mt-10 card p-8 md:p-10 max-w-2xl mx-auto reveal">
-      <div class="flex items-center justify-center gap-2 mb-3">
-        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 5.9-1.1 7.9-2.9l-3.9-3a7.2 7.2 0 0 1-11-3.8H1v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"/></svg>
-        <span class="font-semibold text-[var(--ink)]">Avis Google</span>
-      </div>
-      <div class="disp text-5xl font-bold text-[var(--primary-deep)] leading-none">4,6<span class="text-2xl text-[var(--muted)]"> / 5</span></div>
-      <div class="text-amber-500 text-2xl tracking-widest mt-2">★★★★★</div>
-      <p class="text-[var(--muted)] mt-3 mb-6">Vos clients saluent l'ambiance chaleureuse, l'accueil et le bon rapport qualité prix. Leurs avis s'afficheront ici, en vrai, dès la mise en ligne.</p>
-      <a href="https://www.google.com/maps/search/Pint%27A+Gones+Lyon" target="_blank" rel="noopener" class="btn btn-ghost">Voir nos avis Google</a>
-    </div>
-  </section>
-
-  <!-- ================= BON À SAVOIR ================= -->
-  <section class="bg-[var(--paper-2)] grain">
-    <div class="max-w-6xl mx-auto px-5 py-20 md:py-28">
-      <div class="text-center max-w-2xl mx-auto mb-14 reveal">
-        <p class="eyebrow center mb-4">Bon à savoir</p>
-        <h2 class="text-3xl md:text-4xl mb-3">Tout pour passer une bonne soirée</h2>
-      </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal-stagger">
-        <div class="card p-6 flex gap-4">
-          <span class="flex-none w-10 h-10 rounded-full bg-[var(--accent-soft)] text-[var(--accent-2)] flex items-center justify-center font-bold">✓</span>
-          <div><h3 class="text-lg mb-1">Réservation simple</h3><p class="text-sm text-[var(--muted)]">Un coup de fil ou un message et votre table vous attend.</p></div>
-        </div>
-        <div class="card p-6 flex gap-4">
-          <span class="flex-none w-10 h-10 rounded-full bg-[var(--accent-soft)] text-[var(--accent-2)] flex items-center justify-center font-bold">✓</span>
-          <div><h3 class="text-lg mb-1">Privatisation possible</h3><p class="text-sm text-[var(--muted)]">On réserve le bar pour votre groupe en dehors des horaires d'ouverture.</p></div>
-        </div>
-        <div class="card p-6 flex gap-4">
-          <span class="flex-none w-10 h-10 rounded-full bg-[var(--accent-soft)] text-[var(--accent-2)] flex items-center justify-center font-bold">✓</span>
-          <div><h3 class="text-lg mb-1">Groupes & EVG bienvenus</h3><p class="text-sm text-[var(--muted)]">Anniversaires, afterworks, EVG et EVJF : on adore les bandes d'amis.</p></div>
-        </div>
-        <div class="card p-6 flex gap-4">
-          <span class="flex-none w-10 h-10 rounded-full bg-[var(--accent-soft)] text-[var(--accent-2)] flex items-center justify-center font-bold">✓</span>
-          <div><h3 class="text-lg mb-1">Tous les matchs</h3><p class="text-sm text-[var(--muted)]">Les grands rendez-vous sportifs sur écran géant, l'ambiance des grands soirs.</p></div>
-        </div>
-        <div class="card p-6 flex gap-4">
-          <span class="flex-none w-10 h-10 rounded-full bg-[var(--accent-soft)] text-[var(--accent-2)] flex items-center justify-center font-bold">✓</span>
-          <div><h3 class="text-lg mb-1">Beer pong & jeux</h3><p class="text-sm text-[var(--muted)]">Beer pong, fléchettes et jeux à boire pour animer toute la soirée.</p></div>
-        </div>
-        <div class="card p-6 flex gap-4">
-          <span class="flex-none w-10 h-10 rounded-full bg-[var(--accent-soft)] text-[var(--accent-2)] flex items-center justify-center font-bold">✓</span>
-          <div><h3 class="text-lg mb-1">À deux pas de Jean Macé</h3><p class="text-sm text-[var(--muted)]">En plein 7ème, facile d'accès en métro comme à pied.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= VENIR / RÉSERVER ================= -->
-  <section id="venir" class="max-w-6xl mx-auto px-5 py-20 md:py-28 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-    <div class="reveal">
-      <p class="eyebrow mb-4">Venir nous voir</p>
-      <h2 class="text-3xl md:text-4xl mb-4">Réserver ou privatiser</h2>
-      <p class="text-[var(--muted)] text-lg mb-8">Le plus rapide, c'est de nous appeler. Sinon, laissez nous un message et on revient vers vous.</p>
-      <div class="space-y-4 mb-8">
-        <a href="tel:+33636160693" class="flex items-center gap-3 font-bold text-lg group"><span class="w-11 h-11 rounded-2xl bg-[var(--primary)] text-white flex items-center justify-center group-hover:bg-[var(--primary-dark)] transition"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>06 36 16 06 93</a>
-        <p class="flex items-center gap-3 text-[var(--ink)]"><span class="w-11 h-11 rounded-2xl bg-[var(--card)] border border-[var(--line)] flex items-center justify-center text-[var(--accent-2)]"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></span>pintagones.lyon@gmail.com</p>
-        <p class="flex items-center gap-3 text-[var(--ink)]"><span class="w-11 h-11 rounded-2xl bg-[var(--card)] border border-[var(--line)] flex items-center justify-center text-[var(--accent-2)]"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>82 rue Jaboulay, 69007 Lyon</p>
-        <p class="flex items-center gap-3 text-[var(--ink)]"><span class="w-11 h-11 rounded-2xl bg-[var(--card)] border border-[var(--line)] flex items-center justify-center text-[var(--accent-2)]"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>Du mardi au vendredi, 17h à 1h</p>
-      </div>
-      <iframe src="https://www.google.com/maps?q=82%20rue%20Jaboulay%2069007%20Lyon&output=embed" class="w-full h-64 rounded-2xl border-0 shadow-lg" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Plan d'accès Pint'A Gones"></iframe>
-    </div>
-    <div class="reveal">
-      <form id="devisForm" class="card p-6 md:p-8 shadow-sm space-y-4">
-        <input type="hidden" name="access_key" value="WEB3FORMS_A_CONFIGURER">
-        <input type="hidden" name="subject" value="Nouvelle demande depuis le site Pint'A Gones">
-        <input type="checkbox" name="botcheck" class="hidden" style="display:none" aria-hidden="true">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-14 reveal">
         <div>
-          <label class="block text-sm font-semibold mb-1.5">Votre nom</label>
-          <input name="name" required class="w-full rounded-xl border border-[var(--line)] bg-white px-4 py-3 focus:outline-none focus:border-[var(--primary)]">
+          <p class="eyebrow mb-4">Au comptoir</p>
+          <h2 class="text-4xl md:text-6xl">Ce qu'on<br>vous sert</h2>
         </div>
-        <div>
-          <label class="block text-sm font-semibold mb-1.5">Téléphone</label>
-          <input name="phone" type="tel" required class="w-full rounded-xl border border-[var(--line)] bg-white px-4 py-3 focus:outline-none focus:border-[var(--primary)]">
+        <p class="text-[var(--muted)] max-w-sm md:text-right">Une carte vivante, qui change au gré des brasseurs et des vignerons. On vous guide, selon votre soif et votre humeur.</p>
+      </div>
+
+      <div class="reveal">
+        <div class="carde py-7 md:py-9 grid grid-cols-[auto_1fr] md:grid-cols-[auto_1fr_auto] gap-x-5 md:gap-x-10 items-baseline">
+          <span class="idx">01</span>
+          <div><h3 class="disp text-2xl md:text-4xl mb-2">Bières artisanales</h3><p class="text-[var(--muted)] md:max-w-xl">À la pression et à la bouteille, une sélection qui tourne : brasseurs locaux, pépites artisanales, toujours bien tirées.</p></div>
+          <span class="hidden md:block serif italic text-[var(--muted)] text-xl">pression & bouteilles</span>
         </div>
-        <div>
-          <label class="block text-sm font-semibold mb-1.5">Votre demande (réservation, privatisation, groupe...)</label>
-          <textarea name="message" rows="3" required class="w-full rounded-xl border border-[var(--line)] bg-white px-4 py-3 focus:outline-none focus:border-[var(--primary)]"></textarea>
+        <div class="carde py-7 md:py-9 grid grid-cols-[auto_1fr] md:grid-cols-[auto_1fr_auto] gap-x-5 md:gap-x-10 items-baseline">
+          <span class="idx">02</span>
+          <div><h3 class="disp text-2xl md:text-4xl mb-2">Vins nature</h3><p class="text-[var(--muted)] md:max-w-xl">Une cave de vignerons, vivante et sincère, dont les cuvées du Château Saint-Louis. On adore raconter ce qu'il y a dans le verre.</p></div>
+          <span class="hidden md:block serif italic text-[var(--muted)] text-xl">au verre & en bouteille</span>
         </div>
-        <button type="submit" class="btn btn-primary w-full">Envoyer ma demande</button>
-        <p id="formMsg" class="text-sm text-center hidden"></p>
-      </form>
+        <div class="carde py-7 md:py-9 grid grid-cols-[auto_1fr] md:grid-cols-[auto_1fr_auto] gap-x-5 md:gap-x-10 items-baseline">
+          <span class="idx">03</span>
+          <div><h3 class="disp text-2xl md:text-4xl mb-2">Planches à partager</h3><p class="text-[var(--muted)] md:max-w-xl">Charcuterie, fromages affinés et bons produits, à picorer à plusieurs autour d'un verre.</p></div>
+          <span class="hidden md:block serif italic text-[var(--muted)] text-xl">à grignoter</span>
+        </div>
+        <div class="carde py-7 md:py-9 grid grid-cols-[auto_1fr] md:grid-cols-[auto_1fr_auto] gap-x-5 md:gap-x-10 items-baseline">
+          <span class="idx">04</span>
+          <div><h3 class="disp text-2xl md:text-4xl mb-2">L'apéro entre gones</h3><p class="text-[var(--muted)] md:max-w-xl">Un comptoir où l'on se sent vite chez soi, pour l'afterwork, les copains ou refaire le monde jusqu'à la fermeture.</p></div>
+          <span class="hidden md:block serif italic text-[var(--muted)] text-xl">l'ambiance maison</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ================= FOOTER ================= -->
-  <footer class="bg-[var(--ink)] text-white/70">
-    <div class="max-w-6xl mx-auto px-5 py-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-sm">
-      <div>
-        <p class="disp font-bold text-white text-xl mb-2">Pint'A Gones</p>
-        <p>Le bar festif du 7ème à Lyon. Bières, cocktails, vins de vignerons, matchs et privatisation, dans une ambiance conviviale.</p>
-      </div>
-      <div>
-        <p class="font-bold text-white mb-3">Contact</p>
-        <p class="mb-1"><a href="tel:+33636160693" class="hover:text-white">06 36 16 06 93</a></p>
-        <p class="mb-1"><a href="mailto:pintagones.lyon@gmail.com" class="hover:text-white">pintagones.lyon@gmail.com</a></p>
-        <p>82 rue Jaboulay, 69007 Lyon</p>
-      </div>
-      <div>
-        <p class="font-bold text-white mb-3">Horaires</p>
-        <p class="mb-1">Du mardi au vendredi</p>
-        <p class="mb-1">17h à 1h</p>
-        <p><a href="mentions-legales.html" class="hover:text-white">Mentions légales</a></p>
+  <!-- galerie -->
+  <section id="lieu" class="wrap max-w-6xl mx-auto px-5 py-20 md:py-28">
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+      <div class="img-warm rounded-2xl h-64 md:h-80 reveal col-span-2 md:col-span-2"><img src="assets/amb-1.jpg" alt="Trinquer entre amis"></div>
+      <div class="img-warm rounded-2xl h-64 md:h-80 reveal"><img src="assets/serv-bieres.jpg" alt="Bières à la pression"></div>
+      <div class="img-warm rounded-2xl h-64 md:h-80 reveal"><img src="assets/serv-vins.jpg" alt="Vins nature au verre"></div>
+      <div class="img-warm rounded-2xl h-64 md:h-80 reveal"><img src="assets/serv-planches.jpg" alt="Planche à partager"></div>
+      <div class="img-warm rounded-2xl h-64 md:h-80 reveal"><img src="assets/amb-6.jpg" alt="L'ambiance du soir"></div>
+    </div>
+  </section>
+
+  <!-- LA CAVE (spotlight vin nature, Château Saint-Louis) -->
+  <section id="cave" class="wrap relative overflow-hidden" style="background:linear-gradient(160deg,#2a1016,#1a0e0b);">
+    <div class="glow" style="width:30rem;height:30rem;background:var(--wine);top:-8rem;right:-6rem;opacity:.45;"></div>
+    <div class="max-w-6xl mx-auto px-5 py-20 md:py-28 grid md:grid-cols-[1fr_1fr] gap-12 items-center">
+      <div class="img-warm rounded-2xl h-80 md:h-[30rem] reveal border border-[var(--line)] order-2 md:order-1"><img src="assets/amb-4.jpg" alt="La cave de vins nature"></div>
+      <div class="reveal order-1 md:order-2">
+        <p class="eyebrow mb-5" style="color:var(--wine);">La cave</p>
+        <h2 class="text-4xl md:text-6xl mb-6">Des vins<br><span class="serif italic font-normal text-[var(--amber)]" style="font-weight:400;">qui ont une histoire</span></h2>
+        <p class="text-[var(--muted)] text-lg leading-relaxed mb-6 max-w-lg">Sur nos étagères, des vins nature de vignerons qu'on aime, dont les cuvées du <strong class="text-[var(--cream)] font-semibold">Château Saint-Louis</strong>. Des vins vivants, francs, à découvrir au verre comme à la bouteille. Dites nous ce que vous aimez, on trouve le bon.</p>
+        <a href="#venir" class="btn btn-out">Passer goûter</a>
       </div>
     </div>
-    <div class="border-t border-white/10 py-5 text-center text-xs text-white/50">
-      © <span id="year"></span> Pint'A Gones. Site réalisé par Movari Easy.
+  </section>
+
+  <!-- AVIS -->
+  <section class="wrap max-w-4xl mx-auto px-5 py-20 md:py-28 text-center reveal">
+    <p class="eyebrow mb-6">On en dit du bien</p>
+    <blockquote class="serif text-2xl md:text-[2.4rem] leading-snug text-[var(--cream)]">
+      &ldquo; Super endroit, les bières sont de qualité, les propriétaires cherchent la qualité et la satisfaction client avant tout. Le rapport qualité prix est dans les meilleurs de Lyon. &rdquo;
+    </blockquote>
+    <p class="mt-6 text-[var(--muted)] text-sm">Un client, sur Google</p>
+  </section>
+
+  <!-- VENIR -->
+  <section id="venir" class="wrap relative" style="background:var(--bg2);">
+    <div class="max-w-6xl mx-auto px-5 py-20 md:py-28 grid md:grid-cols-[1fr_1fr] gap-12 items-start">
+      <div class="reveal">
+        <p class="eyebrow mb-4">Venir nous voir</p>
+        <h2 class="text-4xl md:text-6xl mb-8">On vous<br>garde une place</h2>
+        <div class="space-y-6 text-lg">
+          <div>
+            <p class="eyebrow mb-1">Adresse</p>
+            <p>13 rue Terme, 69001 Lyon</p>
+            <p class="text-[var(--muted)] text-sm">Pentes de la Croix-Rousse, métro Hôtel de Ville</p>
+          </div>
+          <div>
+            <p class="eyebrow mb-1">Horaires</p>
+            <p>Du mardi au samedi, en soirée</p>
+            <p class="text-[var(--muted)] text-sm">horaires précis à confirmer</p>
+          </div>
+          <div>
+            <p class="eyebrow mb-1">Réservation & privatisation</p>
+            <a href="https://www.instagram.com/pintesagones69001/" target="_blank" rel="noopener" class="link-u">Écrivez nous sur Instagram @pintesagones69001</a>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="img-warm rounded-2xl overflow-hidden border border-[var(--line)]">
+          <iframe src="https://www.google.com/maps?q=13%20rue%20Terme%2069001%20Lyon&output=embed" class="w-full h-[26rem] border-0" style="filter:grayscale(.3) sepia(.2) brightness(.9);" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Plan d'accès Pintes À Gones"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="wrap relative overflow-hidden" style="background:var(--bg);border-top:1px solid var(--line);">
+    <div class="max-w-6xl mx-auto px-5 pt-16 pb-10">
+      <div class="disp text-[16vw] md:text-[10rem] leading-[.8] text-center" style="color:#2a2017;">Pintes à Gones</div>
+      <div class="rule my-10"></div>
+      <div class="flex flex-col md:flex-row gap-4 md:items-center md:justify-between text-sm text-[var(--muted)]">
+        <p>13 rue Terme, 69001 Lyon · Bar à bières & vins nature</p>
+        <div class="flex gap-6">
+          <a href="https://www.instagram.com/pintesagones69001/" target="_blank" rel="noopener" class="link-u">Instagram</a>
+          <a href="mentions-legales.html" class="link-u">Mentions légales</a>
+        </div>
+      </div>
+      <p class="text-center text-xs mt-10" style="color:#6c5f4d;">© <span id="year"></span> Pintes À Gones. Site réalisé par Movari Easy.</p>
     </div>
   </footer>
 
-  <!-- ================= BOUTONS FLOTTANTS ================= -->
-  <a href="https://wa.me/33636160693" target="_blank" rel="noopener" class="fixed bottom-20 md:bottom-6 right-4 z-50 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-lg hover:scale-105 transition" style="width:54px;height:54px" aria-label="Contacter sur WhatsApp">
-    <svg width="27" height="27" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.157 5.335 5.493 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.477-.755zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-  </a>
-  <a href="tel:+33636160693" class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-[var(--primary)] text-white font-bold py-4 text-center flex items-center justify-center gap-2 shadow-[0_-6px_20px_-8px_rgba(0,0,0,.4)]">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-    Réserver maintenant
+  <!-- bouton flottant mobile -->
+  <a href="https://www.instagram.com/pintesagones69001/" target="_blank" rel="noopener" class="md:hidden wrap fixed bottom-0 inset-x-0 z-50 text-center font-semibold py-4" style="background:var(--amber);color:#1a130c;">
+    Nous écrire sur Instagram
   </a>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); } });
-    }, {threshold:.12});
-    document.querySelectorAll('.reveal, .reveal-stagger').forEach(el=>io.observe(el));
-
-    const form = document.getElementById('devisForm'); const msg = document.getElementById('formMsg');
-    form.addEventListener('submit', async (ev)=>{
-      ev.preventDefault();
-      const btn = form.querySelector('button[type=submit]');
-      btn.disabled = true; btn.textContent = 'Envoi en cours...';
-      try{
-        const res = await fetch('https://api.web3forms.com/submit', { method:'POST', headers:{'Accept':'application/json'}, body:new FormData(form) });
-        const data = await res.json(); msg.classList.remove('hidden');
-        if(data.success){ form.reset(); msg.textContent = 'Merci, votre demande est envoyée. On revient vers vous vite.'; msg.className='text-sm text-center text-green-600'; }
-        else { msg.textContent = 'Pour aller plus vite, appelez nous au 06 36 16 06 93.'; msg.className='text-sm text-center text-red-600'; }
-      }catch(e){ msg.classList.remove('hidden'); msg.textContent = 'Pour aller plus vite, appelez nous au 06 36 16 06 93.'; msg.className='text-sm text-center text-red-600'; }
-      finally{ btn.disabled=false; btn.textContent='Envoyer ma demande'; }
-    });
+    const io = new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}})},{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   </script>
 </body>
 </html>
