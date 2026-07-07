@@ -65,8 +65,9 @@
     .portrait::after{content:'';position:absolute;inset:0;pointer-events:none;mix-blend-mode:multiply;opacity:.05;
       background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
 
-    .domaine{padding:1.6rem 0;border-top:1px solid var(--line);}
+    .domaine{padding:1.7rem 0;border-top:1px solid var(--line);}
     .domaine h3{font-family:'Hanken Grotesk',sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:0;}
+    .ico{flex:none;width:2.9rem;height:2.9rem;border:1px solid var(--line);border-radius:7px;display:flex;align-items:center;justify-content:center;color:var(--ink-soft);background:#fff;}
 
     .field{width:100%;border:0;border-bottom:1.5px solid var(--line);background:transparent;padding:.7rem 0;font-size:1rem;color:var(--ink);}
     .field:focus{outline:none;border-color:var(--ink);}
@@ -131,12 +132,30 @@
       <p class="text-lg text-[var(--muted)]">Une pratique généraliste, du conseil au contentieux. Un premier échange permet d'orienter votre situation.</p>
     </div>
     <div class="grid md:grid-cols-2 gap-x-16 reveal">
-      <div class="domaine"><h3 class="mb-1">Immobilier et construction</h3><p class="text-[var(--muted)]">Achat, vente, baux, copropriété, voisinage, malfaçons.</p></div>
-      <div class="domaine"><h3 class="mb-1">Droit des affaires et commercial</h3><p class="text-[var(--muted)]">Sociétés, contrats, baux commerciaux, recouvrement, litiges entre entreprises.</p></div>
-      <div class="domaine"><h3 class="mb-1">Droit du travail</h3><p class="text-[var(--muted)]">Salariés et employeurs : contrats, ruptures, conseil de prud'hommes.</p></div>
-      <div class="domaine"><h3 class="mb-1">Droit de la famille</h3><p class="text-[var(--muted)]">Divorce, séparation, autorité parentale, successions.</p></div>
-      <div class="domaine"><h3 class="mb-1">Droit civil et contrats</h3><p class="text-[var(--muted)]">Responsabilité, contrats, litiges du quotidien, recouvrement de créances.</p></div>
-      <div class="domaine"><h3 class="mb-1">Droit pénal</h3><p class="text-[var(--muted)]">Assistance et défense devant les juridictions pénales.</p></div>
+      <div class="domaine flex gap-5">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M10 6h4M10 10h4M10 14h4M10 18h4"/></svg></span>
+        <div><h3 class="mb-1">Immobilier et construction</h3><p class="text-[var(--muted)]">Achat, vente, baux, copropriété, voisinage, malfaçons.</p></div>
+      </div>
+      <div class="domaine flex gap-5">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+        <div><h3 class="mb-1">Droit des affaires et commercial</h3><p class="text-[var(--muted)]">Sociétés, contrats, baux commerciaux, recouvrement, litiges entre entreprises.</p></div>
+      </div>
+      <div class="domaine flex gap-5">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+        <div><h3 class="mb-1">Droit du travail</h3><p class="text-[var(--muted)]">Salariés et employeurs : contrats, ruptures, conseil de prud'hommes.</p></div>
+      </div>
+      <div class="domaine flex gap-5">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg></span>
+        <div><h3 class="mb-1">Droit de la famille</h3><p class="text-[var(--muted)]">Divorce, séparation, autorité parentale, successions.</p></div>
+      </div>
+      <div class="domaine flex gap-5">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></span>
+        <div><h3 class="mb-1">Droit civil et contrats</h3><p class="text-[var(--muted)]">Responsabilité, contrats, litiges du quotidien, recouvrement de créances.</p></div>
+      </div>
+      <div class="domaine flex gap-5">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m14.5 12.5-8 8a2.12 2.12 0 1 1-3-3l8-8"/><path d="m16 16 6-6"/><path d="m8 8 6-6"/><path d="m9 7 8 8"/><path d="m21 11-8-8"/></svg></span>
+        <div><h3 class="mb-1">Droit pénal</h3><p class="text-[var(--muted)]">Assistance et défense devant les juridictions pénales.</p></div>
+      </div>
     </div>
   </section>
 
