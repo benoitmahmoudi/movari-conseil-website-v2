@@ -2,11 +2,12 @@
 <html lang="fr">
 <!--
   ============================================================================
-  SITE v2  ·  Maître Jérôme Hortal, avocat  ·  Plaisance-du-Touch (31)
-  Direction : clair & éditorial. Le visage porte la page. Une idée, une action.
-  Maquette de prospection Movari Easy. Contenu (infos publiques) À VALIDER par
-  Me Hortal. Profession réglementée : ton sobre, pas de promesse, pas d'avis.
-  Règle : aucun tiret cadratin — ni demi-cadratin – dans le contenu.
+  SITE v3  ·  Maître Jérôme Hortal, avocat  ·  Plaisance-du-Touch (31)
+  Direction : editorial raffine + relief moderne facon movari.fr, mais sobre.
+  Couleur de marque : bordeaux feutre. Le visage porte la page. Une action.
+  Maquette de prospection Movari Easy. Contenu (infos publiques) A VALIDER par
+  Me Hortal. Profession reglementee : ton sobre, pas de promesse, pas d'avis.
+  Regle : aucun tiret cadratin ni demi-cadratin dans le contenu.
   ============================================================================
 -->
 <head>
@@ -37,90 +38,128 @@
   }
   </script>
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c1e22'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='18' fill='%23faf8f3' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%236d2634'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='16' font-style='italic' fill='%23faf8f3' text-anchor='middle'%3EJH%3C/text%3E%3C/svg%3E">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --paper:#faf8f3; --paper-2:#f1ece2; --ink:#1c1e22; --ink-soft:#3a3c40; --muted:#767268; --line:rgba(28,30,34,.13);
+      --paper:#faf8f3; --paper-2:#f2ece3; --ink:#1c1e22; --ink-soft:#3a3c40; --muted:#7a756c; --line:rgba(28,30,34,.12);
+      --wine:#6d2634; --wine-deep:#561d28; --wine-tint:#f4e6e7; --wine-line:rgba(109,38,52,.20);
     }
     *{box-sizing:border-box;}
     html{scroll-behavior:smooth;}
     body{font-family:'Hanken Grotesk',system-ui,sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6;}
-    h1,h2,h3,.disp{font-family:'Newsreader',Georgia,serif;font-weight:400;letter-spacing:-.01em;line-height:1.05;}
-    ::selection{background:#e7dfce;}
+    h1,h2,h3,.disp{font-family:'Newsreader',Georgia,serif;font-weight:400;letter-spacing:-.01em;line-height:1.06;}
+    ::selection{background:var(--wine-tint);}
 
-    .kicker{font-size:.74rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);}
+    /* ——— Marque / monogramme ——— */
+    .mono{display:inline-flex;align-items:center;justify-content:center;width:2.3rem;height:2.3rem;border-radius:8px;background:var(--wine);color:var(--paper);font-family:'Newsreader',serif;font-style:italic;font-size:1.05rem;letter-spacing:.02em;flex:none;}
 
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-weight:600;font-size:1rem;line-height:1;padding:1rem 1.7rem;border-radius:2px;transition:background .2s,color .2s,transform .2s,border-color .2s;cursor:pointer;}
-    .btn-ink{background:var(--ink);color:var(--paper);}
-    .btn-ink:hover{background:#000;transform:translateY(-1px);}
-    .link-underline{position:relative;font-weight:600;padding-bottom:2px;border-bottom:1.5px solid var(--ink);}
-    .link-underline:hover{opacity:.65;}
+    /* ——— Kicker : petit filet bordeaux + capitales ——— */
+    .kicker{display:inline-flex;align-items:center;gap:.7rem;font-size:.73rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--wine);}
+    .kicker::before{content:'';width:1.6rem;height:1.5px;background:var(--wine);display:inline-block;}
 
-    .portrait{position:relative;overflow:hidden;background:var(--paper-2);}
-    .portrait img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.04);}
+    /* ——— Boutons ——— */
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-weight:600;font-size:1rem;line-height:1;padding:1rem 1.7rem;border-radius:10px;transition:background .2s,color .2s,transform .2s,box-shadow .2s,border-color .2s;cursor:pointer;}
+    .btn-wine{background:var(--wine);color:#fdf6f2;box-shadow:0 10px 24px -12px rgba(109,38,52,.6);}
+    .btn-wine:hover{background:var(--wine-deep);transform:translateY(-2px);box-shadow:0 16px 30px -12px rgba(109,38,52,.55);}
+    .link-underline{position:relative;font-weight:600;padding-bottom:2px;border-bottom:1.5px solid var(--wine);color:var(--ink);}
+    .link-underline:hover{opacity:.7;}
+
+    /* ——— En-tete ——— */
+    .site-header{position:sticky;top:0;z-index:40;background:rgba(250,248,243,.82);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s;}
+    .site-header.stuck{border-bottom-color:var(--line);box-shadow:0 8px 24px -20px rgba(28,30,34,.5);}
+
+    /* ——— Portrait ——— */
+    .portrait{position:relative;overflow:hidden;border-radius:14px;background:var(--paper-2);}
+    .portrait img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.03);}
     .portrait::after{content:'';position:absolute;inset:0;pointer-events:none;mix-blend-mode:multiply;opacity:.05;
       background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
 
-    .domaine{padding:1.7rem 0;border-top:1px solid var(--line);}
-    .domaine h3{font-family:'Hanken Grotesk',sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:0;}
-    .ico{flex:none;width:2.9rem;height:2.9rem;border:1px solid var(--line);border-radius:7px;display:flex;align-items:center;justify-content:center;color:var(--ink-soft);background:#fff;}
+    /* ——— Cartes domaines ——— */
+    .domaine{background:#fff;border:1px solid var(--line);border-radius:16px;padding:1.6rem 1.5rem;transition:transform .25s cubic-bezier(.22,.61,.36,1),box-shadow .25s,border-color .25s;}
+    .domaine:hover{transform:translateY(-5px);box-shadow:0 22px 38px -22px rgba(28,30,34,.28);border-color:var(--wine-line);}
+    .domaine h3{font-family:'Hanken Grotesk',sans-serif;font-weight:700;font-size:1.06rem;letter-spacing:0;line-height:1.25;}
+    .ico{flex:none;width:3rem;height:3rem;border-radius:11px;display:flex;align-items:center;justify-content:center;color:var(--wine);background:var(--wine-tint);}
 
+    /* ——— Formulaire ——— */
     .field{width:100%;border:0;border-bottom:1.5px solid var(--line);background:transparent;padding:.7rem 0;font-size:1rem;color:var(--ink);}
-    .field:focus{outline:none;border-color:var(--ink);}
+    .field:focus{outline:none;border-color:var(--wine);}
 
-    .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease;}
+    /* ——— Animations ——— */
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1);}
     .reveal.on{opacity:1;transform:none;}
-    @media (prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none;}}
+    .stagger>*{opacity:0;transform:translateY(16px);transition:opacity .6s cubic-bezier(.22,.61,.36,1),transform .6s cubic-bezier(.22,.61,.36,1);}
+    .stagger.on>*{opacity:1;transform:none;}
+    .stagger.on>*:nth-child(1){transition-delay:.04s;} .stagger.on>*:nth-child(2){transition-delay:.10s;}
+    .stagger.on>*:nth-child(3){transition-delay:.16s;} .stagger.on>*:nth-child(4){transition-delay:.22s;}
+    .stagger.on>*:nth-child(5){transition-delay:.28s;} .stagger.on>*:nth-child(6){transition-delay:.34s;}
+    @keyframes up{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:none;}}
+    .in{opacity:0;animation:up .8s cubic-bezier(.22,.61,.36,1) forwards;}
+    .in.d1{animation-delay:.05s;} .in.d2{animation-delay:.18s;} .in.d3{animation-delay:.31s;} .in.d4{animation-delay:.44s;} .in.d5{animation-delay:.58s;}
+    @media (prefers-reduced-motion:reduce){.reveal,.stagger>*{transition:none;opacity:1;transform:none;}.in{animation:none;opacity:1;}}
   </style>
 </head>
 <body>
 
   <!-- ===== EN-TÊTE ===== -->
-  <header class="absolute top-0 inset-x-0 z-30">
-    <div class="max-w-5xl mx-auto px-6 h-20 md:h-24 flex items-center justify-between">
-      <a href="#top" class="disp text-xl tracking-tight">Jérôme Hortal<span class="hidden sm:inline-block text-[var(--muted)] font-sans text-[11px] font-semibold uppercase tracking-[.18em] ml-3 align-middle">Avocat</span></a>
-      <div class="flex items-center gap-6">
-        <a href="tel:+33534593191" class="hidden sm:block text-sm font-semibold text-[var(--ink-soft)] hover:text-[var(--ink)]">05 34 59 31 91</a>
-        <a href="#contact" class="btn btn-ink !py-2.5 !px-4 text-sm whitespace-nowrap">Rendez-vous</a>
+  <header id="siteHeader" class="site-header">
+    <div class="max-w-5xl mx-auto px-6 h-[70px] md:h-[78px] flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-3">
+        <span class="mono">JH</span>
+        <span class="leading-tight">
+          <span class="disp block text-lg tracking-tight">Jérôme Hortal</span>
+          <span class="block text-[10px] font-semibold uppercase tracking-[.2em] text-[var(--muted)]">Avocat à la Cour</span>
+        </span>
+      </a>
+      <div class="flex items-center gap-5">
+        <a href="tel:+33534593191" class="hidden sm:block text-sm font-semibold text-[var(--ink-soft)] hover:text-[var(--wine)] transition">05 34 59 31 91</a>
+        <a href="#contact" class="btn btn-wine !py-2.5 !px-4 text-sm whitespace-nowrap">Rendez-vous</a>
       </div>
     </div>
   </header>
 
   <!-- ===== HERO ===== -->
-  <section id="top" class="max-w-5xl mx-auto px-6 pt-36 pb-16 md:pt-44 md:pb-24">
-    <div class="grid md:grid-cols-[1.15fr_.85fr] gap-12 md:gap-16 items-center">
-      <div class="reveal on">
-        <p class="kicker mb-6">Avocat au barreau de Toulouse</p>
-        <h1 class="text-[2.7rem] sm:text-6xl md:text-[4.75rem] leading-[1.03] mb-6">Jérôme Hortal</h1>
-        <p class="disp text-2xl md:text-[1.7rem] text-[var(--ink-soft)] italic font-light mb-7 max-w-sm">Avocat à Plaisance-du-Touch, depuis 2005.</p>
-        <p class="text-lg text-[var(--muted)] max-w-md mb-9 leading-relaxed">Conseil et défense des particuliers et des entreprises. En clair, sans jargon.</p>
-        <div class="flex flex-wrap items-center gap-6">
-          <a href="#contact" class="btn btn-ink">Prendre rendez-vous</a>
-          <a href="tel:+33534593191" class="link-underline text-[var(--ink)]">ou appelez le 05 34 59 31 91</a>
+  <section id="top" class="max-w-5xl mx-auto px-6 pt-14 pb-16 md:pt-24 md:pb-24">
+    <div class="grid md:grid-cols-[1.12fr_.88fr] gap-12 md:gap-16 items-center">
+      <div>
+        <p class="kicker mb-6 in d1">Avocat au barreau de Toulouse</p>
+        <h1 class="text-[2.7rem] sm:text-6xl md:text-[4.7rem] leading-[1.04] mb-6 in d2">Jérôme Hortal</h1>
+        <p class="disp text-2xl md:text-[1.7rem] text-[var(--ink-soft)] italic font-light mb-7 max-w-md in d3">Conseil et défense, à Plaisance-du-Touch, depuis 2005.</p>
+        <p class="text-lg text-[var(--muted)] max-w-md mb-9 leading-relaxed in d4">Aux côtés des particuliers et des entreprises. Une écoute réelle, des options expliquées en clair, sans jargon.</p>
+        <div class="flex flex-wrap items-center gap-6 in d5">
+          <a href="#contact" class="btn btn-wine">Prendre rendez-vous</a>
+          <a href="tel:+33534593191" class="link-underline">ou appelez le 05 34 59 31 91</a>
         </div>
       </div>
-      <div class="reveal on">
-        <div class="portrait rounded-sm shadow-[0_30px_60px_-30px_rgba(28,30,34,.4)] max-w-[360px] mx-auto md:mx-0">
-          <img src="assets/portrait-bw.jpg" alt="Maître Jérôme Hortal, avocat au barreau de Toulouse" width="420" height="578">
+      <div class="in d3">
+        <div class="relative max-w-[350px] mx-auto md:mx-0">
+          <div class="absolute -top-4 -right-4 w-full h-full rounded-[18px] bg-[var(--wine-tint)]" aria-hidden="true"></div>
+          <div class="absolute -bottom-4 -left-4 hidden sm:flex items-end gap-1.5" aria-hidden="true">
+            <span class="block w-2.5 rounded-t bg-[var(--wine)]/30" style="height:22px"></span>
+            <span class="block w-2.5 rounded-t bg-[var(--wine)]/50" style="height:34px"></span>
+            <span class="block w-2.5 rounded-t bg-[var(--wine)]/70" style="height:50px"></span>
+          </div>
+          <div class="portrait shadow-[0_34px_60px_-32px_rgba(28,30,34,.5)] ring-1 ring-black/5">
+            <img src="assets/portrait-bw.jpg" alt="Maître Jérôme Hortal, avocat au barreau de Toulouse" width="420" height="578">
+          </div>
         </div>
-        <p class="text-center md:text-left text-xs text-[var(--muted)] mt-3 max-w-[360px] mx-auto md:mx-0">Maître Jérôme Hortal, avocat à la Cour</p>
+        <p class="text-center md:text-left text-xs text-[var(--muted)] mt-6 md:mt-4 max-w-[350px] mx-auto md:mx-0">Maître Jérôme Hortal, avocat à la Cour</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== LIGNE DE REPÈRES (discrète) ===== -->
+  <!-- ===== LIGNE DE REPÈRES ===== -->
   <section class="max-w-5xl mx-auto px-6">
     <div class="border-y border-[var(--line)] py-5 flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-[var(--muted)]">
       <span>Barreau de Toulouse</span>
-      <span class="text-[var(--line)]">·</span>
+      <span class="text-[var(--wine-line)]">◆</span>
       <span>Avocat depuis 2005</span>
-      <span class="text-[var(--line)]">·</span>
+      <span class="text-[var(--wine-line)]">◆</span>
       <span>Particuliers et entreprises</span>
-      <span class="text-[var(--line)]">·</span>
+      <span class="text-[var(--wine-line)]">◆</span>
       <span>Plaisance-du-Touch</span>
     </div>
   </section>
@@ -128,33 +167,40 @@
   <!-- ===== DOMAINES ===== -->
   <section id="domaines" class="max-w-5xl mx-auto px-6 py-24 md:py-32">
     <div class="max-w-2xl mb-12 reveal">
-      <h2 class="text-4xl md:text-5xl mb-4">Domaines d'intervention</h2>
-      <p class="text-lg text-[var(--muted)]">Une pratique généraliste, du conseil au contentieux. Un premier échange permet d'orienter votre situation.</p>
+      <p class="kicker mb-5">Domaines d'intervention</p>
+      <h2 class="text-4xl md:text-5xl mb-4">Une pratique généraliste, du conseil au contentieux</h2>
+      <p class="text-lg text-[var(--muted)]">Un premier échange permet d'orienter votre situation vers la meilleure voie.</p>
     </div>
-    <div class="grid md:grid-cols-2 gap-x-16 reveal">
-      <div class="domaine flex gap-5">
-        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M10 6h4M10 10h4M10 14h4M10 18h4"/></svg></span>
-        <div><h3 class="mb-1">Immobilier et construction</h3><p class="text-[var(--muted)]">Achat, vente, baux, copropriété, voisinage, malfaçons.</p></div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 reveal stagger">
+      <div class="domaine">
+        <span class="ico mb-5"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M10 6h4M10 10h4M10 14h4M10 18h4"/></svg></span>
+        <h3 class="mb-2">Immobilier et construction</h3>
+        <p class="text-[var(--muted)] text-[15px]">Achat, vente, baux, copropriété, voisinage, malfaçons.</p>
       </div>
-      <div class="domaine flex gap-5">
-        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
-        <div><h3 class="mb-1">Droit des affaires et commercial</h3><p class="text-[var(--muted)]">Sociétés, contrats, baux commerciaux, recouvrement, litiges entre entreprises.</p></div>
+      <div class="domaine">
+        <span class="ico mb-5"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+        <h3 class="mb-2">Droit des affaires et commercial</h3>
+        <p class="text-[var(--muted)] text-[15px]">Sociétés, contrats, baux commerciaux, recouvrement, litiges entre entreprises.</p>
       </div>
-      <div class="domaine flex gap-5">
-        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-        <div><h3 class="mb-1">Droit du travail</h3><p class="text-[var(--muted)]">Salariés et employeurs : contrats, ruptures, conseil de prud'hommes.</p></div>
+      <div class="domaine">
+        <span class="ico mb-5"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+        <h3 class="mb-2">Droit du travail</h3>
+        <p class="text-[var(--muted)] text-[15px]">Salariés et employeurs : contrats, ruptures, conseil de prud'hommes.</p>
       </div>
-      <div class="domaine flex gap-5">
-        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg></span>
-        <div><h3 class="mb-1">Droit de la famille</h3><p class="text-[var(--muted)]">Divorce, séparation, autorité parentale, successions.</p></div>
+      <div class="domaine">
+        <span class="ico mb-5"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg></span>
+        <h3 class="mb-2">Droit de la famille</h3>
+        <p class="text-[var(--muted)] text-[15px]">Divorce, séparation, autorité parentale, successions.</p>
       </div>
-      <div class="domaine flex gap-5">
-        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></span>
-        <div><h3 class="mb-1">Droit civil et contrats</h3><p class="text-[var(--muted)]">Responsabilité, contrats, litiges du quotidien, recouvrement de créances.</p></div>
+      <div class="domaine">
+        <span class="ico mb-5"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></span>
+        <h3 class="mb-2">Droit civil et contrats</h3>
+        <p class="text-[var(--muted)] text-[15px]">Responsabilité, contrats, litiges du quotidien, recouvrement de créances.</p>
       </div>
-      <div class="domaine flex gap-5">
-        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m14.5 12.5-8 8a2.12 2.12 0 1 1-3-3l8-8"/><path d="m16 16 6-6"/><path d="m8 8 6-6"/><path d="m9 7 8 8"/><path d="m21 11-8-8"/></svg></span>
-        <div><h3 class="mb-1">Droit pénal</h3><p class="text-[var(--muted)]">Assistance et défense devant les juridictions pénales.</p></div>
+      <div class="domaine">
+        <span class="ico mb-5"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m14.5 12.5-8 8a2.12 2.12 0 1 1-3-3l8-8"/><path d="m16 16 6-6"/><path d="m8 8 6-6"/><path d="m9 7 8 8"/><path d="m21 11-8-8"/></svg></span>
+        <h3 class="mb-2">Droit pénal</h3>
+        <p class="text-[var(--muted)] text-[15px]">Assistance et défense devant les juridictions pénales.</p>
       </div>
     </div>
   </section>
@@ -162,19 +208,23 @@
   <!-- ===== APPROCHE ===== -->
   <section class="bg-[var(--paper-2)]">
     <div class="max-w-5xl mx-auto px-6 py-24 md:py-32">
+      <p class="kicker mb-6 reveal">L'approche du cabinet</p>
       <blockquote class="disp text-3xl md:text-[2.6rem] leading-snug max-w-3xl mb-14 reveal">
-        Comprendre votre situation <span class="italic text-[var(--muted)]">avant de parler droit.</span>
+        Comprendre votre situation <span class="italic text-[var(--wine)]">avant de parler droit.</span>
       </blockquote>
-      <div class="grid md:grid-cols-3 gap-10 md:gap-14 reveal">
+      <div class="grid md:grid-cols-3 gap-10 md:gap-14 reveal stagger">
         <div>
+          <span class="disp text-2xl italic text-[var(--wine-line)] block mb-3">01</span>
           <h3 class="disp text-2xl mb-2">Écoute</h3>
           <p class="text-[var(--muted)]">Un vrai temps pour comprendre ce que vous vivez, avant toute chose.</p>
         </div>
         <div>
+          <span class="disp text-2xl italic text-[var(--wine-line)] block mb-3">02</span>
           <h3 class="disp text-2xl mb-2">Clarté</h3>
           <p class="text-[var(--muted)]">Des options expliquées simplement, sans jargon, pour décider en connaissance de cause.</p>
         </div>
         <div>
+          <span class="disp text-2xl italic text-[var(--wine-line)] block mb-3">03</span>
           <h3 class="disp text-2xl mb-2">Transparence</h3>
           <p class="text-[var(--muted)]">Des honoraires convenus par écrit, avant tout engagement. Aucune surprise.</p>
         </div>
@@ -186,17 +236,18 @@
   <section id="contact" class="max-w-5xl mx-auto px-6 py-24 md:py-32">
     <div class="grid md:grid-cols-2 gap-14 md:gap-20 items-start">
       <div class="reveal">
-        <h2 class="text-4xl md:text-5xl mb-5">Prendre rendez-vous</h2>
+        <p class="kicker mb-6">Prendre rendez-vous</p>
+        <h2 class="text-4xl md:text-5xl mb-5">Parlons de votre situation</h2>
         <p class="text-lg text-[var(--muted)] mb-10">Le plus simple est d'appeler le cabinet. Vous pouvez aussi laisser un message, le cabinet vous recontacte rapidement.</p>
         <div class="space-y-5">
-          <a href="tel:+33534593191" class="block disp text-3xl md:text-4xl hover:opacity-70 transition">05 34 59 31 91</a>
+          <a href="tel:+33534593191" class="block disp text-3xl md:text-4xl hover:text-[var(--wine)] transition">05 34 59 31 91</a>
           <p><a href="mailto:cabinet@hortal-avocats.fr" class="link-underline">cabinet@hortal-avocats.fr</a></p>
-          <p class="text-[var(--muted)] leading-relaxed">Centre d'Affaires Bernadet, 4 rue Bernadet<br>31830 Plaisance-du-Touch</p>
+          <p class="text-[var(--muted)] leading-relaxed">Centre d'Affaires Bernadet, 4 rue Bernadet, Bâtiment C<br>31830 Plaisance-du-Touch</p>
           <p class="text-[var(--muted)]">Du lundi au vendredi, sur rendez-vous</p>
         </div>
       </div>
       <div class="reveal">
-        <form id="contactForm" class="space-y-6">
+        <form id="contactForm" class="space-y-6 bg-white border border-[var(--line)] rounded-2xl p-7 md:p-8 shadow-[0_30px_60px_-40px_rgba(28,30,34,.4)]">
           <!-- DEMO : remplacer 'DEMO' par la clé Web3Forms de Benoît pour recevoir vraiment les messages -->
           <input type="hidden" name="access_key" value="DEMO">
           <input type="hidden" name="subject" value="Nouvelle demande depuis le site de Me Hortal">
@@ -206,10 +257,10 @@
           <div><label class="kicker block mb-2">Email</label><input name="email" type="email" required class="field"></div>
           <div><label class="kicker block mb-2">Votre demande</label><textarea name="message" rows="3" required class="field resize-none" placeholder="Décrivez brièvement votre situation."></textarea></div>
           <label class="flex items-start gap-2.5 text-xs text-[var(--muted)] leading-relaxed">
-            <input type="checkbox" name="consent" required class="mt-0.5 accent-[var(--ink)]">
+            <input type="checkbox" name="consent" required class="mt-0.5 accent-[var(--wine)]">
             <span>J'accepte d'être recontacté au sujet de ma demande. Ces informations ne sont pas utilisées à d'autres fins.</span>
           </label>
-          <button type="submit" class="btn btn-ink w-full">Envoyer ma demande</button>
+          <button type="submit" class="btn btn-wine w-full">Envoyer ma demande</button>
           <p id="formMsg" class="text-sm text-center hidden"></p>
           <p class="text-[11px] text-[var(--muted)]">Ce formulaire ne crée pas de relation avocat-client et ne remplace pas une consultation.</p>
         </form>
@@ -222,23 +273,30 @@
     <div class="max-w-5xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-[var(--muted)]">
       <p>Maître Jérôme Hortal · Avocat au barreau de Toulouse · Plaisance-du-Touch</p>
       <div class="flex items-center gap-5">
-        <a href="mentions-legales.html" class="hover:text-[var(--ink)]">Mentions légales</a>
-        <span class="text-[var(--line)]">·</span>
+        <a href="mentions-legales.html" class="hover:text-[var(--wine)] transition">Mentions légales</a>
+        <span class="text-[var(--wine-line)]">◆</span>
         <span>Aperçu réalisé par Movari Easy</span>
       </div>
     </div>
   </footer>
 
   <!-- ===== BARRE D'APPEL MOBILE ===== -->
-  <a href="tel:+33534593191" class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-[var(--ink)] text-[var(--paper)] font-semibold py-4 text-center flex items-center justify-center gap-2">
+  <a href="tel:+33534593191" class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-[var(--wine)] text-[#fdf6f2] font-semibold py-4 text-center flex items-center justify-center gap-2 shadow-[0_-8px_24px_-16px_rgba(0,0,0,.6)]">
     <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
     Appeler le cabinet
   </a>
 
   <script>
+    // Apparition au défilement
     const io = new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}})},{threshold:.14});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
+    // Ombre de l'en-tête au défilement
+    const hd=document.getElementById('siteHeader');
+    const onScroll=()=>hd.classList.toggle('stuck',window.scrollY>10);
+    onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+    // Formulaire (mode démo tant que la clé Web3Forms n'est pas renseignée)
     const form=document.getElementById('contactForm'),msg=document.getElementById('formMsg');
     form.addEventListener('submit',async(ev)=>{
       ev.preventDefault();
