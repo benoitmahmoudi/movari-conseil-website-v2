@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movari Easy · Votre site internet et votre fiche Google, tout compris</title>
+  <meta name="description" content="Movari Easy crée le site internet et la fiche Google des artisans et commerçants. Création offerte, tout compris à partir de 49 € par mois, sans engagement.">
+  <!-- Page autonome et discrète : volontairement non indexée et non liée au menu de Movari Conseil -->
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/png" href="../assets/logo-movari-conseil.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { movari: { DEFAULT:'#0066F0', dark:'#0052CC', deeper:'#003D99', navy:'#0A1F44', ink:'#0E1B33' } },
+      fontFamily: { sans:['Inter','system-ui','sans-serif'], serif:['"Playfair Display"','Georgia','serif'] }
+    } } }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',system-ui,sans-serif;color:#0E1B33;}
+    .font-display{font-family:'Playfair Display',Georgia,serif;}
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1);}
+    .reveal.on{opacity:1;transform:none;}
+    .reveal-stagger>*{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease;}
+    .reveal-stagger.on>*{opacity:1;transform:none;}
+    .reveal-stagger.on>*:nth-child(2){transition-delay:.08s;}
+    .reveal-stagger.on>*:nth-child(3){transition-delay:.16s;}
+    .reveal-stagger.on>*:nth-child(4){transition-delay:.24s;}
+    .reveal-stagger.on>*:nth-child(5){transition-delay:.32s;}
+    .browser-dot{width:10px;height:10px;border-radius:50%;display:inline-block;}
+  </style>
+</head>
+<body class="bg-white">
+
+  <!-- Barre d'annonce (urgence) -->
+  <div class="bg-movari-ink text-white text-center text-sm font-semibold py-2.5 px-4">
+    Offre de lancement : 5 places fondateur à 49 € par mois à vie. Ensuite 79 €.
+  </div>
+
+  <!-- En-tête -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-100">
+    <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2 font-extrabold text-lg tracking-tight">Movari <span class="bg-movari text-white text-xs font-bold px-2 py-0.5 rounded-md uppercase tracking-wider">Easy</span></a>
+      <a href="#contact" class="inline-flex items-center rounded-lg bg-movari hover:bg-movari-dark text-white text-sm font-bold px-4 py-2.5 transition">Ma maquette gratuite</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="bg-gradient-to-b from-blue-50 to-white">
+    <div class="max-w-5xl mx-auto px-4 py-16 md:py-24 text-center">
+      <p class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-movari mb-5 reveal on">
+        <span class="w-6 h-px bg-movari"></span> Sites internet pour artisans et commerçants <span class="w-6 h-px bg-movari"></span>
+      </p>
+      <h1 class="font-display text-3xl sm:text-4xl md:text-6xl font-bold leading-tight mb-6 reveal on">Votre site internet et votre fiche Google, pour le prix d'un plein par mois.</h1>
+      <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-9 reveal on">On crée tout, on s'occupe de tout. Vous, vous répondez au téléphone qui sonne. Création offerte, sans engagement, en ligne en 7 jours.</p>
+      <div class="flex flex-wrap justify-center gap-3 mb-8 reveal on">
+        <a href="#contact" class="inline-flex items-center rounded-xl bg-movari hover:bg-movari-dark text-white font-bold px-7 py-4 text-base shadow-lg shadow-movari/20 transition">Recevez votre maquette gratuite</a>
+        <a href="#exemple" class="inline-flex items-center rounded-xl border-2 border-slate-200 hover:border-movari font-bold px-7 py-4 text-base transition">Voir un exemple</a>
+      </div>
+      <ul class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-semibold text-slate-600 reveal on">
+        <li class="inline-flex items-center gap-1.5"><span class="text-green-600">✓</span> Création offerte</li>
+        <li class="inline-flex items-center gap-1.5"><span class="text-green-600">✓</span> Sans engagement</li>
+        <li class="inline-flex items-center gap-1.5"><span class="text-green-600">✓</span> En ligne en 7 jours</li>
+        <li class="inline-flex items-center gap-1.5"><span class="text-green-600">✓</span> À partir de 49 € par mois</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Problème -->
+  <section class="max-w-3xl mx-auto px-4 py-16 md:py-20 text-center reveal">
+    <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-5">Aujourd'hui, on cherche un artisan sur son téléphone</h2>
+    <p class="text-lg text-slate-600">Sans site ni fiche Google à jour, vos futurs clients tombent sur vos concurrents. Une page Facebook ne suffit pas : elle n'apparaît pas quand quelqu'un tape « plombier » ou « plaquiste » suivi de votre ville. Movari Easy met votre métier là où on vous cherche.</p>
+  </section>
+
+  <!-- Ce qui est inclus -->
+  <section class="bg-slate-50">
+    <div class="max-w-5xl mx-auto px-4 py-16 md:py-20">
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+        <p class="text-xs font-bold uppercase tracking-widest text-movari mb-3">Tout compris</p>
+        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold">Ce que vous avez, chaque mois</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-5 reveal-stagger">
+        <div class="flex gap-4 bg-white rounded-2xl border border-slate-100 p-6"><span class="text-green-600 text-2xl">✓</span><div><h3 class="font-bold text-lg mb-1">Un site professionnel</h3><p class="text-sm text-slate-600">Rapide, beau sur mobile, pensé pour donner envie d'appeler.</p></div></div>
+        <div class="flex gap-4 bg-white rounded-2xl border border-slate-100 p-6"><span class="text-green-600 text-2xl">✓</span><div><h3 class="font-bold text-lg mb-1">Votre nom de domaine et un email pro</h3><p class="text-sm text-slate-600">Votre adresse à vous, et une boîte mail professionnelle. On gère tout.</p></div></div>
+        <div class="flex gap-4 bg-white rounded-2xl border border-slate-100 p-6"><span class="text-green-600 text-2xl">✓</span><div><h3 class="font-bold text-lg mb-1">Votre fiche Google entretenue</h3><p class="text-sm text-slate-600">L'aimant à appels n°1 d'un artisan. On la crée et on la tient à jour.</p></div></div>
+        <div class="flex gap-4 bg-white rounded-2xl border border-slate-100 p-6"><span class="text-green-600 text-2xl">✓</span><div><h3 class="font-bold text-lg mb-1">Modifications illimitées sous 48h</h3><p class="text-sm text-slate-600">Un nouveau tarif, une photo de chantier, vos congés ? Un mot, c'est changé.</p></div></div>
+        <div class="flex gap-4 bg-white rounded-2xl border border-slate-100 p-6"><span class="text-green-600 text-2xl">✓</span><div><h3 class="font-bold text-lg mb-1">Un point chaque mois</h3><p class="text-sm text-slate-600">Visites, appels reçus, et un coup de pouce pour récolter des avis Google.</p></div></div>
+        <div class="flex gap-4 bg-white rounded-2xl border border-slate-100 p-6"><span class="text-green-600 text-2xl">✓</span><div><h3 class="font-bold text-lg mb-1">Zéro souci technique</h3><p class="text-sm text-slate-600">Hébergement, sécurité, mises à jour : c'est notre travail, pas le vôtre.</p></div></div>
+      </div>
+      <p class="text-center mt-10 text-lg reveal"><span class="line-through text-slate-400">Création d'une valeur de 1 500 €</span> <span class="font-bold text-movari">offerte.</span></p>
+    </div>
+  </section>
+
+  <!-- Exemple -->
+  <section id="exemple" class="max-w-5xl mx-auto px-4 py-16 md:py-20">
+    <div class="text-center max-w-2xl mx-auto mb-10 reveal">
+      <p class="text-xs font-bold uppercase tracking-widest text-movari mb-3">Un exemple</p>
+      <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold">Voici le genre de site qu'on vous livre</h2>
+    </div>
+    <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-2xl reveal">
+      <div class="bg-slate-100 px-4 py-2.5 flex items-center gap-2 border-b border-slate-200">
+        <span class="browser-dot bg-red-400"></span><span class="browser-dot bg-amber-400"></span><span class="browser-dot bg-green-400"></span>
+        <span class="ml-3 text-xs text-slate-500 bg-white rounded px-3 py-1">votre-entreprise.fr</span>
+      </div>
+      <div class="h-[420px] overflow-hidden">
+        <img src="exemple-site.png" alt="Exemple de site réalisé par Movari Easy" class="w-full object-cover object-top">
+      </div>
+    </div>
+  </section>
+
+  <!-- Prix -->
+  <section class="bg-movari-ink text-white">
+    <div class="max-w-5xl mx-auto px-4 py-16 md:py-20">
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+        <p class="text-xs font-bold uppercase tracking-widest text-blue-300 mb-3">Un prix simple</p>
+        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold">La création est offerte. Vous payez juste l'abonnement.</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto reveal-stagger">
+        <div class="rounded-2xl bg-white/5 border-2 border-movari p-8 relative">
+          <span class="absolute -top-3 left-8 bg-movari text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Places limitées</span>
+          <h3 class="font-bold text-xl mb-1">Fondateur</h3>
+          <p class="text-blue-200 text-sm mb-5">Les 5 premiers, à vie.</p>
+          <p class="text-5xl font-extrabold mb-1">49 €<span class="text-lg font-medium text-blue-200"> / mois</span></p>
+          <p class="text-sm text-blue-200 mb-6">Tout compris. Création offerte.</p>
+          <a href="#contact" class="block text-center rounded-xl bg-movari hover:bg-movari-dark text-white font-bold py-3.5 transition">Réserver ma place</a>
+        </div>
+        <div class="rounded-2xl bg-white/5 border border-white/15 p-8">
+          <h3 class="font-bold text-xl mb-1">Standard</h3>
+          <p class="text-blue-200 text-sm mb-5">L'offre normale.</p>
+          <p class="text-5xl font-extrabold mb-1">79 €<span class="text-lg font-medium text-blue-200"> / mois</span></p>
+          <p class="text-sm text-blue-200 mb-6">Tout compris. Création offerte.</p>
+          <a href="#contact" class="block text-center rounded-xl border border-white/25 hover:bg-white/10 text-white font-bold py-3.5 transition">Je veux mon site</a>
+        </div>
+      </div>
+      <p class="text-center text-blue-200 text-sm mt-8 reveal">Sans engagement. Vous arrêtez quand vous voulez.</p>
+    </div>
+  </section>
+
+  <!-- Garantie -->
+  <section class="max-w-4xl mx-auto px-4 py-16 md:py-20">
+    <div class="grid md:grid-cols-3 gap-6 reveal-stagger text-center">
+      <div class="rounded-2xl border border-slate-100 p-7"><div class="text-3xl mb-3">🚀</div><h3 class="font-bold mb-1.5">En ligne en 7 jours</h3><p class="text-sm text-slate-600">Ou le premier mois est offert.</p></div>
+      <div class="rounded-2xl border border-slate-100 p-7"><div class="text-3xl mb-3">😌</div><h3 class="font-bold mb-1.5">Satisfait ou remboursé</h3><p class="text-sm text-slate-600">Le premier mois, sans condition.</p></div>
+      <div class="rounded-2xl border border-slate-100 p-7"><div class="text-3xl mb-3">🔓</div><h3 class="font-bold mb-1.5">Sans engagement</h3><p class="text-sm text-slate-600">Vous restez parce que ça marche, pas parce qu'un contrat vous oblige.</p></div>
+    </div>
+  </section>
+
+  <!-- Comment ça marche -->
+  <section class="bg-slate-50">
+    <div class="max-w-4xl mx-auto px-4 py-16 md:py-20">
+      <div class="text-center mb-12 reveal">
+        <p class="text-xs font-bold uppercase tracking-widest text-movari mb-3">Simple comme bonjour</p>
+        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold">Comment ça marche</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6 reveal-stagger">
+        <div class="text-center"><div class="w-12 h-12 mx-auto rounded-full bg-movari text-white flex items-center justify-center font-bold text-lg mb-4">1</div><h3 class="font-bold mb-1.5">On crée votre maquette</h3><p class="text-sm text-slate-600">Gratuitement, sans que vous ayez rien à payer ni à signer.</p></div>
+        <div class="text-center"><div class="w-12 h-12 mx-auto rounded-full bg-movari text-white flex items-center justify-center font-bold text-lg mb-4">2</div><h3 class="font-bold mb-1.5">Elle vous plaît ?</h3><p class="text-sm text-slate-600">On la met en ligne sous 7 jours, avec votre fiche Google.</p></div>
+        <div class="text-center"><div class="w-12 h-12 mx-auto rounded-full bg-movari text-white flex items-center justify-center font-bold text-lg mb-4">3</div><h3 class="font-bold mb-1.5">Vous recevez des appels</h3><p class="text-sm text-slate-600">On s'occupe de tout le reste. Vous faites votre métier.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="max-w-3xl mx-auto px-4 py-16 md:py-20">
+    <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12 reveal">Vos questions</h2>
+    <div class="space-y-4 reveal-stagger">
+      <details class="group rounded-xl border border-slate-200 p-5"><summary class="font-semibold cursor-pointer list-none flex justify-between items-center">C'est cher ? <span class="text-movari group-open:rotate-45 transition">+</span></summary><p class="text-sm text-slate-600 mt-3">Moins qu'un plein par mois. Un seul chantier gagné grâce au site rembourse largement l'année. Et c'est sans engagement.</p></details>
+      <details class="group rounded-xl border border-slate-200 p-5"><summary class="font-semibold cursor-pointer list-none flex justify-between items-center">Je n'ai pas le temps de m'en occuper. <span class="text-movari group-open:rotate-45 transition">+</span></summary><p class="text-sm text-slate-600 mt-3">Justement, vous n'avez rien à faire. On crée tout, on met à jour, on gère la technique. Vous nous appelez pour changer un détail, c'est tout.</p></details>
+      <details class="group rounded-xl border border-slate-200 p-5"><summary class="font-semibold cursor-pointer list-none flex justify-between items-center">J'ai déjà une page Facebook. <span class="text-movari group-open:rotate-45 transition">+</span></summary><p class="text-sm text-slate-600 mt-3">Utile, mais elle n'apparaît pas quand on cherche votre métier sur Google. Le site et la fiche Google, oui. Les deux se complètent.</p></details>
+      <details class="group rounded-xl border border-slate-200 p-5"><summary class="font-semibold cursor-pointer list-none flex justify-between items-center">Et si je veux arrêter ? <span class="text-movari group-open:rotate-45 transition">+</span></summary><p class="text-sm text-slate-600 mt-3">Vous arrêtez quand vous voulez, sans frais. On parie sur la qualité du service pour vous garder, pas sur un contrat.</p></details>
+    </div>
+  </section>
+
+  <!-- Contact / CTA final -->
+  <section id="contact" class="bg-gradient-to-b from-blue-50 to-white">
+    <div class="max-w-3xl mx-auto px-4 py-16 md:py-24 text-center">
+      <h2 class="font-display text-2xl sm:text-3xl md:text-5xl font-bold mb-5 reveal">Recevez votre maquette gratuite</h2>
+      <p class="text-lg text-slate-600 mb-9 max-w-xl mx-auto reveal">On vous montre à quoi ressemblerait votre site, en ligne, sans rien payer ni signer. Vous décidez ensuite.</p>
+      <div class="flex flex-wrap justify-center gap-3 reveal">
+        <a href="tel:+33621059309" class="inline-flex items-center gap-2 rounded-xl bg-movari hover:bg-movari-dark text-white font-bold px-7 py-4 text-base shadow-lg shadow-movari/20 transition">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Appeler le 06 21 05 93 09
+        </a>
+        <a href="mailto:contact@movari.fr?subject=Je%20veux%20ma%20maquette%20Movari%20Easy" class="inline-flex items-center rounded-xl border-2 border-slate-200 hover:border-movari font-bold px-7 py-4 text-base transition">Écrire un message</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-movari-ink text-slate-300 text-sm">
+    <div class="max-w-5xl mx-auto px-4 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="flex items-center gap-2 font-extrabold text-white">Movari <span class="bg-movari text-white text-xs px-2 py-0.5 rounded-md uppercase tracking-wider">Easy</span></p>
+      <p class="text-slate-400">Une offre de Movari (SASU). <a href="../mentions-legales.html" class="hover:text-white underline">Mentions légales</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target);} }); }, {threshold:.12});
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>
