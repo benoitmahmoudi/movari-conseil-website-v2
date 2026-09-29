@@ -2,3 +2,6 @@ _*.png
 
 # Fiche d'identite marketing interne (positionnement, prix, objections) : ne jamais publier
 .agents/
+
+# Documents internes de travail (jamais publics)
+_Claude/
