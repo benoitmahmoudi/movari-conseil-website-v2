@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monter un PMO post-acquisition en deux semaines : la méthode | Movari Conseil</title>
+    <meta name="description" content="Monter un PMO post-acquisition en deux semaines : mandat, inventaire des chantiers, comité, tableau de suivi. La méthode d&#x27;un directeur de programme.">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://movari.fr/articles/monter-un-pmo-post-acquisition.html">
+    <meta property="og:title" content="Monter un PMO post-acquisition en deux semaines : la méthode | Movari Conseil">
+    <meta property="og:description" content="Monter un PMO post-acquisition en deux semaines : mandat, inventaire des chantiers, comité, tableau de suivi. La méthode d&#x27;un directeur de programme.">
+    <meta property="og:image" content="https://movari.fr/assets/og-movari.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://movari.fr/articles/monter-un-pmo-post-acquisition.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Monter un PMO post-acquisition en deux semaines : la méthode",
+      "description": "Monter un PMO post-acquisition en deux semaines : mandat, inventaire des chantiers, comité, tableau de suivi. La méthode d&#x27;un directeur de programme.",
+      "inLanguage": "fr-FR",
+      "datePublished": "2026-10-19",
+      "dateModified": "2026-10-19",
+      "mainEntityOfPage": "https://movari.fr/articles/monter-un-pmo-post-acquisition.html",
+      "image": "https://movari.fr/assets/og-movari.png",
+      "author": { "@type": "Person", "@id": "https://movari.fr/#benoit-mahmoudi", "name": "Benoît Mahmoudi", "url": "https://movari.fr/" },
+      "publisher": { "@type": "Organization", "name": "Movari Conseil", "url": "https://movari.fr/", "logo": { "@type": "ImageObject", "url": "https://movari.fr/assets/logo-movari-hd.png" } }
+    }
+    </script>
+
+    <link rel="icon" type="image/png" href="../assets/logo-movari-conseil.png">
+    <link rel="stylesheet" href="../assets/tailwind.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --blue: #0066F0;
+            --navy: #0A1F44;
+        }
+
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', system-ui, sans-serif; text-rendering: optimizeLegibility; }
+
+        .font-display { font-family: 'Playfair Display', Georgia, serif; }
+
+        .kicker {
+            display: inline-flex; align-items: center; gap: .6rem;
+            font-size: .6875rem; font-weight: 600; letter-spacing: .14em;
+            text-transform: uppercase; color: var(--blue);
+        }
+        .kicker .bars { display: inline-flex; align-items: flex-end; gap: 2px; height: 14px; }
+        .kicker .bars span { width: 3px; background: var(--blue); border-radius: 99px; }
+        .kicker .bars span:nth-child(1) { height: 35%; }
+        .kicker .bars span:nth-child(2) { height: 60%; }
+        .kicker .bars span:nth-child(3) { height: 100%; }
+
+        .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1); }
+        .reveal.revealed { opacity: 1; transform: none; }
+        .reveal-stagger > * { opacity: 0; transform: translateY(18px); transition: opacity .65s cubic-bezier(.22,.61,.36,1), transform .65s cubic-bezier(.22,.61,.36,1); }
+        .reveal-stagger.revealed > * { opacity: 1; transform: none; }
+        .reveal-stagger.revealed > *:nth-child(1) { transition-delay: .05s; }
+        .reveal-stagger.revealed > *:nth-child(2) { transition-delay: .15s; }
+        .reveal-stagger.revealed > *:nth-child(3) { transition-delay: .25s; }
+        .reveal-stagger.revealed > *:nth-child(4) { transition-delay: .35s; }
+
+        @keyframes heroUp { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+        .hero-in { opacity: 0; animation: heroUp .8s cubic-bezier(.22,.61,.36,1) forwards; }
+        .hero-in.d1 { animation-delay: .08s; } .hero-in.d2 { animation-delay: .22s; }
+        .hero-in.d3 { animation-delay: .36s; } .hero-in.d4 { animation-delay: .5s; }
+        .hero-in.d5 { animation-delay: .68s; }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .reveal, .reveal-stagger > * { opacity: 1 !important; transform: none !important; transition: none !important; }
+            .hero-in { animation: none; opacity: 1; }
+        }
+
+        .hero-bars {
+            position: absolute; right: -2rem; bottom: 0; display: flex; align-items: flex-end; gap: clamp(10px, 2vw, 22px);
+            pointer-events: none;
+        }
+        .hero-bars i { display: block; width: clamp(26px, 4.5vw, 64px); border-radius: 14px 14px 0 0;
+            background: linear-gradient(180deg, rgba(0,102,240,.10), rgba(0,102,240,.02)); }
+
+        .card-hover { transition: transform .25s cubic-bezier(.22,.61,.36,1), box-shadow .25s, border-color .25s; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 24px 38px -16px rgba(10,31,68,.14); border-color: rgba(0,102,240,.35); }
+
+        .btn-primary {
+            background: var(--blue);
+            box-shadow: 0 10px 24px -8px rgba(0,102,240,.45);
+            transition: background .2s, transform .15s, box-shadow .2s;
+        }
+        .btn-primary:hover { background: #0052CC; transform: translateY(-2px); box-shadow: 0 16px 30px -10px rgba(0,102,240,.5); }
+        .btn-primary:active { transform: scale(.985); }
+
+        .client-logo { filter: grayscale(1); opacity: .55; transition: filter .3s, opacity .3s; }
+        .client-logo:hover { filter: none; opacity: 1; }
+
+        .nav-link { position: relative; transition: color .15s; }
+        .nav-link::after { content: ''; position: absolute; left: 0; bottom: -4px; height: 2px; width: 0; background: var(--blue); transition: width .25s cubic-bezier(.22,.61,.36,1); }
+        .nav-link:hover { color: #0E1B33; }
+        .nav-link:hover::after { width: 100%; }
+
+        .stat-num { font-variant-numeric: tabular-nums; }
+        .anchor { scroll-margin-top: 92px; }
+        .hairline { height: 1px; background: linear-gradient(90deg, transparent, rgba(14,27,51,.14), transparent); }
+        ::selection { background: rgba(0,102,240,.18); }
+        :focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 4px; }
+
+        .quote-mark { font-family: 'Playfair Display', serif; font-size: 4.5rem; line-height: 1; color: rgba(0,102,240,.16); }
+        /* av-debut */
+        /* Gabarit visuel des articles Movari. Lu par robot-article-movari-build.py et copie dans chaque article. */
+        /* Identite du site : Playfair Display + Inter, bleu #0066F0, marine #0A1F44. SVG et CSS seulement. */
+        .av-wrap { max-width: 64rem; margin-inline: auto; padding-inline: 1.25rem; }
+        @media (min-width: 768px) { .av-wrap { padding-inline: 2rem; } }
+        .av-col { max-width: 42rem; margin-inline: auto; }
+        .av-serif { font-family: 'Playfair Display', Georgia, serif; }
+
+        /* Barre de lecture */
+        .av-progress { position: fixed; top: 0; left: 0; height: 3px; width: 100%; background: var(--blue); transform: scaleX(0); transform-origin: 0 50%; z-index: 60; pointer-events: none; }
+
+        /* En-tete */
+        .av-head { position: relative; padding-top: 3rem; padding-bottom: .5rem; }
+        @media (min-width: 768px) { .av-head { padding-top: 4.5rem; } }
+        .av-deco { display: none; position: absolute; right: 0; top: 2rem; align-items: flex-end; gap: 10px; height: 14rem; pointer-events: none; z-index: 0; }
+        .av-deco i { display: block; width: 30px; border-radius: 12px 12px 0 0; background: linear-gradient(180deg, rgba(0,102,240,.11), rgba(0,102,240,.015)); }
+        .av-deco i:nth-child(1) { height: 35%; } .av-deco i:nth-child(2) { height: 62%; } .av-deco i:nth-child(3) { height: 100%; }
+        @media (min-width: 900px) { .av-deco { display: flex; } }
+        .av-head .av-col { position: relative; z-index: 1; }
+        .av-head h1 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; color: var(--navy); font-size: clamp(2.1rem, 5.4vw, 3.4rem); line-height: 1.1; letter-spacing: -.012em; margin-top: 1.4rem; }
+        @media (min-width: 900px) { .av-head h1 { width: 46rem; max-width: calc(100vw - 4rem); } }
+        .av-chapo { margin-top: 2rem; padding-left: 1.25rem; border-left: 3px solid var(--blue); font-size: 1.1875rem; line-height: 1.7; color: #64748b; }
+        @media (min-width: 768px) { .av-chapo { font-size: 1.25rem; } }
+        .av-meta { margin-top: 2rem; display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1.25rem; font-size: .8125rem; color: #94a3b8; }
+        .av-meta b { font-weight: 600; color: #475569; }
+        .av-meta .av-lecture { display: inline-flex; align-items: center; gap: .4rem; color: var(--blue); font-weight: 600; }
+        .av-meta svg { width: 15px; height: 15px; }
+
+        /* Texte */
+        .av-body { padding-bottom: 1rem; }
+        .av-body > p, .av-body > ul, .av-body > h2, .av-body > .av-livrable { max-width: 42rem; margin-inline: auto; }
+        .av-h2 { margin-top: 5rem; margin-bottom: 1.1rem; font-family: 'Playfair Display', Georgia, serif; font-weight: 600; color: var(--navy); font-size: clamp(1.6rem, 3.6vw, 2.05rem); line-height: 1.2; }
+        .av-h2:first-child { margin-top: 3.5rem; }
+        .av-h2 .av-num { display: flex; align-items: center; gap: .85rem; margin-bottom: 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: .75rem; font-weight: 600; letter-spacing: .16em; color: var(--blue); }
+        .av-h2 .av-num::after { content: ''; width: 2.75rem; height: 1px; background: var(--blue); opacity: .45; }
+        .av-p { margin-top: 1.1rem; font-size: 1.0625rem; line-height: 1.8; color: #475569; }
+        .av-list { list-style: none; padding: 0; margin-top: 1.5rem; border-top: 1px solid #E6ECF5; }
+        .av-list li { position: relative; padding: .95rem 0 .95rem 1.9rem; border-bottom: 1px solid #E6ECF5; font-size: 1.0625rem; line-height: 1.7; color: #475569; }
+        .av-list li::before { content: ''; position: absolute; left: 0; top: 1.62rem; width: .85rem; height: 2px; background: var(--blue); }
+        .av-livrable { margin-top: 1.6rem; display: flex; gap: 1rem; align-items: center; background: #F3F7FE; border-radius: 14px; padding: 1.05rem 1.3rem; }
+        .av-livrable .av-ico { background: #fff; }
+        .av-livrable .av-lab { flex: none; font-size: .6875rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); }
+        .av-livrable p { font-size: .9375rem; line-height: 1.6; color: var(--navy); }
+
+        /* Blocs visuels : plus larges que le texte */
+        .av-block { margin-block: 3.75rem; }
+
+        /* Chiffres cles */
+        .av-stats { display: grid; grid-template-columns: 1fr; border-top: 1px solid #E2E8F0; border-bottom: 1px solid #E2E8F0; }
+        .av-stat { padding: 2.25rem 1.5rem 2.25rem 0; }
+        .av-stat + .av-stat { border-top: 1px solid #E2E8F0; }
+        @media (min-width: 720px) { .av-stats { grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: 1fr; } .av-stat + .av-stat { border-top: 0; border-left: 1px solid #E2E8F0; padding-left: 1.9rem; } }
+        .av-stat .av-n { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: clamp(3.25rem, 8vw, 4.9rem); line-height: 1; letter-spacing: -.025em; color: var(--blue); font-variant-numeric: lining-nums tabular-nums; }
+        .av-stat .av-n small { font-size: .36em; letter-spacing: 0; color: var(--navy); margin-left: .3em; font-weight: 600; }
+        .av-stat .av-ico { margin-bottom: 1.4rem; }
+        .av-stat .av-l { margin-top: 1rem; max-width: 17rem; font-size: .9375rem; line-height: 1.55; color: #475569; }
+
+        /* Frise */
+        .av-frise ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(var(--n), minmax(0, 1fr)); }
+        .av-frise li { position: relative; padding: 2.4rem .9rem 0 0; }
+        .av-frise li::before { content: ''; position: absolute; top: .52rem; left: 0; right: 0; height: 2px; background: #D3DDEE; transform: scaleX(0); transform-origin: left; transition: transform .7s cubic-bezier(.22,.61,.36,1); transition-delay: calc(var(--i) * .12s); }
+        .av-frise li:last-child::before { right: auto; width: 55%; background: linear-gradient(90deg, #D3DDEE, transparent); }
+        .av-frise li::after { content: ''; position: absolute; top: 0; left: 0; width: 1.1rem; height: 1.1rem; box-sizing: border-box; border-radius: 50%; background: #fff; border: 2px solid var(--blue); }
+        .av-frise li:last-child::after { background: var(--blue); }
+        .av-frise.revealed li::before { transform: scaleX(1); }
+        .av-frise .av-ico { display: flex; margin-bottom: .8rem; }
+        .av-frise .av-t { display: block; font-size: .6875rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); }
+        .av-frise .av-d { display: block; margin-top: .5rem; font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: 1.1rem; line-height: 1.3; color: var(--navy); }
+        @media (max-width: 719px) {
+          .av-frise ol { grid-template-columns: 1fr; }
+          .av-frise li { padding: 0 0 1.75rem 2.4rem; }
+          .av-frise li::before { top: .55rem; bottom: -.55rem; left: calc(.55rem - 1px); right: auto; width: 2px; height: auto; transform: scaleY(0); transform-origin: top; }
+          .av-frise li:last-child::before { display: none; }
+          .av-frise.revealed li::before { transform: scaleY(1); }
+          .av-frise li::after { top: .05rem; }
+        }
+
+        /* Cycle (schema SVG) */
+        .av-cycle { display: grid; grid-template-columns: 1fr; gap: 1.5rem; align-items: center; justify-items: center; padding: 2rem 1.5rem; border: 1px solid #E2E8F0; border-radius: 22px; background: #fff; }
+        @media (min-width: 720px) { .av-cycle { grid-template-columns: 16rem 1fr; gap: 3.5rem; padding: 2.5rem 3rem; justify-items: stretch; } }
+        .av-cycle svg { width: 100%; max-width: 15rem; height: auto; margin-inline: auto; display: block; }
+        .av-cycle ol { list-style: none; margin: 0; padding: 0; width: 100%; }
+        .av-cycle li { display: flex; align-items: center; gap: 1rem; padding: 1rem 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: 1.25rem; color: var(--navy); line-height: 1.3; }
+        .av-cycle li + li { border-top: 1px solid #E6ECF5; }
+        .av-cycle li .av-ico { margin-left: auto; order: 3; }
+        .av-cycle li span { order: 2; }
+        .av-cycle li b { flex: none; width: 2rem; height: 2rem; border-radius: 50%; background: var(--blue); color: #fff; font-family: 'Inter', system-ui, sans-serif; font-size: .8125rem; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; }
+
+        /* A retenir */
+        .av-retenir { position: relative; overflow: hidden; background: var(--navy); color: #fff; border-radius: 22px; padding: 2.5rem 1.75rem; }
+        @media (min-width: 768px) { .av-retenir { padding: 3.5rem 3.75rem; } }
+        .av-retenir .av-lab { display: inline-flex; align-items: center; gap: .6rem; font-size: .6875rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #8DB9FF; }
+        .av-retenir .av-ico { position: relative; z-index: 1; display: flex; margin-top: 1.4rem; background: rgba(255,255,255,.1); color: #8DB9FF; }
+        .av-retenir p { position: relative; z-index: 1; margin-top: 1.1rem; max-width: 36rem; font-family: 'Playfair Display', Georgia, serif; font-weight: 500; font-size: clamp(1.45rem, 3.2vw, 2rem); line-height: 1.35; }
+        .av-retenir .av-deco2 { position: absolute; right: 2rem; bottom: 0; display: flex; align-items: flex-end; gap: 10px; height: 70%; }
+        .av-retenir .av-deco2 i { display: block; width: 26px; border-radius: 8px 8px 0 0; background: rgba(255,255,255,.07); }
+        .av-retenir .av-deco2 i:nth-child(1) { height: 35%; } .av-retenir .av-deco2 i:nth-child(2) { height: 62%; } .av-retenir .av-deco2 i:nth-child(3) { height: 100%; }
+        @media (max-width: 560px) { .av-retenir .av-deco2 { display: none; } }
+
+        /* Citation */
+        .av-citation { max-width: 46rem; margin-inline: auto; padding-top: 1rem; }
+        .av-citation .av-mark { font-family: 'Playfair Display', Georgia, serif; font-size: 6rem; line-height: .6; color: rgba(0,102,240,.2); height: 3rem; }
+        .av-citation blockquote { margin: 0; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 500; font-size: clamp(1.6rem, 4vw, 2.3rem); line-height: 1.3; color: var(--navy); }
+        .av-citation figcaption { margin-top: 1.4rem; display: flex; align-items: center; gap: .8rem; font-size: .75rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #64748b; }
+        .av-citation figcaption::before { content: ''; width: 2.5rem; height: 2px; background: var(--blue); }
+
+        /* Tableau */
+        .av-tableau { overflow: hidden; border: 1px solid #E2E8F0; border-radius: 20px; background: #fff; }
+        .av-tableau table { width: 100%; border-collapse: collapse; }
+        .av-tableau th { padding: 1.05rem 1.6rem; text-align: left; background: #F3F7FE; font-size: .6875rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); }
+        .av-tableau td { padding: 1.3rem 1.6rem; border-top: 1px solid #E6ECF5; vertical-align: top; font-size: .9688rem; line-height: 1.6; color: #475569; }
+        .av-cell { display: flex; align-items: center; gap: .85rem; }
+        .av-tableau td:first-child { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: 1.1rem; color: var(--navy); width: 24%; }
+        @media (max-width: 719px) {
+          .av-tableau thead { display: none; }
+          .av-tableau tr, .av-tableau td { display: block; }
+          .av-tableau td { border-top: 0; padding: .35rem 1.3rem; }
+          .av-tableau td:first-child { width: auto; padding-top: 1.3rem; }
+          .av-tableau td:last-child { padding-bottom: 1.3rem; }
+          .av-tableau tr + tr { border-top: 1px solid #E6ECF5; }
+          .av-tableau td[data-l]:not(:first-child)::before { content: attr(data-l); display: block; font-size: .625rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); margin-bottom: .15rem; }
+        }
+
+        /* Cartes a icones */
+        .av-cartes { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+        @media (min-width: 640px) { .av-cartes.av-c2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        @media (min-width: 820px) { .av-cartes.av-c3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+        .av-carte { border: 1px solid #E2E8F0; border-radius: 18px; background: #fff; padding: 1.6rem 1.5rem 1.7rem; }
+        .av-ico { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 3.1rem; height: 3.1rem; border-radius: 14px; background: #EAF2FF; color: var(--blue); }
+        .av-ico svg { width: 1.8rem; height: 1.8rem; }
+        .av-ico-s { width: 2.35rem; height: 2.35rem; border-radius: 11px; }
+        .av-ico-s svg { width: 1.4rem; height: 1.4rem; }
+        .av-ico-l { width: 3.4rem; height: 3.4rem; border-radius: 16px; }
+        .av-ico-l svg { width: 2rem; height: 2rem; }
+        .av-ico-h { width: 2.9rem; height: 2.9rem; border-radius: 14px; }
+        .av-ico-h svg { width: 1.7rem; height: 1.7rem; }
+        .av-h2-row { display: flex; align-items: center; gap: 1rem; }
+        @media (max-width: 479px) { .av-ico-h { width: 2.5rem; height: 2.5rem; } .av-ico-h svg { width: 1.5rem; height: 1.5rem; } .av-h2-row { gap: .8rem; } }
+        .av-carte h3 { margin-top: 1.2rem; font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: 1.2rem; line-height: 1.25; color: var(--navy); }
+        .av-carte p { margin-top: .55rem; font-size: .9375rem; line-height: 1.6; color: #475569; }
+
+        /* Maquette d'un document */
+        .av-maquette { background: #F3F7FE; border-radius: 22px; padding: 2rem 1.1rem; }
+        @media (min-width: 640px) { .av-maquette { padding: 3rem 2rem; } }
+        .av-doc { max-width: 34rem; margin-inline: auto; background: #fff; border: 1px solid #D9E3F4; border-radius: 10px; box-shadow: 0 24px 48px -28px rgba(10,31,68,.35); overflow: hidden; }
+        .av-doc-tete { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.1rem 1.4rem; background: var(--navy); color: #fff; font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: 1.1rem; }
+        .av-doc-bars { display: flex; align-items: flex-end; gap: 4px; height: 1.2rem; }
+        .av-doc-bars i { display: block; width: 6px; border-radius: 2px 2px 0 0; background: rgba(255,255,255,.45); }
+        .av-doc-bars i:nth-child(1) { height: 35%; } .av-doc-bars i:nth-child(2) { height: 62%; } .av-doc-bars i:nth-child(3) { height: 100%; }
+        .av-rub { position: relative; display: grid; grid-template-columns: 2.35rem 8rem 1fr; gap: .2rem 1rem; align-items: center; padding: 1rem 1.4rem; border-top: 1px solid #E6ECF5; }
+        .av-rub b { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: 1rem; color: var(--navy); }
+        .av-rub span { font-size: .875rem; line-height: 1.5; color: #64748b; }
+        .av-rub-une { background: #EAF2FF; border-top: 0; box-shadow: inset 3px 0 0 var(--blue); padding-block: 1.3rem; }
+        .av-rub-une .av-ico { background: #fff; }
+        .av-rub-une em { grid-column: 2 / -1; order: -1; font-style: normal; font-size: .625rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); }
+        @media (max-width: 479px) { .av-rub { grid-template-columns: 2.35rem 1fr; } .av-rub .av-ico { grid-row: span 2; } }
+
+        /* A faire / a eviter */
+        .av-duo { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+        @media (min-width: 720px) { .av-duo { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        .av-oui, .av-non { border-radius: 18px; padding: 1.7rem 1.5rem; }
+        .av-oui { background: #F1F9F4; border: 1px solid #CFE8D8; }
+        .av-non { background: #FDF3F2; border: 1px solid #F3D2CE; }
+        .av-duo h3 { font-size: .6875rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+        .av-oui h3 { color: #1E7A45; } .av-non h3 { color: #B3362B; }
+        .av-duo ul { list-style: none; margin: 1rem 0 0; padding: 0; }
+        .av-duo li { display: flex; gap: .9rem; align-items: center; padding: .55rem 0; font-size: 1rem; line-height: 1.55; color: #334155; }
+        .av-oui .av-ico { background: #DDF1E4; color: #1E7A45; } .av-non .av-ico { background: #FBE1DE; color: #B3362B; }
+
+        /* Erreurs en cartes numerotees */
+        .av-erreurs { list-style: none; margin-inline: 0; padding: 0; display: grid; gap: .8rem; }
+        .av-erreurs li { display: grid; grid-template-columns: 3.4rem 1fr; gap: 1.1rem; align-items: start; border: 1px solid #E2E8F0; border-radius: 18px; background: #fff; padding: 1.4rem 1.4rem 1.5rem; }
+        @media (min-width: 640px) { .av-erreurs li { gap: 1.5rem; padding: 1.6rem 1.9rem; } }
+        .av-en { display: block; margin-bottom: .35rem; font-size: .6875rem; font-weight: 600; letter-spacing: .16em; color: var(--blue); }
+        .av-erreurs h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: 1.2rem; line-height: 1.3; color: var(--navy); }
+        .av-erreurs p { margin-top: .4rem; font-size: .9688rem; line-height: 1.6; color: #475569; }
+
+        /* Bandeau de mise en avant */
+        .av-bandeau { display: flex; flex-direction: column; align-items: flex-start; gap: 1.2rem; border-radius: 22px; background: linear-gradient(135deg, #EAF2FF 0%, #F6F9FF 100%); border: 1px solid #CFDBF0; padding: 2rem 1.75rem; }
+        @media (min-width: 768px) { .av-bandeau { flex-direction: row; align-items: center; gap: 1.75rem; padding: 2.6rem 3.25rem; } }
+        .av-bandeau .av-ico { background: #fff; }
+        .av-bandeau .av-lab { display: block; margin-bottom: .5rem; flex: none; font-size: .6875rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--blue); }
+        .av-bandeau p { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: clamp(1.4rem, 3vw, 1.9rem); line-height: 1.3; color: var(--navy); font-variant-numeric: lining-nums; }
+
+        /* Appel a l'action */
+        .av-cta { margin-block: 5.5rem 4.5rem; position: relative; overflow: hidden; border-radius: 24px; background: linear-gradient(135deg, #F3F7FE 0%, #FFFFFF 70%); border: 1px solid #E2E8F0; padding: 2.75rem 1.75rem; }
+        @media (min-width: 768px) { .av-cta { padding: 4rem 4.25rem; } }
+        .av-cta p { position: relative; z-index: 1; max-width: 34rem; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.6rem, 3.6vw, 2.25rem); line-height: 1.25; color: var(--navy); }
+        .av-cta a { position: relative; z-index: 1; }
+        .av-cta .av-deco3 { position: absolute; right: 2.5rem; bottom: 0; display: none; align-items: flex-end; gap: 12px; height: 80%; }
+        .av-cta .av-deco3 i { display: block; width: 34px; border-radius: 10px 10px 0 0; background: linear-gradient(180deg, rgba(0,102,240,.13), rgba(0,102,240,.02)); }
+        .av-cta .av-deco3 i:nth-child(1) { height: 35%; } .av-cta .av-deco3 i:nth-child(2) { height: 62%; } .av-cta .av-deco3 i:nth-child(3) { height: 100%; }
+        @media (min-width: 900px) { .av-cta .av-deco3 { display: flex; } }
+
+        @media (prefers-reduced-motion: reduce) {
+          .av-frise li::before { transform: none !important; transition: none !important; }
+          .av-progress { display: none; }
+        }
+
+        /* chiffres alignes sur la ligne (Playfair a des chiffres elzeviriens) */
+        .av-head h1, .av-h2, .av-stat .av-n, .av-frise .av-d, .av-frise .av-t, .av-cycle li, .av-retenir p, .av-citation blockquote, .av-tableau td, .av-cta p, .av-card-titre { font-variant-numeric: lining-nums; }
+
+        /* av-cartes-debut */
+        .av-card { position: relative; display: block; margin-top: 2.5rem; padding: 2.25rem 2rem 2rem; background: #fff; border: 1px solid #E2E8F0; border-radius: 1.25rem; overflow: hidden; transition: border-color .25s, box-shadow .25s, transform .25s; }
+        .av-card:hover { border-color: #B9D3FA; box-shadow: 0 18px 40px -22px rgba(10,31,68,.28); transform: translateY(-2px); }
+        .av-card-bars { position: absolute; right: 1.75rem; top: 0; display: flex; align-items: flex-start; gap: 6px; height: 4.5rem; pointer-events: none; }
+        .av-card-bars i { display: block; width: 12px; border-radius: 0 0 5px 5px; background: linear-gradient(180deg, rgba(0,102,240,.45), rgba(0,102,240,.08)); }
+        .av-card-bars i:nth-child(1) { height: 35%; } .av-card-bars i:nth-child(2) { height: 62%; } .av-card-bars i:nth-child(3) { height: 100%; }
+        .av-card-kicker { font-size: .75rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #0066F0; padding-right: 5rem; }
+        .av-card-titre { margin-top: .9rem; font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: clamp(1.5rem, 3.4vw, 1.9rem); line-height: 1.22; color: #0A1F44; transition: color .25s; font-variant-numeric: lining-nums; }
+        .av-card:hover .av-card-titre { color: #0066F0; }
+        .av-card-texte { margin-top: .9rem; color: #475569; line-height: 1.65; }
+        .av-card-pied { margin-top: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+        .av-card-lien { font-weight: 600; color: #0066F0; }
+        .av-card-lect { font-size: .8125rem; color: #64748B; }
+        /* av-cartes-fin */
+        /* av-fin */
+    </style>
+</head>
+<body class="bg-[#FCFCFD] text-movari-ink antialiased">
+
+    <!-- ════════ NAVIGATION ════════ -->
+    <nav class="bg-white/90 backdrop-blur-md border-b border-slate-200/70 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-5 md:px-8">
+            <div class="flex items-center justify-between h-[76px]">
+                <a href="../index.html" class="flex items-center gap-x-3" aria-label="Movari Conseil, retour à l'accueil">
+                    <img src="../assets/logo-movari-hd.png" alt="Movari Conseil" class="h-12 md:h-14 w-auto">
+                </a>
+
+                <div class="hidden lg:flex items-center gap-x-9 text-[13.5px] font-medium text-slate-500">
+                    <div class="relative group">
+                        <a href="../index.html#pour-qui" class="nav-link inline-flex items-center gap-x-1.5" aria-haspopup="true">
+                            Pour qui
+                            <svg class="w-3.5 h-3.5 text-slate-400 transition-transform duration-200 group-hover:rotate-180 group-hover:text-movari" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </a>
+                        <div class="absolute left-0 top-full pt-3.5 w-[320px] opacity-0 invisible translate-y-1 transition-all duration-200 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-y-0">
+                            <div class="bg-white border border-slate-200/80 rounded-2xl shadow-xl shadow-slate-300/40 p-2">
+                                <a href="../fonds.html" class="flex items-start gap-3 rounded-xl px-3 py-2.5 bg-slate-50/80 transition">
+                                    <span class="mt-0.5 w-9 h-9 rounded-lg bg-movari/10 flex items-center justify-center flex-shrink-0">
+                                        <svg class="w-5 h-5 text-movari" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z"/>
+                                        </svg>
+                                    </span>
+                                    <span class="min-w-0">
+                                        <span class="block text-[13.5px] font-semibold text-movari">Fonds d'investissement</span>
+                                        <span class="block text-[12px] text-slate-400 leading-snug">Création de valeur post-acquisition</span>
+                                    </span>
+                                </a>
+                                <a href="../entreprises.html" class="flex items-start gap-3 rounded-xl px-3 py-2.5 hover:bg-slate-50 transition">
+                                    <span class="mt-0.5 w-9 h-9 rounded-lg bg-movari/10 flex items-center justify-center flex-shrink-0">
+                                        <svg class="w-5 h-5 text-movari" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z"/>
+                                        </svg>
+                                    </span>
+                                    <span class="min-w-0">
+                                        <span class="block text-[13.5px] font-semibold text-movari-ink">Dirigeants PME &amp; ETI</span>
+                                        <span class="block text-[12px] text-slate-400 leading-snug">Diagnostic, plan, exécution</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="../index.html#approche" class="nav-link">Approche</a>
+                    <div class="relative group">
+                        <a href="../index.html#prestations" class="nav-link inline-flex items-center gap-x-1.5" aria-haspopup="true">
+                            Prestations
+                            <svg class="w-3.5 h-3.5 text-slate-400 transition-transform duration-200 group-hover:rotate-180 group-hover:text-movari" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </a>
+                        <div class="absolute left-0 top-full pt-3.5 w-[320px] opacity-0 invisible translate-y-1 transition-all duration-200 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-y-0">
+                            <div class="bg-white border border-slate-200/80 rounded-2xl shadow-xl shadow-slate-300/40 p-2">
+                                <a href="../ameliorer-la-performance.html" class="flex items-start gap-3 rounded-xl px-3 py-2.5 bg-movari/5 hover:bg-movari/10 transition">
+                                    <span class="mt-0.5 w-9 h-9 rounded-lg bg-movari/10 flex items-center justify-center flex-shrink-0">
+                                        <svg class="w-5 h-5 text-movari" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.307a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"/>
+                                        </svg>
+                                    </span>
+                                    <span class="min-w-0">
+                                        <span class="block text-[13.5px] font-semibold text-movari">Améliorer la performance</span>
+                                        <span class="block text-[12px] text-slate-400 leading-snug">Plus de marge, de cash, de croissance</span>
+                                    </span>
+                                </a>
+                                <div class="my-1.5 h-px bg-slate-100" aria-hidden="true"></div>
+                                <a href="../index.html#prestations" class="block rounded-xl px-3 py-2 text-[13.5px] font-medium text-movari-ink hover:bg-slate-50 transition">Diagnostic stratégique</a>
+                                <a href="../index.html#prestations" class="block rounded-xl px-3 py-2 text-[13.5px] font-medium text-movari-ink hover:bg-slate-50 transition">Plan stratégique</a>
+                                <a href="../index.html#prestations" class="block rounded-xl px-3 py-2 text-[13.5px] font-medium text-movari-ink hover:bg-slate-50 transition">Transformation &amp; PMO</a>
+                                <a href="../index.html#prestations" class="block rounded-xl px-3 py-2 text-[13.5px] font-medium text-movari-ink hover:bg-slate-50 transition">Séminaires de direction</a>
+                                <div class="my-1.5 h-px bg-slate-100" aria-hidden="true"></div>
+                                <a href="../evaluer-une-acquisition.html" class="flex items-start gap-3 rounded-xl px-3 py-2.5 bg-movari/5 hover:bg-movari/10 transition">
+                                    <span class="mt-0.5 w-9 h-9 rounded-lg bg-movari/10 flex items-center justify-center flex-shrink-0">
+                                        <svg class="w-5 h-5 text-movari" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                                        </svg>
+                                    </span>
+                                    <span class="min-w-0">
+                                        <span class="block text-[13.5px] font-semibold text-movari">Évaluer une acquisition</span>
+                                        <span class="block text-[12px] text-slate-400 leading-snug">Revue avant signature · go ou no-go</span>
+                                    </span>
+                                </a>
+                                <a href="../preparer-une-cession.html" class="flex items-start gap-3 rounded-xl px-3 py-2.5 hover:bg-slate-50 transition">
+                                    <span class="mt-0.5 w-9 h-9 rounded-lg bg-movari/10 flex items-center justify-center flex-shrink-0">
+                                        <svg class="w-5 h-5 text-movari" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z"/>
+                                        </svg>
+                                    </span>
+                                    <span class="min-w-0">
+                                        <span class="block text-[13.5px] font-semibold text-movari-ink">Préparer une cession</span>
+                                        <span class="block text-[12px] text-slate-400 leading-snug">Vendre au meilleur prix</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="../index.html#experience" class="nav-link">Expérience</a>
+                    <a href="../index.html#investissement" class="nav-link">Investissement</a>
+                    <a href="../index.html#apropos" class="nav-link">À propos</a>
+                </div>
+
+                <div class="flex items-center gap-x-3">
+                    <a href="https://cal.com/movariconseil" target="_blank" rel="noopener" data-cal
+                       class="btn-primary hidden sm:inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white rounded-xl">
+                        Échange de 30 min
+                    </a>
+                    <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-600 hover:text-slate-900" aria-label="Ouvrir le menu" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu mobile -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-100 bg-white px-6 py-5">
+            <div class="flex flex-col gap-y-1 text-[15px] font-medium text-slate-600">
+                <a href="../index.html#pour-qui" class="py-2.5">Pour qui</a>
+                <div class="ml-1 pl-3.5 border-l border-slate-200 flex flex-col mb-1">
+                    <a href="../fonds.html" class="py-2 text-[14px] text-movari font-semibold">Fonds d'investissement</a>
+                    <a href="../entreprises.html" class="py-2 text-[14px] text-slate-500">Dirigeants PME &amp; ETI</a>
+                </div>
+                <a href="../index.html#approche" class="py-2.5">Approche</a>
+                <a href="../index.html#prestations" class="py-2.5">Prestations</a>
+                <div class="ml-1 pl-3.5 border-l border-slate-200 flex flex-col mb-1">
+                    <a href="../ameliorer-la-performance.html" class="py-2 text-[14px] text-slate-500">Améliorer la performance</a>
+                    <a href="../evaluer-une-acquisition.html" class="py-2 text-[14px] text-movari font-semibold">Évaluer une acquisition</a>
+                    <a href="../preparer-une-cession.html" class="py-2 text-[14px] text-slate-500">Préparer une cession</a>
+                </div>
+                <a href="../index.html#experience" class="py-2.5">Expérience</a>
+                <a href="../index.html#investissement" class="py-2.5">Investissement</a>
+                <a href="../index.html#apropos" class="py-2.5">À propos</a>
+                <a href="https://cal.com/movariconseil" target="_blank" rel="noopener" data-cal
+                   class="btn-primary mt-3 inline-flex items-center justify-center px-5 py-3.5 text-sm font-semibold text-white rounded-xl">
+                    Réserver un échange de 30 min
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="av-wrap pt-5 text-[13px] text-slate-400">
+        <a href="../index.html" class="hover:text-movari transition">Accueil</a>
+        <span class="mx-2" aria-hidden="true">›</span>
+        <a href="index.html" class="hover:text-movari transition">Articles</a><span class="mx-2" aria-hidden="true">›</span><span class="text-slate-600">PMO post-acquisition</span>
+    </div>
+
+    <main>
+    <div class="av-progress" id="av-progress" aria-hidden="true"></div>
+    <header class="av-head av-wrap">
+        <span class="av-deco" aria-hidden="true"><i></i><i></i><i></i></span>
+        <div class="av-col">
+        <span class="kicker"><span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>Post-acquisition</span>
+        <h1>Monter un PMO post-acquisition en deux semaines : la méthode</h1>
+        <p class="av-chapo">Après un rachat, les chantiers démarrent vite et dans tous les sens. Un PMO post-acquisition, monté en deux semaines, donne au dirigeant et au fonds une seule lecture de l'avancement et un seul lieu pour décider.</p>
+        <p class="av-meta"><span><b>Benoît Mahmoudi</b> · Manager de transition</span><time datetime="2026-10-19">19 octobre 2026</time><span class="av-lecture"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> 6 min de lecture</span></p>
+        </div>
+    </header>
+
+    <article class="av-body av-wrap">
+        <h2 class="av-h2"><span class="av-num">01</span><span class="av-h2-row"><span class="av-ico av-ico-h" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M224,200a24,24,0,1,1-24-24A24,24,0,0,1,224,200Z" opacity="0.2"/><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg></span><span>Pourquoi un PMO post-acquisition se monte en deux semaines</span></span></h2>
+        <p class="av-p">Le rachat est signé et le plan de création de valeur existe sur le papier. Dans l'entreprise, les chantiers se lancent déjà : achats, systèmes, organisation, offre commerciale. Chacun avance à son rythme, avec ses propres tableaux.</p>
+        <p class="av-p">Sans bureau de projet, personne ne voit l'ensemble. Le dirigeant apprend les retards par hasard. Le fonds reçoit des nouvelles différentes selon son interlocuteur. Les décisions attendent, faute de lieu pour les prendre.</p>
+        <p class="av-p">Deux semaines suffisent pour installer un PMO utile. Plus long, l'élan du rachat retombe. Plus court, le PMO n'a pas eu le temps de comprendre les chantiers qu'il doit suivre. Voici la méthode, jour par jour.</p>
+        <div class="av-block av-frise reveal"><ol style="--n:4">
+            <li style="--i:0"><span class="av-ico av-ico-s" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M216,48V88H40V48a8,8,0,0,1,8-8H208A8,8,0,0,1,216,48Z" opacity="0.2"/><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"/></svg></span><span class="av-t">Jours 1 à 3</span><span class="av-d">Mandat et périmètre</span></li>
+            <li style="--i:1"><span class="av-ico av-ico-s" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M192,112a80,80,0,1,1-80-80A80,80,0,0,1,192,112Z" opacity="0.2"/><path d="M229.66,218.34,179.6,168.28a88.21,88.21,0,1,0-11.32,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></svg></span><span class="av-t">Jours 4 à 7</span><span class="av-d">Inventaire des chantiers</span></li>
+            <li style="--i:2"><span class="av-ico av-ico-s" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M207.86,123.18l16.78-21a99.14,99.14,0,0,0-10.07-24.29l-26.7-3a81,81,0,0,0-6.81-6.81l-3-26.71a99.43,99.43,0,0,0-24.3-10l-21,16.77a81.59,81.59,0,0,0-9.64,0l-21-16.78A99.14,99.14,0,0,0,77.91,41.43l-3,26.7a81,81,0,0,0-6.81,6.81l-26.71,3a99.43,99.43,0,0,0-10,24.3l16.77,21a81.59,81.59,0,0,0,0,9.64l-16.78,21a99.14,99.14,0,0,0,10.07,24.29l26.7,3a81,81,0,0,0,6.81,6.81l3,26.71a99.43,99.43,0,0,0,24.3,10l21-16.77a81.59,81.59,0,0,0,9.64,0l21,16.78a99.14,99.14,0,0,0,24.29-10.07l3-26.7a81,81,0,0,0,6.81-6.81l26.71-3a99.43,99.43,0,0,0,10-24.3l-16.77-21A81.59,81.59,0,0,0,207.86,123.18ZM128,168a40,40,0,1,1,40-40A40,40,0,0,1,128,168Z" opacity="0.2"/><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm88-29.84q.06-2.16,0-4.32l14.92-18.64a8,8,0,0,0,1.48-7.06,107.6,107.6,0,0,0-10.88-26.25,8,8,0,0,0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L186,40.54a8,8,0,0,0-3.94-6,107.29,107.29,0,0,0-26.25-10.86,8,8,0,0,0-7.06,1.48L130.16,40Q128,40,125.84,40L107.2,25.11a8,8,0,0,0-7.06-1.48A107.6,107.6,0,0,0,73.89,34.51a8,8,0,0,0-3.93,6L67.32,64.27q-1.56,1.49-3,3L40.54,70a8,8,0,0,0-6,3.94,107.71,107.71,0,0,0-10.87,26.25,8,8,0,0,0,1.49,7.06L40,125.84Q40,128,40,130.16L25.11,148.8a8,8,0,0,0-1.48,7.06,107.6,107.6,0,0,0,10.88,26.25,8,8,0,0,0,6,3.93l23.72,2.64q1.49,1.56,3,3L70,215.46a8,8,0,0,0,3.94,6,107.71,107.71,0,0,0,26.25,10.87,8,8,0,0,0,7.06-1.49L125.84,216q2.16.06,4.32,0l18.64,14.92a8,8,0,0,0,7.06,1.48,107.21,107.21,0,0,0,26.25-10.88,8,8,0,0,0,3.93-6l2.64-23.72q1.56-1.48,3-3L215.46,186a8,8,0,0,0,6-3.94,107.71,107.71,0,0,0,10.87-26.25,8,8,0,0,0-1.49-7.06Zm-16.1-6.5a73.93,73.93,0,0,1,0,8.68,8,8,0,0,0,1.74,5.48l14.19,17.73a91.57,91.57,0,0,1-6.23,15L187,173.11a8,8,0,0,0-5.1,2.64,74.11,74.11,0,0,1-6.14,6.14,8,8,0,0,0-2.64,5.1l-2.51,22.58a91.32,91.32,0,0,1-15,6.23l-17.74-14.19a8,8,0,0,0-5-1.75h-.48a73.93,73.93,0,0,1-8.68,0,8.06,8.06,0,0,0-5.48,1.74L100.45,215.8a91.57,91.57,0,0,1-15-6.23L82.89,187a8,8,0,0,0-2.64-5.1,74.11,74.11,0,0,1-6.14-6.14,8,8,0,0,0-5.1-2.64L46.43,170.6a91.32,91.32,0,0,1-6.23-15l14.19-17.74a8,8,0,0,0,1.74-5.48,73.93,73.93,0,0,1,0-8.68,8,8,0,0,0-1.74-5.48L40.2,100.45a91.57,91.57,0,0,1,6.23-15L69,82.89a8,8,0,0,0,5.1-2.64,74.11,74.11,0,0,1,6.14-6.14A8,8,0,0,0,82.89,69L85.4,46.43a91.32,91.32,0,0,1,15-6.23l17.74,14.19a8,8,0,0,0,5.48,1.74,73.93,73.93,0,0,1,8.68,0,8.06,8.06,0,0,0,5.48-1.74L155.55,40.2a91.57,91.57,0,0,1,15,6.23L173.11,69a8,8,0,0,0,2.64,5.1,74.11,74.11,0,0,1,6.14,6.14,8,8,0,0,0,5.1,2.64l22.58,2.51a91.32,91.32,0,0,1,6.23,15l-14.19,17.74A8,8,0,0,0,199.87,123.66Z"/></svg></span><span class="av-t">Jours 8 à 10</span><span class="av-d">Rythme et outils</span></li>
+            <li style="--i:3"><span class="av-ico av-ico-s" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M224,56V176c-64,55.43-112-55.43-176,0V56C112,.57,160,111.43,224,56Z" opacity="0.2"/><path d="M42.76,50A8,8,0,0,0,40,56V224a8,8,0,0,0,16,0V179.77c26.79-21.16,49.87-9.75,76.45,3.41,16.4,8.11,34.06,16.85,53,16.85,13.93,0,28.54-4.75,43.82-18a8,8,0,0,0,2.76-6V56A8,8,0,0,0,218.76,50c-28,24.23-51.72,12.49-79.21-1.12C111.07,34.76,78.78,18.79,42.76,50ZM216,172.25c-26.79,21.16-49.87,9.74-76.45-3.41-25-12.35-52.81-26.13-83.55-8.4V59.79c26.79-21.16,49.87-9.75,76.45,3.4,25,12.35,52.82,26.13,83.55,8.4Z"/></svg></span><span class="av-t">Jours 11 à 14</span><span class="av-d">Premier comité</span></li>
+        </ol></div>
+        <h2 class="av-h2"><span class="av-num">02</span><span class="av-h2-row"><span class="av-ico av-ico-h" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M208,88H152V32Z" opacity="0.2"/><path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Zm-32-80a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,136Zm0,32a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,168Z"/></svg></span><span>Jours 1 à 3 : écrire le mandat du PMO</span></span></h2>
+        <p class="av-p">Le PMO commence par une page. Elle dit ce qu'il fait, ce qu'il ne fait pas, à qui il rend compte. Je la rédige avec le dirigeant, puis je la fais valider par le fonds. Sans cette page, le bureau de projet devient vite un secrétariat que chacun sollicite pour tout.</p>
+        <p class="av-p">Le mandat fixe trois points. Le périmètre : les chantiers suivis, et ceux qui restent dans la gestion courante. La gouvernance : qui siège au comité, qui tranche en cas de désaccord. Le rythme : la fréquence des points et la date du premier comité.</p>
+        <div class="av-block av-cartes av-c3 reveal">
+            <div class="av-carte"><span class="av-ico" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M224,56V176c-64,55.43-112-55.43-176,0V56C112,.57,160,111.43,224,56Z" opacity="0.2"/><path d="M42.76,50A8,8,0,0,0,40,56V224a8,8,0,0,0,16,0V179.77c26.79-21.16,49.87-9.75,76.45,3.41,16.4,8.11,34.06,16.85,53,16.85,13.93,0,28.54-4.75,43.82-18a8,8,0,0,0,2.76-6V56A8,8,0,0,0,218.76,50c-28,24.23-51.72,12.49-79.21-1.12C111.07,34.76,78.78,18.79,42.76,50ZM216,172.25c-26.79,21.16-49.87,9.74-76.45-3.41-25-12.35-52.81-26.13-83.55-8.4V59.79c26.79-21.16,49.87-9.75,76.45,3.4,25,12.35,52.82,26.13,83.55,8.4Z"/></svg></span><h3>Le périmètre</h3><p>Les chantiers suivis sont listés. Le reste relève de la gestion courante.</p></div>
+            <div class="av-carte"><span class="av-ico" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M136,108A52,52,0,1,1,84,56,52,52,0,0,1,136,108Z" opacity="0.2"/><path d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"/></svg></span><h3>La gouvernance</h3><p>Le comité a ses membres. Un arbitre tranche les désaccords.</p></div>
+            <div class="av-carte"><span class="av-ico" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M216,48V88H40V48a8,8,0,0,1,8-8H208A8,8,0,0,1,216,48Z" opacity="0.2"/><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"/></svg></span><h3>Le rythme</h3><p>Les points sont fixés à l'avance. Le premier comité a une date.</p></div>
+        </div>
+        <div class="av-livrable"><span class="av-ico av-ico-s" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M208,48V216a8,8,0,0,1-8,8H56a8,8,0,0,1-8-8V48a8,8,0,0,1,8-8H96a39.83,39.83,0,0,0-8,24v8h80V64a39.83,39.83,0,0,0-8-24h40A8,8,0,0,1,208,48Z" opacity="0.2"/><path d="M168,152a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,152Zm-8-40H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm56-64V216a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V48A16,16,0,0,1,56,32H92.26a47.92,47.92,0,0,1,71.48,0H200A16,16,0,0,1,216,48ZM96,64h64a32,32,0,0,0-64,0ZM200,48H173.25A47.93,47.93,0,0,1,176,64v8a8,8,0,0,1-8,8H88a8,8,0,0,1-8-8V64a47.93,47.93,0,0,1,2.75-16H56V216H200Z"/></svg></span><span class="av-lab">Livrable</span><p>un mandat d'une page, signé par le dirigeant et validé par le fonds.</p></div>
+        <h2 class="av-h2"><span class="av-num">03</span><span class="av-h2-row"><span class="av-ico av-ico-h" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M192,112a80,80,0,1,1-80-80A80,80,0,0,1,192,112Z" opacity="0.2"/><path d="M229.66,218.34,179.6,168.28a88.21,88.21,0,1,0-11.32,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></svg></span><span>Jours 4 à 7 : faire l'inventaire des chantiers</span></span></h2>
+        <p class="av-p">Pendant quatre jours, je rencontre chaque responsable de chantier. Un entretien par personne, avec la même grille de questions. Où en est le chantier, quel gain il porte, quelle est la prochaine échéance, qu'est-ce qui le bloque.</p>
+        <p class="av-p">Cet inventaire révèle presque toujours deux choses. Des chantiers lancés sans responsable clair. Des chantiers qui se recouvrent et se disputent les mêmes équipes. Je propose alors de fusionner, de suspendre ou de nommer. Le dirigeant décide.</p>
+        <div class="av-block av-tableau reveal"><table>
+            <thead><tr><th scope="col">Question</th><th scope="col">Ce que je cherche</th><th scope="col">Signal d'alerte</th></tr></thead>
+            <tbody>
+                <tr><td data-l="Question"><span class="av-cell"><span class="av-ico av-ico-s" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M136,108A52,52,0,1,1,84,56,52,52,0,0,1,136,108Z" opacity="0.2"/><path d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"/></svg></span><span>Qui porte le chantier</span></span></td><td data-l="Ce que je cherche">Un nom, un seul</td><td data-l="Signal d&#x27;alerte">Deux noms ou aucun</td></tr>
+                <tr><td data-l="Question"><span class="av-cell"><span class="av-ico av-ico-s" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M176,128a48,48,0,1,1-48-48A48,48,0,0,1,176,128Z" opacity="0.2"/><path d="M221.87,83.16A104.1,104.1,0,1,1,195.67,49l22.67-22.68a8,8,0,0,1,11.32,11.32l-96,96a8,8,0,0,1-11.32-11.32l27.72-27.72a40,40,0,1,0,17.87,31.09,8,8,0,1,1,16-.9,56,56,0,1,1-22.38-41.65L184.3,60.39a87.88,87.88,0,1,0,23.13,29.67,8,8,0,0,1,14.44-6.9Z"/></svg></span><span>Quel gain</span></span></td><td data-l="Ce que je cherche">Un montant ou un indicateur</td><td data-l="Signal d&#x27;alerte">Un objectif vague</td></tr>
+                <tr><td data-l="Question"><span class="av-cell"><span class="av-ico av-ico-s" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M216,48V88H40V48a8,8,0,0,1,8-8H208A8,8,0,0,1,216,48Z" opacity="0.2"/><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"/></svg></span><span>Quelle échéance</span></span></td><td data-l="Ce que je cherche">Une date proche</td><td data-l="Signal d&#x27;alerte">Une date lointaine</td></tr>
+                <tr><td data-l="Question"><span class="av-cell"><span class="av-ico av-ico-s" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M215.46,216H40.54C27.92,216,20,202.79,26.13,192.09L113.59,40.22c6.3-11,22.52-11,28.82,0l87.46,151.87C236,202.79,228.08,216,215.46,216Z" opacity="0.2"/><path d="M236.8,188.09,149.35,36.22h0a24.76,24.76,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.35,24.35,0,0,0,40.55,224h174.9a24.35,24.35,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09ZM222.93,203.8a8.5,8.5,0,0,1-7.48,4.2H40.55a8.5,8.5,0,0,1-7.48-4.2,7.59,7.59,0,0,1,0-7.72L120.52,44.21a8.75,8.75,0,0,1,15,0l87.45,151.87A7.59,7.59,0,0,1,222.93,203.8ZM120,144V104a8,8,0,0,1,16,0v40a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,180Z"/></svg></span><span>Quel blocage</span></span></td><td data-l="Ce que je cherche">Une décision attendue</td><td data-l="Signal d&#x27;alerte">Un blocage tu</td></tr>
+            </tbody>
+        </table></div>
+        <div class="av-livrable"><span class="av-ico av-ico-s" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M208,48V216a8,8,0,0,1-8,8H56a8,8,0,0,1-8-8V48a8,8,0,0,1,8-8H96a39.83,39.83,0,0,0-8,24v8h80V64a39.83,39.83,0,0,0-8-24h40A8,8,0,0,1,208,48Z" opacity="0.2"/><path d="M168,152a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,152Zm-8-40H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm56-64V216a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V48A16,16,0,0,1,56,32H92.26a47.92,47.92,0,0,1,71.48,0H200A16,16,0,0,1,216,48ZM96,64h64a32,32,0,0,0-64,0ZM200,48H173.25A47.93,47.93,0,0,1,176,64v8a8,8,0,0,1-8,8H88a8,8,0,0,1-8-8V64a47.93,47.93,0,0,1,2.75-16H56V216H200Z"/></svg></span><span class="av-lab">Livrable</span><p>la liste des chantiers retenus, chacun avec un responsable, un gain et une échéance.</p></div>
+        <h2 class="av-h2"><span class="av-num">04</span><span class="av-h2-row"><span class="av-ico av-ico-h" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M216,128a88,88,0,1,1-88-88A88,88,0,0,1,216,128Z" opacity="0.2"/><path d="M224,48V96a8,8,0,0,1-8,8H168a8,8,0,0,1,0-16h28.69L182.06,73.37a79.56,79.56,0,0,0-56.13-23.43h-.45A79.52,79.52,0,0,0,69.59,72.71,8,8,0,0,1,58.41,61.27a96,96,0,0,1,135,.79L208,76.69V48a8,8,0,0,1,16,0ZM186.41,183.29a80,80,0,0,1-112.47-.66L59.31,168H88a8,8,0,0,0,0-16H40a8,8,0,0,0-8,8v48a8,8,0,0,0,16,0V179.31l14.63,14.63A95.43,95.43,0,0,0,130,222.06h.53a95.36,95.36,0,0,0,67.07-27.33,8,8,0,0,0-11.18-11.44Z"/></svg></span><span>Jours 8 à 10 : installer le rythme de pilotage</span></span></h2>
+        <p class="av-p">Le PMO vit de son rythme. Je fixe deux rendez-vous. Un point hebdomadaire avec chaque responsable de chantier, court, pour mettre à jour l'avancement. Un comité de pilotage avec le dirigeant, toutes les deux semaines au début, puis chaque mois.</p>
+        <p class="av-p">Le comité suit toujours le même ordre du jour. Les gains constatés, les écarts, les décisions à prendre. Chaque séance se termine par une liste de décisions, chacune avec un nom et une date. Un PMO qui ne fait pas décider n'est qu'un secrétariat.</p>
+        <div class="av-block av-cycle reveal">
+            <svg viewBox="0 0 240 240" role="img" aria-label="Comité : Gains constatés, Écarts, Décisions à prendre, Suivi des décisions" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="120" r="86" fill="none" stroke="#CFDBF0" stroke-width="2"/><polygon points="188.6,67.0 182.9,48.6 170.2,61.3" fill="#0066F0"/><polygon points="173.0,188.6 191.4,182.9 178.7,170.2" fill="#0066F0"/><polygon points="51.4,173.0 57.1,191.4 69.8,178.7" fill="#0066F0"/><polygon points="67.0,51.4 48.6,57.1 61.3,69.8" fill="#0066F0"/><circle cx="120.0" cy="34.0" r="17" fill="#0066F0"/><text x="120.0" y="34.5" text-anchor="middle" dominant-baseline="central" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600" fill="#fff">1</text><circle cx="206.0" cy="120.0" r="17" fill="#0066F0"/><text x="206.0" y="120.5" text-anchor="middle" dominant-baseline="central" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600" fill="#fff">2</text><circle cx="120.0" cy="206.0" r="17" fill="#0066F0"/><text x="120.0" y="206.5" text-anchor="middle" dominant-baseline="central" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600" fill="#fff">3</text><circle cx="34.0" cy="120.0" r="17" fill="#0066F0"/><text x="34.0" y="120.5" text-anchor="middle" dominant-baseline="central" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600" fill="#fff">4</text><text x="120" y="120.0" text-anchor="middle" dominant-baseline="central" font-family="Playfair Display, Georgia, serif" font-size="19" font-weight="600" fill="#0A1F44">Comité</text></svg>
+            <ol>
+                <li><b>1</b><span class="av-ico av-ico-s" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M208,40V208H152V40Z" opacity="0.2"/><path d="M224,200h-8V40a8,8,0,0,0-8-8H152a8,8,0,0,0-8,8V80H96a8,8,0,0,0-8,8v40H48a8,8,0,0,0-8,8v64H32a8,8,0,0,0,0,16H224a8,8,0,0,0,0-16ZM160,48h40V200H160ZM104,96h40V200H104ZM56,144H88v56H56Z"/></svg></span><span>Gains constatés</span></li>
+                <li><b>2</b><span class="av-ico av-ico-s" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M208,80v96H48V80Z" opacity="0.2"/><path d="M213.66,181.66l-32,32a8,8,0,0,1-11.32-11.32L188.69,184H48a8,8,0,0,1,0-16H188.69l-18.35-18.34a8,8,0,0,1,11.32-11.32l32,32A8,8,0,0,1,213.66,181.66Zm-139.32-64a8,8,0,0,0,11.32-11.32L67.31,88H208a8,8,0,0,0,0-16H67.31L85.66,53.66A8,8,0,0,0,74.34,42.34l-32,32a8,8,0,0,0,0,11.32Z"/></svg></span><span>Écarts</span></li>
+                <li><b>3</b><span class="av-ico av-ico-s" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M56,88l32,80c0,17.67-20,24-32,24s-32-6.33-32-24ZM200,56l-32,80c0,17.67,20,24,32,24s32-6.33,32-24Z" opacity="0.2"/><path d="M239.43,133l-32-80h0a8,8,0,0,0-9.16-4.84L136,62V40a8,8,0,0,0-16,0V65.58L54.26,80.19A8,8,0,0,0,48.57,85h0v.06L16.57,165a7.92,7.92,0,0,0-.57,3c0,23.31,24.54,32,40,32s40-8.69,40-32a7.92,7.92,0,0,0-.57-3L66.92,93.77,120,82V208H104a8,8,0,0,0,0,16h48a8,8,0,0,0,0-16H136V78.42L187,67.1,160.57,133a7.92,7.92,0,0,0-.57,3c0,23.31,24.54,32,40,32s40-8.69,40-32A7.92,7.92,0,0,0,239.43,133ZM56,184c-7.53,0-22.76-3.61-23.93-14.64L56,109.54l23.93,59.82C78.76,180.39,63.53,184,56,184Zm144-32c-7.53,0-22.76-3.61-23.93-14.64L200,77.54l23.93,59.82C222.76,148.39,207.53,152,200,152Z"/></svg></span><span>Décisions à prendre</span></li>
+                <li><b>4</b><span class="av-ico av-ico-s" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"/><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg></span><span>Suivi des décisions</span></li>
+            </ol>
+        </div>
+        <h2 class="av-h2"><span class="av-num">05</span><span class="av-h2-row"><span class="av-ico av-ico-h" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M232,152v24a8,8,0,0,1-8,8H32a8,8,0,0,1-8-8V153.13C24,95.65,70.15,48.2,127.63,48A104,104,0,0,1,232,152Z" opacity="0.2"/><path d="M207.06,72.67A111.24,111.24,0,0,0,128,40h-.4C66.07,40.21,16,91,16,153.13V176a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V152A111.25,111.25,0,0,0,207.06,72.67ZM224,176H119.71l54.76-75.3a8,8,0,0,0-12.94-9.42L99.92,176H32V153.13c0-3.08.15-6.12.43-9.13H56a8,8,0,0,0,0-16H35.27c10.32-38.86,44-68.24,84.73-71.66V80a8,8,0,0,0,16,0V56.33A96.14,96.14,0,0,1,221,128H200a8,8,0,0,0,0,16h23.67c.21,2.65.33,5.31.33,8Z"/></svg></span><span>Les outils du PMO : peu, et toujours les mêmes</span></span></h2>
+        <p class="av-p">Le PMO n'a pas besoin d'un logiciel coûteux. Il a besoin de trois documents tenus à jour, toujours au même format, pour que les semaines se comparent.</p>
+        <div class="av-block av-maquette reveal"><div class="av-doc" role="img" aria-label="Tableau de suivi du PMO">
+            <div class="av-doc-tete"><span>Tableau de suivi du PMO</span><span class="av-doc-bars" aria-hidden="true"><i></i><i></i><i></i></span></div>
+            <div class="av-rub av-rub-une"><span class="av-ico av-ico-s" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M224,80l-96,56L32,80l96-56Z" opacity="0.2"/><path d="M230.91,172A8,8,0,0,1,228,182.91l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,36,169.09l92,53.65,92-53.65A8,8,0,0,1,230.91,172ZM220,121.09l-92,53.65L36,121.09A8,8,0,0,0,28,134.91l96,56a8,8,0,0,0,8.06,0l96-56A8,8,0,1,0,220,121.09ZM24,80a8,8,0,0,1,4-6.91l96-56a8,8,0,0,1,8.06,0l96,56a8,8,0,0,1,0,13.82l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,24,80Zm23.88,0L128,126.74,208.12,80,128,33.26Z"/></svg></span><b>Les chantiers</b><span>responsable, échéance, état d'avancement</span><em>En tête</em></div>
+            <div class="av-rub"><span class="av-ico av-ico-s" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M240,132c0,19.88-35.82,36-80,36-19.6,0-37.56-3.17-51.47-8.44h0C146.76,156.85,176,142,176,124V96.72h0C212.52,100.06,240,114.58,240,132ZM176,84c0-19.88-35.82-36-80-36S16,64.12,16,84s35.82,36,80,36S176,103.88,176,84Z" opacity="0.2"/><path d="M184,89.57V84c0-25.08-37.83-44-88-44S8,58.92,8,84v40c0,20.89,26.25,37.49,64,42.46V172c0,25.08,37.83,44,88,44s88-18.92,88-44V132C248,111.3,222.58,94.68,184,89.57ZM232,132c0,13.22-30.79,28-72,28-3.73,0-7.43-.13-11.08-.37C170.49,151.77,184,139,184,124V105.74C213.87,110.19,232,122.27,232,132ZM72,150.25V126.46A183.74,183.74,0,0,0,96,128a183.74,183.74,0,0,0,24-1.54v23.79A163,163,0,0,1,96,152,163,163,0,0,1,72,150.25Zm96-40.32V124c0,8.39-12.41,17.4-32,22.87V123.5C148.91,120.37,159.84,115.71,168,109.93ZM96,56c41.21,0,72,14.78,72,28s-30.79,28-72,28S24,97.22,24,84,54.79,56,96,56ZM24,124V109.93c8.16,5.78,19.09,10.44,32,13.57v23.37C36.41,141.4,24,132.39,24,124Zm64,48v-4.17c2.63.1,5.29.17,8,.17,3.88,0,7.67-.13,11.39-.35A121.92,121.92,0,0,0,120,171.41v23.46C100.41,189.4,88,180.39,88,172Zm48,26.25V174.4a179.48,179.48,0,0,0,24,1.6,183.74,183.74,0,0,0,24-1.54v23.79a165.45,165.45,0,0,1-48,0Zm64-3.38V171.5c12.91-3.13,23.84-7.79,32-13.57V172C232,180.39,219.59,189.4,200,194.87Z"/></svg></span><b>Les gains</b><span>attendus, engagés, constatés dans les comptes</span></div>
+            <div class="av-rub"><span class="av-ico av-ico-s" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M215.46,216H40.54C27.92,216,20,202.79,26.13,192.09L113.59,40.22c6.3-11,22.52-11,28.82,0l87.46,151.87C236,202.79,228.08,216,215.46,216Z" opacity="0.2"/><path d="M236.8,188.09,149.35,36.22h0a24.76,24.76,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.35,24.35,0,0,0,40.55,224h174.9a24.35,24.35,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09ZM222.93,203.8a8.5,8.5,0,0,1-7.48,4.2H40.55a8.5,8.5,0,0,1-7.48-4.2,7.59,7.59,0,0,1,0-7.72L120.52,44.21a8.75,8.75,0,0,1,15,0l87.45,151.87A7.59,7.59,0,0,1,222.93,203.8ZM120,144V104a8,8,0,0,1,16,0v40a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,180Z"/></svg></span><b>Les risques</b><span>un responsable et une date de traitement</span></div>
+            <div class="av-rub"><span class="av-ico av-ico-s" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M216,64V192H128V64Z" opacity="0.2"/><path d="M224,128a8,8,0,0,1-8,8H128a8,8,0,0,1,0-16h88A8,8,0,0,1,224,128ZM128,72h88a8,8,0,0,0,0-16H128a8,8,0,0,0,0,16Zm88,112H128a8,8,0,0,0,0,16h88a8,8,0,0,0,0-16ZM82.34,42.34,56,68.69,45.66,58.34A8,8,0,0,0,34.34,69.66l16,16a8,8,0,0,0,11.32,0l32-32A8,8,0,0,0,82.34,42.34Zm0,64L56,132.69,45.66,122.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32,0l32-32a8,8,0,0,0-11.32-11.32Zm0,64L56,196.69,45.66,186.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32,0l32-32a8,8,0,0,0-11.32-11.32Z"/></svg></span><b>Les décisions</b><span>prises, en attente, avec leur date</span></div>
+        </div></div>
+        <p class="av-p">Le relevé de décisions part le lendemain de chaque comité. La synthèse destinée au fonds reprend les mêmes rubriques, en une page. Un gain n'est compté que lorsqu'il apparaît dans les comptes.</p>
+        <div class="av-livrable"><span class="av-ico av-ico-s" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M208,48V216a8,8,0,0,1-8,8H56a8,8,0,0,1-8-8V48a8,8,0,0,1,8-8H96a39.83,39.83,0,0,0-8,24v8h80V64a39.83,39.83,0,0,0-8-24h40A8,8,0,0,1,208,48Z" opacity="0.2"/><path d="M168,152a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,152Zm-8-40H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm56-64V216a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V48A16,16,0,0,1,56,32H92.26a47.92,47.92,0,0,1,71.48,0H200A16,16,0,0,1,216,48ZM96,64h64a32,32,0,0,0-64,0ZM200,48H173.25A47.93,47.93,0,0,1,176,64v8a8,8,0,0,1-8,8H88a8,8,0,0,1-8-8V64a47.93,47.93,0,0,1,2.75-16H56V216H200Z"/></svg></span><span class="av-lab">Livrable</span><p>le tableau de suivi, le relevé de décisions et la synthèse pour le fonds.</p></div>
+        <h2 class="av-h2"><span class="av-num">06</span><span class="av-h2-row"><span class="av-ico av-ico-h" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M208,40V208H152V40Z" opacity="0.2"/><path d="M224,200h-8V40a8,8,0,0,0-8-8H152a8,8,0,0,0-8,8V80H96a8,8,0,0,0-8,8v40H48a8,8,0,0,0-8,8v64H32a8,8,0,0,0,0,16H224a8,8,0,0,0,0-16ZM160,48h40V200H160ZM104,96h40V200H104ZM56,144H88v56H56Z"/></svg></span><span>Ce que cela donne en pratique</span></span></h2>
+        <p class="av-p">Chez Cegid, éditeur de logiciels de 400 M€ de chiffre d'affaires, j'ai piloté le plan de transformation du groupe et l'intégration des sociétés acquises, avec un reporting direct au COMEX. Sur un réseau multi-sites sous LBO, le suivi serré d'un chantier de délai de paiement, réduit de 14 jours, a libéré environ 300 k€ de cash.</p>
+        <div class="av-block av-stats reveal">
+            <div class="av-stat"><span class="av-ico av-ico-l" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M136,32V216H40V85.35a8,8,0,0,1,3.56-6.66l80-53.33A8,8,0,0,1,136,32Z" opacity="0.2"/><path d="M240,208H224V96a16,16,0,0,0-16-16H144V32a16,16,0,0,0-24.88-13.32L39.12,72A16,16,0,0,0,32,85.34V208H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM208,96V208H144V96ZM48,85.34,128,32V208H48ZM112,112v16a8,8,0,0,1-16,0V112a8,8,0,1,1,16,0Zm-32,0v16a8,8,0,0,1-16,0V112a8,8,0,1,1,16,0Zm0,56v16a8,8,0,0,1-16,0V168a8,8,0,0,1,16,0Zm32,0v16a8,8,0,0,1-16,0V168a8,8,0,0,1,16,0Z"/></svg></span><div class="av-n">400<small>M€</small></div><p class="av-l">de chiffre d'affaires chez Cegid, avec l'intégration des sociétés acquises</p></div>
+            <div class="av-stat"><span class="av-ico av-ico-l" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"/><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg></span><div class="av-n">14<small>jours</small></div><p class="av-l">de délai de paiement en moins sur un réseau multi-sites sous LBO</p></div>
+            <div class="av-stat"><span class="av-ico av-ico-l" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M224,80V192a8,8,0,0,1-8,8H56a16,16,0,0,1-16-16V56A16,16,0,0,0,56,72H216A8,8,0,0,1,224,80Z" opacity="0.2"/><path d="M216,64H56a8,8,0,0,1,0-16H192a8,8,0,0,0,0-16H56A24,24,0,0,0,32,56V184a24,24,0,0,0,24,24H216a16,16,0,0,0,16-16V80A16,16,0,0,0,216,64Zm0,128H56a8,8,0,0,1-8-8V78.63A23.84,23.84,0,0,0,56,80H216Zm-48-60a12,12,0,1,1,12,12A12,12,0,0,1,168,132Z"/></svg></span><div class="av-n">300<small>k€</small></div><p class="av-l">de cash libéré sur ce même réseau</p></div>
+        </div>
+        <p class="av-p">Dans les deux cas, le principe était le même : un chantier, un responsable, un comité qui tranche.</p>
+        <h2 class="av-h2"><span class="av-num">07</span><span class="av-h2-row"><span class="av-ico av-ico-h" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M215.46,216H40.54C27.92,216,20,202.79,26.13,192.09L113.59,40.22c6.3-11,22.52-11,28.82,0l87.46,151.87C236,202.79,228.08,216,215.46,216Z" opacity="0.2"/><path d="M236.8,188.09,149.35,36.22h0a24.76,24.76,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.35,24.35,0,0,0,40.55,224h174.9a24.35,24.35,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09ZM222.93,203.8a8.5,8.5,0,0,1-7.48,4.2H40.55a8.5,8.5,0,0,1-7.48-4.2,7.59,7.59,0,0,1,0-7.72L120.52,44.21a8.75,8.75,0,0,1,15,0l87.45,151.87A7.59,7.59,0,0,1,222.93,203.8ZM120,144V104a8,8,0,0,1,16,0v40a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,180Z"/></svg></span><span>Les erreurs à éviter</span></span></h2>
+        <p class="av-p">Les PMO qui échouent après un rachat échouent rarement par manque de méthode. Ils échouent parce qu'ils suivent tout et ne font rien décider.</p>
+        <ol class="av-block av-erreurs reveal">
+            <li><span class="av-ico av-ico-l" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M215.46,216H40.54C27.92,216,20,202.79,26.13,192.09L113.59,40.22c6.3-11,22.52-11,28.82,0l87.46,151.87C236,202.79,228.08,216,215.46,216Z" opacity="0.2"/><path d="M236.8,188.09,149.35,36.22h0a24.76,24.76,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.35,24.35,0,0,0,40.55,224h174.9a24.35,24.35,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09ZM222.93,203.8a8.5,8.5,0,0,1-7.48,4.2H40.55a8.5,8.5,0,0,1-7.48-4.2,7.59,7.59,0,0,1,0-7.72L120.52,44.21a8.75,8.75,0,0,1,15,0l87.45,151.87A7.59,7.59,0,0,1,222.93,203.8ZM120,144V104a8,8,0,0,1,16,0v40a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,180Z"/></svg></span><div><span class="av-en">01</span><h3>Suivre tous les chantiers</h3><p>Le PMO se noie et le comité perd le fil.</p></div></li>
+            <li><span class="av-ico av-ico-l" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M215.46,216H40.54C27.92,216,20,202.79,26.13,192.09L113.59,40.22c6.3-11,22.52-11,28.82,0l87.46,151.87C236,202.79,228.08,216,215.46,216Z" opacity="0.2"/><path d="M236.8,188.09,149.35,36.22h0a24.76,24.76,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.35,24.35,0,0,0,40.55,224h174.9a24.35,24.35,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09ZM222.93,203.8a8.5,8.5,0,0,1-7.48,4.2H40.55a8.5,8.5,0,0,1-7.48-4.2,7.59,7.59,0,0,1,0-7.72L120.52,44.21a8.75,8.75,0,0,1,15,0l87.45,151.87A7.59,7.59,0,0,1,222.93,203.8ZM120,144V104a8,8,0,0,1,16,0v40a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,180Z"/></svg></span><div><span class="av-en">02</span><h3>Confier le PMO à un cadre déjà occupé</h3><p>Le suivi passe après son métier.</p></div></li>
+            <li><span class="av-ico av-ico-l" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M215.46,216H40.54C27.92,216,20,202.79,26.13,192.09L113.59,40.22c6.3-11,22.52-11,28.82,0l87.46,151.87C236,202.79,228.08,216,215.46,216Z" opacity="0.2"/><path d="M236.8,188.09,149.35,36.22h0a24.76,24.76,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.35,24.35,0,0,0,40.55,224h174.9a24.35,24.35,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09ZM222.93,203.8a8.5,8.5,0,0,1-7.48,4.2H40.55a8.5,8.5,0,0,1-7.48-4.2,7.59,7.59,0,0,1,0-7.72L120.52,44.21a8.75,8.75,0,0,1,15,0l87.45,151.87A7.59,7.59,0,0,1,222.93,203.8ZM120,144V104a8,8,0,0,1,16,0v40a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,180Z"/></svg></span><div><span class="av-en">03</span><h3>Changer le format chaque semaine</h3><p>Personne ne compare plus rien.</p></div></li>
+            <li><span class="av-ico av-ico-l" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M215.46,216H40.54C27.92,216,20,202.79,26.13,192.09L113.59,40.22c6.3-11,22.52-11,28.82,0l87.46,151.87C236,202.79,228.08,216,215.46,216Z" opacity="0.2"/><path d="M236.8,188.09,149.35,36.22h0a24.76,24.76,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.35,24.35,0,0,0,40.55,224h174.9a24.35,24.35,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09ZM222.93,203.8a8.5,8.5,0,0,1-7.48,4.2H40.55a8.5,8.5,0,0,1-7.48-4.2,7.59,7.59,0,0,1,0-7.72L120.52,44.21a8.75,8.75,0,0,1,15,0l87.45,151.87A7.59,7.59,0,0,1,222.93,203.8ZM120,144V104a8,8,0,0,1,16,0v40a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,180Z"/></svg></span><div><span class="av-en">04</span><h3>Compter les gains annoncés</h3><p>Le fonds découvre l'écart dans les comptes.</p></div></li>
+        </ol>
+        <p class="av-p">Un PMO utile reste léger. Il suit peu de chantiers, il garde le même format, il ramène chaque blocage au comité.</p>
+        <aside class="av-block av-retenir reveal"><span class="av-lab">À retenir</span><span class="av-ico av-ico-s" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M208,104a79.86,79.86,0,0,1-30.59,62.92A24.29,24.29,0,0,0,168,186v6a8,8,0,0,1-8,8H96a8,8,0,0,1-8-8v-6a24.11,24.11,0,0,0-9.3-19A79.87,79.87,0,0,1,48,104.45C47.76,61.09,82.72,25,126.07,24A80,80,0,0,1,208,104Z" opacity="0.2"/><path d="M176,232a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,232Zm40-128a87.55,87.55,0,0,1-33.64,69.21A16.24,16.24,0,0,0,176,186v6a16,16,0,0,1-16,16H96a16,16,0,0,1-16-16v-6a16,16,0,0,0-6.23-12.66A87.59,87.59,0,0,1,40,104.49C39.74,56.83,78.26,17.14,125.88,16A88,88,0,0,1,216,104Zm-16,0a72,72,0,0,0-73.74-72c-39,.92-70.47,33.39-70.26,72.39a71.65,71.65,0,0,0,27.64,56.3A32,32,0,0,1,96,186v6h64v-6a32.15,32.15,0,0,1,12.47-25.35A71.65,71.65,0,0,0,200,104Zm-16.11-9.34a57.6,57.6,0,0,0-46.56-46.55,8,8,0,0,0-2.66,15.78c16.57,2.79,30.63,16.85,33.44,33.45A8,8,0,0,0,176,104a9,9,0,0,0,1.35-.11A8,8,0,0,0,183.89,94.66Z"/></svg></span><p>Un mandat écrit, un responsable par chantier, un comité qui décide : le PMO tient en deux semaines.</p><span class="av-deco2" aria-hidden="true"><i></i><i></i><i></i></span></aside>
+        <h2 class="av-h2"><span class="av-num">08</span><span class="av-h2-row"><span class="av-ico av-ico-h" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M200,152l-40,40L96,176,40,136,72.68,70.63,128,56l55.32,14.63L183.6,72H144L98.34,116.29a8,8,0,0,0,1.38,12.42C117.23,139.9,141,139.13,160,120Z" opacity="0.2"/><path d="M254.3,107.91,228.78,56.85a16,16,0,0,0-21.47-7.15L182.44,62.13,130.05,48.27a8.14,8.14,0,0,0-4.1,0L73.56,62.13,48.69,49.7a16,16,0,0,0-21.47,7.15L1.7,107.9a16,16,0,0,0,7.15,21.47l27,13.51,55.49,39.63a8.06,8.06,0,0,0,2.71,1.25l64,16a8,8,0,0,0,7.6-2.1l55.07-55.08,26.42-13.21a16,16,0,0,0,7.15-21.46Zm-54.89,33.37L165,113.72a8,8,0,0,0-10.68.61C136.51,132.27,116.66,130,104,122L147.24,80h31.81l27.21,54.41ZM41.53,64,62,74.22,36.43,125.27,16,115.06Zm116,119.13L99.42,168.61l-49.2-35.14,28-56L128,64.28l9.8,2.59-45,43.68-.08.09a16,16,0,0,0,2.72,24.81c20.56,13.13,45.37,11,64.91-5L188,152.66Zm62-57.87-25.52-51L214.47,64,240,115.06Zm-87.75,92.67a8,8,0,0,1-7.75,6.06,8.13,8.13,0,0,1-1.95-.24L80.41,213.33a7.89,7.89,0,0,1-2.71-1.25L51.35,193.26a8,8,0,0,1,9.3-13l25.11,17.94L126,208.24A8,8,0,0,1,131.82,217.94Z"/></svg></span><span>Quand faire appel à un directeur de programme</span></span></h2>
+        <p class="av-p">Dès que l'équipe de direction ne peut pas porter seule le pilotage du plan, ou que le fonds veut un point de contact unique pendant l'intégration. Je monte le PMO, je l'anime le temps qu'il tourne, puis je le transmets à un responsable interne avec ses outils. Le mandat peut démarrer par un audit flash pour poser le diagnostic et le plan.</p>
+        <aside class="av-block av-bandeau reveal"><span class="av-ico av-ico-l" aria-hidden="true"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M224,56V176c-64,55.43-112-55.43-176,0V56C112,.57,160,111.43,224,56Z" opacity="0.2"/><path d="M42.76,50A8,8,0,0,0,40,56V224a8,8,0,0,0,16,0V179.77c26.79-21.16,49.87-9.75,76.45,3.41,16.4,8.11,34.06,16.85,53,16.85,13.93,0,28.54-4.75,43.82-18a8,8,0,0,0,2.76-6V56A8,8,0,0,0,218.76,50c-28,24.23-51.72,12.49-79.21-1.12C111.07,34.76,78.78,18.79,42.76,50ZM216,172.25c-26.79,21.16-49.87,9.74-76.45-3.41-25-12.35-52.81-26.13-83.55-8.4V59.79c26.79-21.16,49.87-9.75,76.45,3.4,25,12.35,52.82,26.13,83.55,8.4Z"/></svg></span><div><span class="av-lab">Pour démarrer</span><p>Audit flash : cinq jours, 10 000 € HT au forfait.</p></div></aside>
+    </article>
+
+    <section class="av-wrap">
+        <div class="av-cta reveal">
+            <span class="av-deco3" aria-hidden="true"><i></i><i></i><i></i></span>
+            <p>Vous préparez un rachat, ou vous venez de signer ? Trente minutes suffisent pour regarder ensemble votre plan.</p>
+            <a href="https://cal.com/movariconseil" target="_blank" rel="noopener" data-cal
+               class="btn-primary mt-8 inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-white rounded-xl">
+                Échange de 30 min
+            </a>
+        </div>
+    </section>
+        <script>
+        (function () {
+            var barre = document.getElementById('av-progress');
+            if (!barre) return;
+            function maj() {
+                var h = document.documentElement.scrollHeight - window.innerHeight;
+                var p = h > 0 ? Math.min(1, Math.max(0, window.scrollY / h)) : 0;
+                barre.style.transform = 'scaleX(' + p + ')';
+            }
+            window.addEventListener('scroll', maj, { passive: true });
+            window.addEventListener('resize', maj);
+            maj();
+        })();
+        </script>
+    </main>
+
+    <!-- ════════ FOOTER ════════ -->
+    <footer class="bg-[#071735] text-slate-400 text-sm">
+        <div class="max-w-6xl mx-auto px-5 md:px-8 pt-14 pb-10">
+            <div class="flex flex-col md:flex-row gap-y-10 md:items-start md:justify-between">
+                <div>
+                    <img src="../assets/logo-movari-hd.png" alt="Movari Conseil" class="h-10 brightness-0 invert opacity-90 mb-5">
+                    <div class="max-w-xs leading-relaxed">
+                        SASU au capital de 1 000 €<br>
+                        SIRET 892 384 751 000 12<br>
+                        RCS Lyon B 892 384 751 · TVA FR49 892 384 751
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-x-14 gap-y-8">
+                    <div>
+                        <div class="font-semibold text-white mb-3.5 text-[11px] tracking-[0.16em] uppercase">Contact</div>
+                        <a href="tel:+33621059309" class="block hover:text-white mb-1.5 transition">06 21 05 93 09</a>
+                        <a href="mailto:contact@movari.fr" class="block hover:text-white mb-1.5 transition">contact@movari.fr</a>
+                        <a href="https://www.linkedin.com/in/benoitmahmoudi" target="_blank" rel="noopener" class="block hover:text-white transition">LinkedIn ↗</a>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-white mb-3.5 text-[11px] tracking-[0.16em] uppercase">Adresse</div>
+                        <div class="leading-relaxed">163 rue Vendôme<br>69003 Lyon, France</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 mt-12 pt-6 text-xs text-slate-500 flex flex-col md:flex-row gap-y-2 md:items-center md:justify-between">
+                <div>© 2026 Movari Conseil. Tous droits réservés.</div>
+                <div class="flex items-center gap-x-5">
+                    <a href="../index.html" class="hover:text-white transition">Accueil</a>
+                    <a href="../mentions-legales.html" class="hover:text-white transition">Mentions légales</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CTA collant mobile -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur border-t border-slate-200 p-3 z-50 shadow-[0_-8px_30px_rgba(10,31,68,.12)]">
+        <a href="https://cal.com/movariconseil" target="_blank" rel="noopener" data-cal
+           class="btn-primary block w-full text-center text-white font-bold py-3.5 text-sm rounded-2xl">
+            Réserver un échange · 30 min
+        </a>
+    </div>
+    <div class="md:hidden h-[68px]" aria-hidden="true"><!-- compense le CTA collant --></div>
+
+    <!-- ════════ Cal.com · embed officiel (popup) ════════ -->
+    <script type="text/javascript">
+        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); })(window, "https://app.cal.com/embed/embed.js", "init");
+        Cal("init", { origin: "https://cal.com" });
+        Cal("ui", { styles: { branding: { brandColor: "#0066F0" } }, hideEventTypeDetails: false, layout: "month_view" });
+    </script>
+
+    <script>
+        /* ═══ Lien de réservation Cal.com ═══ */
+        const CAL_LINK = "movariconseil/audit-strategique-30min";
+
+        document.querySelectorAll('[data-cal]').forEach(el => {
+            el.setAttribute('data-cal-link', CAL_LINK);
+            el.setAttribute('data-cal-config', '{"layout":"month_view"}');
+            el.setAttribute('data-goatcounter-click', 'clic-reserver-audit');
+        });
+
+        // Menu mobile
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const iconOpen = '<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>';
+        const iconClose = '<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>';
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                const hidden = menu.classList.toggle('hidden');
+                btn.innerHTML = hidden ? iconOpen : iconClose;
+                btn.setAttribute('aria-expanded', String(!hidden));
+            });
+            menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                btn.innerHTML = iconOpen;
+                btn.setAttribute('aria-expanded', 'false');
+            }));
+        }
+
+        // Révélation au défilement
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Fermer le menu mobile avec Échap
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && menu && !menu.classList.contains('hidden')) {
+                menu.classList.add('hidden');
+                if (btn) { btn.innerHTML = iconOpen; btn.setAttribute('aria-expanded', 'false'); }
+            }
+        });
+    </script>
+
+    <!-- GoatCounter : mesure d'audience anonyme, sans cookie -->
+    <script data-goatcounter="https://movari.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
