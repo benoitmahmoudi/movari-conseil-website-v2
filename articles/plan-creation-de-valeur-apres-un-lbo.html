@@ -117,6 +117,140 @@
         :focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 4px; }
 
         .quote-mark { font-family: 'Playfair Display', serif; font-size: 4.5rem; line-height: 1; color: rgba(0,102,240,.16); }
+        /* av-debut */
+        /* Gabarit visuel des articles Movari. Lu par robot-article-movari-build.py et copie dans chaque article. */
+        /* Identite du site : Playfair Display + Inter, bleu #0066F0, marine #0A1F44. SVG et CSS seulement. */
+        .av-wrap { max-width: 64rem; margin-inline: auto; padding-inline: 1.25rem; }
+        @media (min-width: 768px) { .av-wrap { padding-inline: 2rem; } }
+        .av-col { max-width: 42rem; margin-inline: auto; }
+        .av-serif { font-family: 'Playfair Display', Georgia, serif; }
+
+        /* Barre de lecture */
+        .av-progress { position: fixed; top: 0; left: 0; height: 3px; width: 100%; background: var(--blue); transform: scaleX(0); transform-origin: 0 50%; z-index: 60; pointer-events: none; }
+
+        /* En-tete */
+        .av-head { position: relative; padding-top: 3rem; padding-bottom: .5rem; }
+        @media (min-width: 768px) { .av-head { padding-top: 4.5rem; } }
+        .av-deco { display: none; position: absolute; right: 0; top: 2rem; align-items: flex-end; gap: 10px; height: 14rem; pointer-events: none; z-index: 0; }
+        .av-deco i { display: block; width: 30px; border-radius: 12px 12px 0 0; background: linear-gradient(180deg, rgba(0,102,240,.11), rgba(0,102,240,.015)); }
+        .av-deco i:nth-child(1) { height: 35%; } .av-deco i:nth-child(2) { height: 62%; } .av-deco i:nth-child(3) { height: 100%; }
+        @media (min-width: 900px) { .av-deco { display: flex; } }
+        .av-head .av-col { position: relative; z-index: 1; }
+        .av-head h1 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; color: var(--navy); font-size: clamp(2.1rem, 5.4vw, 3.4rem); line-height: 1.1; letter-spacing: -.012em; margin-top: 1.4rem; }
+        @media (min-width: 900px) { .av-head h1 { width: 46rem; max-width: calc(100vw - 4rem); } }
+        .av-chapo { margin-top: 2rem; padding-left: 1.25rem; border-left: 3px solid var(--blue); font-size: 1.1875rem; line-height: 1.7; color: #64748b; }
+        @media (min-width: 768px) { .av-chapo { font-size: 1.25rem; } }
+        .av-meta { margin-top: 2rem; display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1.25rem; font-size: .8125rem; color: #94a3b8; }
+        .av-meta b { font-weight: 600; color: #475569; }
+        .av-meta .av-lecture { display: inline-flex; align-items: center; gap: .4rem; color: var(--blue); font-weight: 600; }
+        .av-meta svg { width: 15px; height: 15px; }
+
+        /* Texte */
+        .av-body { padding-bottom: 1rem; }
+        .av-body > p, .av-body > ul, .av-body > h2, .av-body > .av-livrable { max-width: 42rem; margin-inline: auto; }
+        .av-h2 { margin-top: 5rem; margin-bottom: 1.1rem; font-family: 'Playfair Display', Georgia, serif; font-weight: 600; color: var(--navy); font-size: clamp(1.6rem, 3.6vw, 2.05rem); line-height: 1.2; }
+        .av-h2:first-child { margin-top: 3.5rem; }
+        .av-h2 .av-num { display: flex; align-items: center; gap: .85rem; margin-bottom: 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: .75rem; font-weight: 600; letter-spacing: .16em; color: var(--blue); }
+        .av-h2 .av-num::after { content: ''; width: 2.75rem; height: 1px; background: var(--blue); opacity: .45; }
+        .av-p { margin-top: 1.1rem; font-size: 1.0625rem; line-height: 1.8; color: #475569; }
+        .av-list { list-style: none; padding: 0; margin-top: 1.5rem; border-top: 1px solid #E6ECF5; }
+        .av-list li { position: relative; padding: .95rem 0 .95rem 1.9rem; border-bottom: 1px solid #E6ECF5; font-size: 1.0625rem; line-height: 1.7; color: #475569; }
+        .av-list li::before { content: ''; position: absolute; left: 0; top: 1.62rem; width: .85rem; height: 2px; background: var(--blue); }
+        .av-livrable { margin-top: 1.6rem; display: flex; gap: 1rem; align-items: baseline; background: #F3F7FE; border-radius: 14px; padding: 1.05rem 1.3rem; }
+        .av-livrable .av-lab { flex: none; font-size: .6875rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); }
+        .av-livrable p { font-size: .9375rem; line-height: 1.6; color: var(--navy); }
+
+        /* Blocs visuels : plus larges que le texte */
+        .av-block { margin-block: 3.75rem; }
+
+        /* Chiffres cles */
+        .av-stats { display: grid; grid-template-columns: 1fr; border-top: 1px solid #E2E8F0; border-bottom: 1px solid #E2E8F0; }
+        .av-stat { padding: 2.25rem 1.5rem 2.25rem 0; }
+        .av-stat + .av-stat { border-top: 1px solid #E2E8F0; }
+        @media (min-width: 720px) { .av-stats { grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: 1fr; } .av-stat + .av-stat { border-top: 0; border-left: 1px solid #E2E8F0; padding-left: 1.9rem; } }
+        .av-stat .av-n { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: clamp(3.25rem, 8vw, 4.9rem); line-height: 1; letter-spacing: -.025em; color: var(--blue); font-variant-numeric: lining-nums tabular-nums; }
+        .av-stat .av-n small { font-size: .36em; letter-spacing: 0; color: var(--navy); margin-left: .3em; font-weight: 600; }
+        .av-stat .av-l { margin-top: 1rem; max-width: 17rem; font-size: .9375rem; line-height: 1.55; color: #475569; }
+
+        /* Frise */
+        .av-frise ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(var(--n), minmax(0, 1fr)); }
+        .av-frise li { position: relative; padding: 2.4rem .9rem 0 0; }
+        .av-frise li::before { content: ''; position: absolute; top: .52rem; left: 0; right: 0; height: 2px; background: #D3DDEE; transform: scaleX(0); transform-origin: left; transition: transform .7s cubic-bezier(.22,.61,.36,1); transition-delay: calc(var(--i) * .12s); }
+        .av-frise li:last-child::before { right: auto; width: 55%; background: linear-gradient(90deg, #D3DDEE, transparent); }
+        .av-frise li::after { content: ''; position: absolute; top: 0; left: 0; width: 1.1rem; height: 1.1rem; box-sizing: border-box; border-radius: 50%; background: #fff; border: 2px solid var(--blue); }
+        .av-frise li:last-child::after { background: var(--blue); }
+        .av-frise.revealed li::before { transform: scaleX(1); }
+        .av-frise .av-t { display: block; font-size: .6875rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); }
+        .av-frise .av-d { display: block; margin-top: .5rem; font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: 1.1rem; line-height: 1.3; color: var(--navy); }
+        @media (max-width: 719px) {
+          .av-frise ol { grid-template-columns: 1fr; }
+          .av-frise li { padding: 0 0 1.75rem 2.4rem; }
+          .av-frise li::before { top: .55rem; bottom: -.55rem; left: calc(.55rem - 1px); right: auto; width: 2px; height: auto; transform: scaleY(0); transform-origin: top; }
+          .av-frise li:last-child::before { display: none; }
+          .av-frise.revealed li::before { transform: scaleY(1); }
+          .av-frise li::after { top: .05rem; }
+        }
+
+        /* Cycle (schema SVG) */
+        .av-cycle { display: grid; grid-template-columns: 1fr; gap: 1.5rem; align-items: center; justify-items: center; padding: 2rem 1.5rem; border: 1px solid #E2E8F0; border-radius: 22px; background: #fff; }
+        @media (min-width: 720px) { .av-cycle { grid-template-columns: 16rem 1fr; gap: 3.5rem; padding: 2.5rem 3rem; justify-items: stretch; } }
+        .av-cycle svg { width: 100%; max-width: 15rem; height: auto; margin-inline: auto; display: block; }
+        .av-cycle ol { list-style: none; margin: 0; padding: 0; width: 100%; }
+        .av-cycle li { display: flex; align-items: center; gap: 1rem; padding: 1rem 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: 1.25rem; color: var(--navy); line-height: 1.3; }
+        .av-cycle li + li { border-top: 1px solid #E6ECF5; }
+        .av-cycle li b { flex: none; width: 2rem; height: 2rem; border-radius: 50%; background: var(--blue); color: #fff; font-family: 'Inter', system-ui, sans-serif; font-size: .8125rem; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; }
+
+        /* A retenir */
+        .av-retenir { position: relative; overflow: hidden; background: var(--navy); color: #fff; border-radius: 22px; padding: 2.5rem 1.75rem; }
+        @media (min-width: 768px) { .av-retenir { padding: 3.5rem 3.75rem; } }
+        .av-retenir .av-lab { display: inline-flex; align-items: center; gap: .6rem; font-size: .6875rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #8DB9FF; }
+        .av-retenir p { position: relative; z-index: 1; margin-top: 1.1rem; max-width: 36rem; font-family: 'Playfair Display', Georgia, serif; font-weight: 500; font-size: clamp(1.45rem, 3.2vw, 2rem); line-height: 1.35; }
+        .av-retenir .av-deco2 { position: absolute; right: 2rem; bottom: 0; display: flex; align-items: flex-end; gap: 10px; height: 70%; }
+        .av-retenir .av-deco2 i { display: block; width: 26px; border-radius: 8px 8px 0 0; background: rgba(255,255,255,.07); }
+        .av-retenir .av-deco2 i:nth-child(1) { height: 35%; } .av-retenir .av-deco2 i:nth-child(2) { height: 62%; } .av-retenir .av-deco2 i:nth-child(3) { height: 100%; }
+        @media (max-width: 560px) { .av-retenir .av-deco2 { display: none; } }
+
+        /* Citation */
+        .av-citation { max-width: 46rem; margin-inline: auto; padding-top: 1rem; }
+        .av-citation .av-mark { font-family: 'Playfair Display', Georgia, serif; font-size: 6rem; line-height: .6; color: rgba(0,102,240,.2); height: 3rem; }
+        .av-citation blockquote { margin: 0; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 500; font-size: clamp(1.6rem, 4vw, 2.3rem); line-height: 1.3; color: var(--navy); }
+        .av-citation figcaption { margin-top: 1.4rem; display: flex; align-items: center; gap: .8rem; font-size: .75rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #64748b; }
+        .av-citation figcaption::before { content: ''; width: 2.5rem; height: 2px; background: var(--blue); }
+
+        /* Tableau */
+        .av-tableau { overflow: hidden; border: 1px solid #E2E8F0; border-radius: 20px; background: #fff; }
+        .av-tableau table { width: 100%; border-collapse: collapse; }
+        .av-tableau th { padding: 1.05rem 1.6rem; text-align: left; background: #F3F7FE; font-size: .6875rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); }
+        .av-tableau td { padding: 1.3rem 1.6rem; border-top: 1px solid #E6ECF5; vertical-align: top; font-size: .9688rem; line-height: 1.6; color: #475569; }
+        .av-tableau td:first-child { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: 1.1rem; color: var(--navy); width: 24%; }
+        @media (max-width: 719px) {
+          .av-tableau thead { display: none; }
+          .av-tableau tr, .av-tableau td { display: block; }
+          .av-tableau td { border-top: 0; padding: .35rem 1.3rem; }
+          .av-tableau td:first-child { width: auto; padding-top: 1.3rem; }
+          .av-tableau td:last-child { padding-bottom: 1.3rem; }
+          .av-tableau tr + tr { border-top: 1px solid #E6ECF5; }
+          .av-tableau td[data-l]:not(:first-child)::before { content: attr(data-l); display: block; font-size: .625rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); margin-bottom: .15rem; }
+        }
+
+        /* Appel a l'action */
+        .av-cta { margin-block: 5.5rem 4.5rem; position: relative; overflow: hidden; border-radius: 24px; background: linear-gradient(135deg, #F3F7FE 0%, #FFFFFF 70%); border: 1px solid #E2E8F0; padding: 2.75rem 1.75rem; }
+        @media (min-width: 768px) { .av-cta { padding: 4rem 4.25rem; } }
+        .av-cta p { position: relative; z-index: 1; max-width: 34rem; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.6rem, 3.6vw, 2.25rem); line-height: 1.25; color: var(--navy); }
+        .av-cta a { position: relative; z-index: 1; }
+        .av-cta .av-deco3 { position: absolute; right: 2.5rem; bottom: 0; display: none; align-items: flex-end; gap: 12px; height: 80%; }
+        .av-cta .av-deco3 i { display: block; width: 34px; border-radius: 10px 10px 0 0; background: linear-gradient(180deg, rgba(0,102,240,.13), rgba(0,102,240,.02)); }
+        .av-cta .av-deco3 i:nth-child(1) { height: 35%; } .av-cta .av-deco3 i:nth-child(2) { height: 62%; } .av-cta .av-deco3 i:nth-child(3) { height: 100%; }
+        @media (min-width: 900px) { .av-cta .av-deco3 { display: flex; } }
+
+        @media (prefers-reduced-motion: reduce) {
+          .av-frise li::before { transform: none !important; transition: none !important; }
+          .av-progress { display: none; }
+        }
+
+        /* chiffres alignes sur la ligne (Playfair a des chiffres elzeviriens) */
+        .av-head h1, .av-h2, .av-stat .av-n, .av-frise .av-d, .av-frise .av-t, .av-cycle li, .av-retenir p, .av-citation blockquote, .av-tableau td, .av-cta p, .av-card-titre { font-variant-numeric: lining-nums; }
+        /* av-fin */
     </style>
 </head>
 <body class="bg-[#FCFCFD] text-movari-ink antialiased">
@@ -262,55 +396,86 @@
         </div>
     </nav>
 
-    <div class="max-w-3xl mx-auto px-5 md:px-8 pt-5 text-[13px] text-slate-400">
+    <div class="av-wrap pt-5 text-[13px] text-slate-400">
         <a href="../index.html" class="hover:text-movari transition">Accueil</a>
         <span class="mx-2" aria-hidden="true">›</span>
         <a href="index.html" class="hover:text-movari transition">Articles</a><span class="mx-2" aria-hidden="true">›</span><span class="text-slate-600">Création de valeur LBO</span>
     </div>
 
     <main>
-    <header class="max-w-3xl mx-auto px-5 md:px-8 pt-10 md:pt-14 pb-2">
+    <div class="av-progress" id="av-progress" aria-hidden="true"></div>
+    <header class="av-head av-wrap">
+        <span class="av-deco" aria-hidden="true"><i></i><i></i><i></i></span>
+        <div class="av-col">
         <span class="kicker"><span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>Post-acquisition</span>
-        <h1 class="font-display text-4xl md:text-5xl font-semibold text-movari-navy leading-[1.12] mt-5">Plan de création de valeur après un LBO : les leviers qui tiennent</h1>
-        <p class="mt-6 text-xl text-slate-500 leading-relaxed">Après un LBO, le plan de création de valeur est souvent un tableur bien construit et une liste de leviers trop longue. Les leviers qui tiennent sont ceux qui ont un responsable, un chiffre de départ et un rythme de suivi.</p>
-        <p class="mt-6 text-sm text-slate-400">Benoît Mahmoudi · Manager de transition · <time datetime="2026-09-29">29 septembre 2026</time></p>
+        <h1>Plan de création de valeur après un LBO : les leviers qui tiennent</h1>
+        <p class="av-chapo">Après un LBO, le plan de création de valeur est souvent un tableur bien construit et une liste de leviers trop longue. Les leviers qui tiennent sont ceux qui ont un responsable, un chiffre de départ et un rythme de suivi.</p>
+        <p class="av-meta"><span><b>Benoît Mahmoudi</b> · Manager de transition</span><time datetime="2026-09-29">29 septembre 2026</time><span class="av-lecture"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> 6 min de lecture</span></p>
+        </div>
     </header>
 
-    <article class="max-w-3xl mx-auto px-5 md:px-8 pb-6">
-        <h2 class="font-display text-2xl md:text-3xl font-semibold text-movari-navy leading-snug mt-14 mb-4">Pourquoi un plan de création de valeur se dilue après un LBO</h2>
-        <p class="text-[17px] text-slate-600 leading-[1.75] mt-4">Le plan de création de valeur est écrit avant la signature. Il sert à justifier un prix et un niveau de dette. Il repose sur des hypothèses construites avec un accès limité à l'entreprise, souvent en quelques semaines.</p>
-        <p class="text-[17px] text-slate-600 leading-[1.75] mt-4">Après le closing, ce plan rencontre la réalité. Les équipes n'ont pas participé à sa construction. Les données ne sont pas toujours celles de la data room. Les priorités du quotidien reprennent vite le dessus.</p>
-        <p class="text-[17px] text-slate-600 leading-[1.75] mt-4">Le risque n'est pas l'absence de leviers. Il est d'en garder trop, sans hiérarchie, et de mesurer l'avancement par des actions lancées plutôt que par des gains constatés. Un plan qui tient repose sur peu de leviers, suivis chaque mois, avec un responsable nommé pour chacun.</p>
-        <h2 class="font-display text-2xl md:text-3xl font-semibold text-movari-navy leading-snug mt-14 mb-4">Trier les leviers : ceux qui tiennent et les autres</h2>
-        <p class="text-[17px] text-slate-600 leading-[1.75] mt-4">Je classe les leviers en deux familles. Ceux qui dépendent de décisions internes : prix, conditions de paiement, achats, organisation, portefeuille d'offres. Ceux qui dépendent du marché : volumes, nouveaux clients, nouveaux pays. Les premiers tiennent mieux parce que l'entreprise en garde la main.</p>
-        <p class="text-[17px] text-slate-600 leading-[1.75] mt-4">Pour chaque levier, je pose quatre questions. Le gain est-il mesurable dans les comptes, et à quelle ligne ? Qui en est responsable, par son nom ? Quel est le chiffre de départ, vérifié et non estimé ? À quelle date le premier effet doit-il apparaître ?</p>
-        <p class="text-[17px] text-slate-600 leading-[1.75] mt-4">Un levier qui ne passe pas ces quatre questions reste une idée. Il peut revenir plus tard dans le plan. Il ne doit pas occuper le comité de pilotage.</p>
-        <p class="mt-5 text-[15px] text-movari-ink border-l-2 border-movari pl-4"><span class="font-semibold">Livrable :</span> une liste courte de leviers, chacun avec sa ligne de compte, son responsable, son point de départ et sa date.</p>
-        <h2 class="font-display text-2xl md:text-3xl font-semibold text-movari-navy leading-snug mt-14 mb-4">Les leviers qui tiennent le mieux</h2>
-        <p class="text-[17px] text-slate-600 leading-[1.75] mt-4">Certains leviers reviennent dans la plupart des plans. Ils tiennent parce qu'ils se mesurent vite et ne demandent pas de pari sur le marché.</p>
-        <ul class="mt-4 space-y-3 text-[17px] text-slate-600 leading-[1.7] list-disc pl-6">
+    <article class="av-body av-wrap">
+        <h2 class="av-h2"><span class="av-num">01</span>Pourquoi un plan de création de valeur se dilue après un LBO</h2>
+        <p class="av-p">Le plan de création de valeur est écrit avant la signature. Il sert à justifier un prix et un niveau de dette. Il repose sur des hypothèses construites avec un accès limité à l'entreprise, souvent en quelques semaines.</p>
+        <p class="av-p">Après le closing, ce plan rencontre la réalité. Les équipes n'ont pas participé à sa construction. Les données ne sont pas toujours celles de la data room. Les priorités du quotidien reprennent vite le dessus.</p>
+        <p class="av-p">Le risque n'est pas l'absence de leviers. Il est d'en garder trop, sans hiérarchie, et de mesurer l'avancement par des actions lancées plutôt que par des gains constatés. Un plan qui tient repose sur peu de leviers, suivis chaque mois, avec un responsable nommé pour chacun.</p>
+        <h2 class="av-h2"><span class="av-num">02</span>Trier les leviers : ceux qui tiennent et les autres</h2>
+        <p class="av-p">Je classe les leviers en deux familles. Ceux qui dépendent de décisions internes : prix, conditions de paiement, achats, organisation, portefeuille d'offres. Ceux qui dépendent du marché : volumes, nouveaux clients, nouveaux pays. Les premiers tiennent mieux parce que l'entreprise en garde la main.</p>
+        <div class="av-block av-tableau reveal"><table>
+            <thead><tr><th scope="col">Famille de leviers</th><th scope="col">Exemples</th><th scope="col">Tenue</th></tr></thead>
+            <tbody>
+                <tr><td data-l="Famille de leviers">Décisions internes</td><td data-l="Exemples">prix, conditions de paiement, achats, organisation, portefeuille d'offres</td><td data-l="Tenue">Tiennent mieux : l'entreprise en garde la main</td></tr>
+                <tr><td data-l="Famille de leviers">Marché</td><td data-l="Exemples">volumes, nouveaux clients, nouveaux pays</td><td data-l="Tenue">Dépendent du marché</td></tr>
+            </tbody>
+        </table></div>
+        <p class="av-p">Pour chaque levier, je pose quatre questions. Le gain est-il mesurable dans les comptes, et à quelle ligne ? Qui en est responsable, par son nom ? Quel est le chiffre de départ, vérifié et non estimé ? À quelle date le premier effet doit-il apparaître ?</p>
+        <div class="av-block av-frise reveal"><ol style="--n:4">
+            <li style="--i:0"><span class="av-t">Question 1</span><span class="av-d">Quelle ligne de compte ?</span></li>
+            <li style="--i:1"><span class="av-t">Question 2</span><span class="av-d">Quel responsable ?</span></li>
+            <li style="--i:2"><span class="av-t">Question 3</span><span class="av-d">Quel chiffre de départ ?</span></li>
+            <li style="--i:3"><span class="av-t">Question 4</span><span class="av-d">Quelle date ?</span></li>
+        </ol></div>
+        <p class="av-p">Un levier qui ne passe pas ces quatre questions reste une idée. Il peut revenir plus tard dans le plan. Il ne doit pas occuper le comité de pilotage.</p>
+        <div class="av-livrable"><span class="av-lab">Livrable</span><p>une liste courte de leviers, chacun avec sa ligne de compte, son responsable, son point de départ et sa date.</p></div>
+        <h2 class="av-h2"><span class="av-num">03</span>Les leviers qui tiennent le mieux</h2>
+        <p class="av-p">Certains leviers reviennent dans la plupart des plans. Ils tiennent parce qu'ils se mesurent vite et ne demandent pas de pari sur le marché.</p>
+        <ul class="av-list">
             <li>Le cash : délais de paiement clients, stocks, conditions fournisseurs. Le gain apparaît dans la trésorerie en quelques mois et se vérifie sans discussion.</li>
             <li>La marge réelle par client et par produit : elle révèle souvent des clients servis à perte et des remises qui ne sont plus justifiées.</li>
             <li>Les prix : une politique tarifaire tenue, avec des règles de remise écrites, rapporte plus qu'une hausse générale mal appliquée.</li>
             <li>Les dépenses externes : un audit ligne par ligne des achats non stratégiques fait apparaître des contrats reconduits sans examen.</li>
             <li>L'intégration des sociétés rachetées, dans une logique de build-up : elle ne crée de la valeur que si elle est pilotée comme un chantier à part entière.</li>
         </ul>
-        <p class="text-[17px] text-slate-600 leading-[1.75] mt-4">Les leviers de croissance ne sont pas à écarter. Ils demandent plus de temps et un suivi plus fin, parce que leur effet se mêle à celui du marché. Je les garde dans le plan, mais je ne fais pas reposer la première année sur eux.</p>
-        <h2 class="font-display text-2xl md:text-3xl font-semibold text-movari-navy leading-snug mt-14 mb-4">Chiffrer chaque levier à partir de la réalité</h2>
-        <p class="text-[17px] text-slate-600 leading-[1.75] mt-4">Un levier chiffré à partir de la data room est une hypothèse. Un levier chiffré à partir des données de l'entreprise, relues avec ceux qui les produisent, devient un engagement.</p>
-        <p class="text-[17px] text-slate-600 leading-[1.75] mt-4">Je repars donc des chiffres réels. Je lis les balances clients avec la direction financière. Je regarde les factures et les contrats. Je fais valider chaque point de départ par le responsable du levier. Ce travail prend quelques semaines. Il évite de piloter pendant des mois un écart qui n'existait pas.</p>
-        <p class="text-[17px] text-slate-600 leading-[1.75] mt-4">Le chiffrage distingue trois choses : le gain attendu, le coût pour l'obtenir, la date à laquelle il apparaît dans les comptes. Un gain sans date ne se pilote pas.</p>
-        <p class="mt-5 text-[15px] text-movari-ink border-l-2 border-movari pl-4"><span class="font-semibold">Livrable :</span> un plan de création de valeur rechiffré, validé par le dirigeant et partagé avec le fonds.</p>
-        <h2 class="font-display text-2xl md:text-3xl font-semibold text-movari-navy leading-snug mt-14 mb-4">Piloter les leviers chaque mois</h2>
-        <p class="text-[17px] text-slate-600 leading-[1.75] mt-4">Le plan vit dans un comité de pilotage au rythme fixe. Hebdomadaire au début, mensuel ensuite. L'ordre du jour ne change pas : gains constatés, écarts, décisions à prendre. Un comité qui commente l'avancement des actions sans regarder les gains ne pilote rien.</p>
-        <p class="text-[17px] text-slate-600 leading-[1.75] mt-4">Un gain n'est compté que lorsqu'il apparaît dans les comptes. Pas lorsqu'il est annoncé, ni lorsque l'action est terminée. Cette règle crée parfois des tensions au début. Elle rend le reporting au fonds crédible et comparable d'un mois sur l'autre.</p>
-        <p class="text-[17px] text-slate-600 leading-[1.75] mt-4">Le reporting investisseur suit le même modèle chaque mois. Il tient sur peu de pages. Il dit ce qui avance, ce qui glisse, et ce qui a été décidé pour corriger.</p>
-        <h2 class="font-display text-2xl md:text-3xl font-semibold text-movari-navy leading-snug mt-14 mb-4">Ce que cela donne en pratique</h2>
-        <p class="text-[17px] text-slate-600 leading-[1.75] mt-4">Sur un réseau multi-sites sous LBO, le travail sur le délai de paiement l'a réduit de 14 jours et a libéré environ 300 k€ de cash. Le levier était simple. Il a tenu parce qu'il avait un responsable, un chiffre de départ vérifié et un suivi mensuel.</p>
-        <p class="text-[17px] text-slate-600 leading-[1.75] mt-4">Chez Cegid, éditeur de logiciels de 400 M€ de chiffre d'affaires, j'ai piloté le plan de transformation du groupe et l'intégration des sociétés acquises, avec un reporting direct au COMEX. Dans une filiale de Generali, le chiffre d'affaires a progressé de 25 %.</p>
-        <p class="text-[17px] text-slate-600 leading-[1.75] mt-4">Les contextes diffèrent. La méthode reste la même : peu de leviers, des chiffres réels, un comité qui ne bouge pas.</p>
-        <h2 class="font-display text-2xl md:text-3xl font-semibold text-movari-navy leading-snug mt-14 mb-4">Les erreurs qui font décrocher un plan</h2>
-        <ul class="mt-4 space-y-3 text-[17px] text-slate-600 leading-[1.7] list-disc pl-6">
+        <p class="av-p">Les leviers de croissance ne sont pas à écarter. Ils demandent plus de temps et un suivi plus fin, parce que leur effet se mêle à celui du marché. Je les garde dans le plan, mais je ne fais pas reposer la première année sur eux.</p>
+        <h2 class="av-h2"><span class="av-num">04</span>Chiffrer chaque levier à partir de la réalité</h2>
+        <p class="av-p">Un levier chiffré à partir de la data room est une hypothèse. Un levier chiffré à partir des données de l'entreprise, relues avec ceux qui les produisent, devient un engagement.</p>
+        <p class="av-p">Je repars donc des chiffres réels. Je lis les balances clients avec la direction financière. Je regarde les factures et les contrats. Je fais valider chaque point de départ par le responsable du levier. Ce travail prend quelques semaines. Il évite de piloter pendant des mois un écart qui n'existait pas.</p>
+        <p class="av-p">Le chiffrage distingue trois choses : le gain attendu, le coût pour l'obtenir, la date à laquelle il apparaît dans les comptes. Un gain sans date ne se pilote pas.</p>
+        <figure class="av-block av-citation reveal"><div class="av-mark" aria-hidden="true">&ldquo;</div><blockquote>Un gain sans date ne se pilote pas.</blockquote><figcaption>Benoît Mahmoudi</figcaption></figure>
+        <div class="av-livrable"><span class="av-lab">Livrable</span><p>un plan de création de valeur rechiffré, validé par le dirigeant et partagé avec le fonds.</p></div>
+        <h2 class="av-h2"><span class="av-num">05</span>Piloter les leviers chaque mois</h2>
+        <p class="av-p">Le plan vit dans un comité de pilotage au rythme fixe. Hebdomadaire au début, mensuel ensuite. L'ordre du jour ne change pas : gains constatés, écarts, décisions à prendre. Un comité qui commente l'avancement des actions sans regarder les gains ne pilote rien.</p>
+        <p class="av-p">Un gain n'est compté que lorsqu'il apparaît dans les comptes. Pas lorsqu'il est annoncé, ni lorsque l'action est terminée. Cette règle crée parfois des tensions au début. Elle rend le reporting au fonds crédible et comparable d'un mois sur l'autre.</p>
+        <div class="av-block av-cycle reveal">
+            <svg viewBox="0 0 240 240" role="img" aria-label="Comité : Gains constatés, Écarts, Décisions à prendre" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="120" r="86" fill="none" stroke="#CFDBF0" stroke-width="2"/><polygon points="200.0,86.5 199.3,67.3 183.7,76.3" fill="#0066F0"/><polygon points="109.0,206.0 126.0,215.0 126.0,197.0" fill="#0066F0"/><polygon points="51.0,67.5 34.7,77.7 50.3,86.7" fill="#0066F0"/><circle cx="120.0" cy="34.0" r="17" fill="#0066F0"/><text x="120.0" y="34.5" text-anchor="middle" dominant-baseline="central" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600" fill="#fff">1</text><circle cx="194.5" cy="163.0" r="17" fill="#0066F0"/><text x="194.5" y="163.5" text-anchor="middle" dominant-baseline="central" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600" fill="#fff">2</text><circle cx="45.5" cy="163.0" r="17" fill="#0066F0"/><text x="45.5" y="163.5" text-anchor="middle" dominant-baseline="central" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600" fill="#fff">3</text><text x="120" y="120.0" text-anchor="middle" dominant-baseline="central" font-family="Playfair Display, Georgia, serif" font-size="19" font-weight="600" fill="#0A1F44">Comité</text></svg>
+            <ol>
+                <li><b>1</b><span>Gains constatés</span></li>
+                <li><b>2</b><span>Écarts</span></li>
+                <li><b>3</b><span>Décisions à prendre</span></li>
+            </ol>
+        </div>
+        <p class="av-p">Le reporting investisseur suit le même modèle chaque mois. Il tient sur peu de pages. Il dit ce qui avance, ce qui glisse, et ce qui a été décidé pour corriger.</p>
+        <h2 class="av-h2"><span class="av-num">06</span>Ce que cela donne en pratique</h2>
+        <p class="av-p">Sur un réseau multi-sites sous LBO, le travail sur le délai de paiement l'a réduit de 14 jours et a libéré environ 300 k€ de cash. Le levier était simple. Il a tenu parce qu'il avait un responsable, un chiffre de départ vérifié et un suivi mensuel.</p>
+        <div class="av-block av-stats reveal">
+            <div class="av-stat"><div class="av-n">14<small>jours</small></div><p class="av-l">de délai de paiement en moins sur un réseau multi-sites sous LBO</p></div>
+            <div class="av-stat"><div class="av-n">300<small>k€</small></div><p class="av-l">de cash libéré</p></div>
+        </div>
+        <p class="av-p">Chez Cegid, éditeur de logiciels de 400 M€ de chiffre d'affaires, j'ai piloté le plan de transformation du groupe et l'intégration des sociétés acquises, avec un reporting direct au COMEX. Dans une filiale de Generali, le chiffre d'affaires a progressé de 25 %.</p>
+        <p class="av-p">Les contextes diffèrent. La méthode reste la même : peu de leviers, des chiffres réels, un comité qui ne bouge pas.</p>
+        <aside class="av-block av-retenir reveal"><span class="av-lab">À retenir</span><p>Peu de leviers, des chiffres réels, un comité qui ne bouge pas.</p><span class="av-deco2" aria-hidden="true"><i></i><i></i><i></i></span></aside>
+        <h2 class="av-h2"><span class="av-num">07</span>Les erreurs qui font décrocher un plan</h2>
+        <ul class="av-list">
             <li>Garder tous les leviers identifiés avant la signature. Mieux vaut quelques leviers tenus qu'une longue liste suivie de loin.</li>
             <li>Compter les gains annoncés plutôt que les gains constatés.</li>
             <li>Chiffrer les leviers sans les équipes qui devront les porter.</li>
@@ -318,18 +483,34 @@
             <li>Confier le suivi du plan à une direction financière déjà absorbée par le closing et la dette.</li>
             <li>Laisser le reporting au fonds changer de forme chaque mois.</li>
         </ul>
-        <h2 class="font-display text-2xl md:text-3xl font-semibold text-movari-navy leading-snug mt-14 mb-4">Quand faire appel à un directeur de programme</h2>
-        <p class="text-[17px] text-slate-600 leading-[1.75] mt-4">Quand l'équipe de direction ne peut pas porter seule le pilotage du plan de création de valeur, ou quand le fonds veut un point de contact unique sur les gains. J'interviens aux côtés du dirigeant, qui garde la décision. Je tiens le rythme, la preuve et le lien avec l'investisseur. La mission peut démarrer par un audit flash de cinq jours, à 10 000 € HT au forfait, pour rechiffrer les leviers et poser le plan de pilotage.</p>
+        <h2 class="av-h2"><span class="av-num">08</span>Quand faire appel à un directeur de programme</h2>
+        <p class="av-p">Quand l'équipe de direction ne peut pas porter seule le pilotage du plan de création de valeur, ou quand le fonds veut un point de contact unique sur les gains. J'interviens aux côtés du dirigeant, qui garde la décision. Je tiens le rythme, la preuve et le lien avec l'investisseur. La mission peut démarrer par un audit flash de cinq jours, à 10 000 € HT au forfait, pour rechiffrer les leviers et poser le plan de pilotage.</p>
     </article>
 
-    <section class="max-w-3xl mx-auto px-5 md:px-8 py-16 md:py-20">
-        <div class="hairline mb-12" aria-hidden="true"></div>
-        <p class="font-display text-2xl md:text-3xl text-movari-navy leading-snug">Vous préparez un rachat, ou vous venez de signer ? Trente minutes suffisent pour regarder ensemble votre plan.</p>
-        <a href="https://cal.com/movariconseil" target="_blank" rel="noopener" data-cal
-           class="btn-primary mt-8 inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-white rounded-xl">
-            Échange de 30 min
-        </a>
+    <section class="av-wrap">
+        <div class="av-cta reveal">
+            <span class="av-deco3" aria-hidden="true"><i></i><i></i><i></i></span>
+            <p>Vous préparez un rachat, ou vous venez de signer ? Trente minutes suffisent pour regarder ensemble votre plan.</p>
+            <a href="https://cal.com/movariconseil" target="_blank" rel="noopener" data-cal
+               class="btn-primary mt-8 inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-white rounded-xl">
+                Échange de 30 min
+            </a>
+        </div>
     </section>
+        <script>
+        (function () {
+            var barre = document.getElementById('av-progress');
+            if (!barre) return;
+            function maj() {
+                var h = document.documentElement.scrollHeight - window.innerHeight;
+                var p = h > 0 ? Math.min(1, Math.max(0, window.scrollY / h)) : 0;
+                barre.style.transform = 'scaleX(' + p + ')';
+            }
+            window.addEventListener('scroll', maj, { passive: true });
+            window.addEventListener('resize', maj);
+            maj();
+        })();
+        </script>
     </main>
 
     <!-- ════════ FOOTER ════════ -->
